@@ -1,6 +1,4 @@
-Here's a suggested README file for your Gym Management System project:
 
----
 
 # Gym Management System
 
@@ -70,6 +68,4 @@ Specify your project's license (e.g., MIT, Apache, etc.).
 ## Acknowledgments
 Thanks to all team members for their contributions and dedication.
 
----
 
-Feel free to edit this file to match your specific requirements or to add more details.
