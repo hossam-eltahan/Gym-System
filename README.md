@@ -29,7 +29,7 @@ The Gym Management System is a desktop application designed to streamline and ma
 7. راشد عبدالسلام جمعه عبدالسلام
 8. محمد خميس عبدالله
 9. احمد حماده عبده محمد
-10. تامر عادل ابوالخير عادل
+10. عادل تامر عادل أبو الخير
 
 ## Getting Started
 ### Prerequisites
