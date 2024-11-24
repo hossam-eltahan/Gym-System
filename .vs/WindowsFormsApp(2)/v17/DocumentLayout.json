@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|c:\\users\\everest\\desktop\\tic tac game\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form3.cs [Design]",
+              "RelativeToolTip": "Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T11:18:17.283Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T22:33:31.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form2.cs",
+              "RelativeToolTip": "Form2.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAwwDMAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T21:59:37.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form2.cs [Design]",
+              "RelativeToolTip": "Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T21:57:55.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "C:\\Users\\everest\\Desktop\\Tic Tac Game\\WindowsFormsApp1\\Form3.cs",
+              "RelativeToolTip": "Form3.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAqwDMAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T11:22:44.998Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
