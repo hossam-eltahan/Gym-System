@@ -51,9 +51,31 @@ namespace WindowsFormsApp1
         {
             if((textBox2.Text=="ahmed") && (textBox1.Text == "1234"))
             {
+               
                 Form form = new Form3();
+                this.Hide();
                 form.Show();
+
             }
         }
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Show confirmation dialog
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?",
+                                                  "Confirm Exit",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+
+            // Cancel closing if user chooses No
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
+
     }
 }
