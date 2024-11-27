@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class Login : Form
     {
-        public Form2()
+        public Login()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            button1.Focus();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             if((textBox2.Text=="ahmed") && (textBox1.Text == "1234"))
             {
                
-                Form form = new Form3();
+                Form form = new Dashboard();
                 this.Hide();
                 form.Show();
 
@@ -77,5 +77,9 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

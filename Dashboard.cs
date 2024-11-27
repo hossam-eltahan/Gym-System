@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class Dashboard : Form
     {
-        public Form3()
+        public Dashboard()
         {
             InitializeComponent();
         }
@@ -72,14 +72,14 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
-            Form form = new Form2();
+            Form form = new Login();
             form.Show();
             this.Close();
         }
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
 
-            Form form = new Form2();
+            Form form = new Login();
             form.Show();
             
 

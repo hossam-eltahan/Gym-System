@@ -46,25 +46,106 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form2.cs">
+    <Compile Include="Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Add memebership.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Add memebership.Designer.cs">
+      <DependentUpon>Add memebership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view and manage membership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view and manage membership.Designer.cs">
+      <DependentUpon>view and manage membership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Bills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Bills.Designer.cs">
+      <DependentUpon>View Bills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Revenue Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revenue Report.Designer.cs">
+      <DependentUpon>Revenue Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membership Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Membership Report.Designer.cs">
+      <DependentUpon>Membership Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renewal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renewal.Designer.cs">
+      <DependentUpon>Renewal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View and manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View and manage.Designer.cs">
+      <DependentUpon>View and manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Add memebership.resx">
+      <DependentUpon>Add memebership.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Membership Report.resx">
+      <DependentUpon>Membership Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renewal.resx">
+      <DependentUpon>Renewal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Revenue Report.resx">
+      <DependentUpon>Revenue Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view and manage membership.resx">
+      <DependentUpon>view and manage membership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View and manage.resx">
+      <DependentUpon>View and manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Bills.resx">
+      <DependentUpon>View Bills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
