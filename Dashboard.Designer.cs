@@ -37,7 +37,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.addMemberbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -178,20 +178,21 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button5
+            // addMemberbtn
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.ForeColor = System.Drawing.Color.Silver;
-            this.button5.Location = new System.Drawing.Point(59, 11);
-            this.button5.Name = "button5";
-            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(254, 42);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Add Members";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.addMemberbtn.FlatAppearance.BorderSize = 0;
+            this.addMemberbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMemberbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addMemberbtn.ForeColor = System.Drawing.Color.Silver;
+            this.addMemberbtn.Location = new System.Drawing.Point(59, 11);
+            this.addMemberbtn.Name = "addMemberbtn";
+            this.addMemberbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.addMemberbtn.Size = new System.Drawing.Size(254, 42);
+            this.addMemberbtn.TabIndex = 12;
+            this.addMemberbtn.Text = "Add Members";
+            this.addMemberbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addMemberbtn.UseVisualStyleBackColor = true;
+            this.addMemberbtn.Click += new System.EventHandler(this.addMemberbtn_Click);
             // 
             // panel1
             // 
@@ -287,7 +288,7 @@
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.addMemberbtn);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Location = new System.Drawing.Point(12, 248);
             this.panel2.Name = "panel2";
@@ -491,7 +492,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1453, 1021);
+            this.ClientSize = new System.Drawing.Size(1474, 1021);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
@@ -500,7 +502,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Dashboard";
             this.Text = "Form3";
@@ -536,7 +537,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button addMemberbtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button11;

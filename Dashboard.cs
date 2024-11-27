@@ -85,6 +85,14 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void addMemberbtn_Click(object sender, EventArgs e)
+        {
+            Form addfrm = new Add();
+            addfrm.Show();
+            //this.Close();
+        }
+
+
 
         //sssssssssssssssssssssssssssssssssssssssssssssssss
 
