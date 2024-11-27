@@ -121,13 +121,19 @@
   <data name="Pen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pen1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\keyboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Girl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Girl1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home-agreement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-agreement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

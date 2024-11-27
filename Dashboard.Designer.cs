@@ -43,7 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addmembershipbtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -200,7 +200,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.addmembershipbtn);
             this.panel1.Location = new System.Drawing.Point(12, 248);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(313, 123);
@@ -255,19 +255,20 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // addmembershipbtn
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Location = new System.Drawing.Point(59, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 42);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Add New";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.addmembershipbtn.FlatAppearance.BorderSize = 0;
+            this.addmembershipbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addmembershipbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addmembershipbtn.ForeColor = System.Drawing.Color.Silver;
+            this.addmembershipbtn.Location = new System.Drawing.Point(59, 11);
+            this.addmembershipbtn.Name = "addmembershipbtn";
+            this.addmembershipbtn.Size = new System.Drawing.Size(251, 42);
+            this.addmembershipbtn.TabIndex = 15;
+            this.addmembershipbtn.Text = "Add New";
+            this.addmembershipbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addmembershipbtn.UseVisualStyleBackColor = true;
+            this.addmembershipbtn.Click += new System.EventHandler(this.addmembershipbtn_Click);
             // 
             // panel2
             // 
@@ -402,7 +403,6 @@
             this.button11.Text = "Logout";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -486,7 +486,7 @@
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
             // 
-            // Form3
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -499,10 +499,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form3";
+            this.Name = "Dashboard";
             this.Text = "Form3";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -546,7 +546,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addmembershipbtn;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox5;
