@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|d:\\hossam\\faculty data\\open source\\gym project\\gym-system\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|Gym System.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49DFDD32-A3FD-4FF2-B71E-D96391AD1050}|WindowsFormsApp(2).csproj|solutionrelative:dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,70 +54,115 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form3.cs",
-              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form3.cs",
-              "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form3.cs*",
-              "RelativeToolTip": "Form3.cs*",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowFMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:25:59.199Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.cs",
-              "RelativeToolTip": "Form2.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAuwEoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:25:41.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form3.cs [Design]",
-              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form3.cs",
-              "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form3.cs [Design]*",
-              "RelativeToolTip": "Form3.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:44:16.119Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.cs",
-              "RelativeDocumentMoniker": "Form2.cs",
-              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.cs [Design]",
-              "RelativeToolTip": "Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:24:20.858Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T08:23:53.781Z",
+              "WhenOpened": "2024-11-27T17:41:22.85Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs [Design]*",
+              "RelativeToolTip": "Login.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:34:46.7Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dashboard.cs",
+              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:20:14.967Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dashboard.cs",
+              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Dashboard.cs",
+              "RelativeToolTip": "Dashboard.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAIwEsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:20:14.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAiwB8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:25:41.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs*",
+              "RelativeToolTip": "Login.cs*",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAswEoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:20:00.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\Gym-System\\Login.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Gym-System\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:24:20.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dashboard.cs",
+              "ToolTip": "D:\\Gym-System\\Dashboard.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Gym-System\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T10:44:16.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T08:23:53.781Z"
             }
           ]
         }

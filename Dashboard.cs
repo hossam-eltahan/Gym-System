@@ -72,19 +72,26 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
-            Form form = new Login();
-            form.Show();
+            //Form form = new Login();
+            //form.Show();
+            
             this.Close();
         }
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
 
             Form form = new Login();
+            form.Tag = "1";
             form.Show();
-            
+
 
         }
-        //sssssssssssssssssssssssssssssssssssssssssssssssss
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // Attach the FormClosing event to the handler
+            this.FormClosing += new FormClosingEventHandler(Form3_FormClosing);
+        }
+
 
     }
 }

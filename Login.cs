@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,37 +48,41 @@ namespace WindowsFormsApp1
 
         }
 
+        
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if((textBox2.Text=="ahmed") && (textBox1.Text == "1234"))
+            // Check email and password
+            if ((textBox2.Text == "ahmed") && (textBox1.Text == "1234"))
             {
-               
-                Form form = new Dashboard();
+                // Login successful: open Dashboard
+                Form dashboard = new Dashboard();
                 this.Hide();
-                form.Show();
-
-            }
-        }
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Show confirmation dialog
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?",
-                                                  "Confirm Exit",
-                                                  MessageBoxButtons.YesNo,
-                                                  MessageBoxIcon.Question);
-
-            // Cancel closing if user chooses No
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
+                dashboard.Show();
             }
             else
             {
-                Application.Exit();
+                // Show alert if login fails
+                MessageBox.Show("Email or password is incorrect.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private bool isClosing = false; // Flag to prevent multiple closing actions
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+
+
+        }
+
+
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
