@@ -74,22 +74,31 @@ namespace WindowsFormsApp1
 
             Form form = new Login();
             form.Show();
-            
-
         }
 
         private void addmembershipbtn_Click(object sender, EventArgs e)
         {
             Form frm = new addmembershipfrm();
             frm.Show();
-            this.Close();
         }
 
         private void addMemberbtn_Click(object sender, EventArgs e)
         {
             Form addfrm = new Add();
             addfrm.Show();
-            //this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form frm= new Form3();
+            frm.Show();
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form2();
+            frm.Show();
         }
 
 
