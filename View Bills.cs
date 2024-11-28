@@ -16,5 +16,30 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+                    
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

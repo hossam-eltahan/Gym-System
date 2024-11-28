@@ -60,6 +60,36 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.gymMangerTextBox = new System.Windows.Forms.TextBox();
+            this.gymEmailTextBox = new System.Windows.Forms.TextBox();
+            this.gymContactTextBox = new System.Windows.Forms.TextBox();
+            this.gymAddTextBox = new System.Windows.Forms.TextBox();
+            this.updateSettingsButton = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.currencyTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.systemNameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.confirmPassTextBox = new System.Windows.Forms.TextBox();
+            this.newPassTextBox = new System.Windows.Forms.TextBox();
+            this.currentPassTextBox = new System.Windows.Forms.TextBox();
+            this.changePassButton = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.uploadbtn = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,6 +107,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -476,17 +510,401 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(373, 1051);
+            this.pictureBox1.Size = new System.Drawing.Size(373, 1614);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(403, 33);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 49);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Settings";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // panel6
+            // 
+            this.panel6.AutoScrollMargin = new System.Drawing.Size(0, 60);
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Controls.Add(this.uploadbtn);
+            this.panel6.Controls.Add(this.gymMangerTextBox);
+            this.panel6.Controls.Add(this.gymEmailTextBox);
+            this.panel6.Controls.Add(this.gymContactTextBox);
+            this.panel6.Controls.Add(this.gymAddTextBox);
+            this.panel6.Controls.Add(this.updateSettingsButton);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.currencyTextBox);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.systemNameTextBox);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(412, 123);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1468, 890);
+            this.panel6.TabIndex = 27;
+            // 
+            // gymMangerTextBox
+            // 
+            this.gymMangerTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymMangerTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.gymMangerTextBox.Location = new System.Drawing.Point(83, 609);
+            this.gymMangerTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gymMangerTextBox.MaxLength = 20;
+            this.gymMangerTextBox.Multiline = true;
+            this.gymMangerTextBox.Name = "gymMangerTextBox";
+            this.gymMangerTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.gymMangerTextBox.TabIndex = 43;
+            // 
+            // gymEmailTextBox
+            // 
+            this.gymEmailTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymEmailTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.gymEmailTextBox.Location = new System.Drawing.Point(83, 516);
+            this.gymEmailTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gymEmailTextBox.MaxLength = 20;
+            this.gymEmailTextBox.Multiline = true;
+            this.gymEmailTextBox.Name = "gymEmailTextBox";
+            this.gymEmailTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.gymEmailTextBox.TabIndex = 42;
+            // 
+            // gymContactTextBox
+            // 
+            this.gymContactTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymContactTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.gymContactTextBox.Location = new System.Drawing.Point(83, 417);
+            this.gymContactTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gymContactTextBox.MaxLength = 20;
+            this.gymContactTextBox.Multiline = true;
+            this.gymContactTextBox.Name = "gymContactTextBox";
+            this.gymContactTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.gymContactTextBox.TabIndex = 41;
+            // 
+            // gymAddTextBox
+            // 
+            this.gymAddTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymAddTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.gymAddTextBox.Location = new System.Drawing.Point(83, 323);
+            this.gymAddTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gymAddTextBox.MaxLength = 20;
+            this.gymAddTextBox.Multiline = true;
+            this.gymAddTextBox.Name = "gymAddTextBox";
+            this.gymAddTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.gymAddTextBox.TabIndex = 40;
+            // 
+            // updateSettingsButton
+            // 
+            this.updateSettingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.updateSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateSettingsButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateSettingsButton.ForeColor = System.Drawing.Color.White;
+            this.updateSettingsButton.Location = new System.Drawing.Point(88, 794);
+            this.updateSettingsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.updateSettingsButton.Name = "updateSettingsButton";
+            this.updateSettingsButton.Size = new System.Drawing.Size(180, 48);
+            this.updateSettingsButton.TabIndex = 16;
+            this.updateSettingsButton.Text = "Update Settings";
+            this.updateSettingsButton.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(83, 577);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(159, 27);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Gym Manager:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(83, 484);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 27);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Gym Email:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(83, 388);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 27);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Gym Contact:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(83, 291);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 27);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Gym Address:";
+            // 
+            // currencyTextBox
+            // 
+            this.currencyTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currencyTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.currencyTextBox.Location = new System.Drawing.Point(83, 225);
+            this.currencyTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.currencyTextBox.MaxLength = 20;
+            this.currencyTextBox.Multiline = true;
+            this.currencyTextBox.Name = "currencyTextBox";
+            this.currencyTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.currencyTextBox.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(83, 189);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 27);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Currency:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(83, 691);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 27);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Logo:";
+            // 
+            // systemNameTextBox
+            // 
+            this.systemNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.systemNameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.systemNameTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.systemNameTextBox.Location = new System.Drawing.Point(88, 128);
+            this.systemNameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.systemNameTextBox.MaxLength = 50;
+            this.systemNameTextBox.Multiline = true;
+            this.systemNameTextBox.Name = "systemNameTextBox";
+            this.systemNameTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.systemNameTextBox.TabIndex = 2;
+            this.systemNameTextBox.TextChanged += new System.EventHandler(this.systemNameTextBox_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(83, 87);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 27);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "System Name:";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1635, 54);
+            this.panel7.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(19, 10);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(184, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "System Settings";
+            // 
+            // panel8
+            // 
+            this.panel8.AutoScrollMargin = new System.Drawing.Size(0, 60);
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.confirmPassTextBox);
+            this.panel8.Controls.Add(this.newPassTextBox);
+            this.panel8.Controls.Add(this.currentPassTextBox);
+            this.panel8.Controls.Add(this.changePassButton);
+            this.panel8.Controls.Add(this.label15);
+            this.panel8.Controls.Add(this.label16);
+            this.panel8.Controls.Add(this.label17);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Location = new System.Drawing.Point(412, 1038);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1468, 476);
+            this.panel8.TabIndex = 28;
+            // 
+            // confirmPassTextBox
+            // 
+            this.confirmPassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.confirmPassTextBox.Location = new System.Drawing.Point(83, 331);
+            this.confirmPassTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.confirmPassTextBox.MaxLength = 20;
+            this.confirmPassTextBox.Multiline = true;
+            this.confirmPassTextBox.Name = "confirmPassTextBox";
+            this.confirmPassTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.confirmPassTextBox.TabIndex = 43;
+            // 
+            // newPassTextBox
+            // 
+            this.newPassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.newPassTextBox.Location = new System.Drawing.Point(83, 228);
+            this.newPassTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.newPassTextBox.MaxLength = 20;
+            this.newPassTextBox.Multiline = true;
+            this.newPassTextBox.Name = "newPassTextBox";
+            this.newPassTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.newPassTextBox.TabIndex = 42;
+            // 
+            // currentPassTextBox
+            // 
+            this.currentPassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentPassTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.currentPassTextBox.Location = new System.Drawing.Point(83, 129);
+            this.currentPassTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.currentPassTextBox.MaxLength = 20;
+            this.currentPassTextBox.Multiline = true;
+            this.currentPassTextBox.Name = "currentPassTextBox";
+            this.currentPassTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.currentPassTextBox.TabIndex = 41;
+            // 
+            // changePassButton
+            // 
+            this.changePassButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.changePassButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changePassButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changePassButton.ForeColor = System.Drawing.Color.White;
+            this.changePassButton.Location = new System.Drawing.Point(85, 412);
+            this.changePassButton.Margin = new System.Windows.Forms.Padding(4);
+            this.changePassButton.Name = "changePassButton";
+            this.changePassButton.Size = new System.Drawing.Size(204, 48);
+            this.changePassButton.TabIndex = 23;
+            this.changePassButton.Text = "Change Password";
+            this.changePassButton.UseVisualStyleBackColor = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(83, 299);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(202, 27);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Confirm Password:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label16.Location = new System.Drawing.Point(83, 196);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(167, 27);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "New Password:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label17.Location = new System.Drawing.Point(83, 97);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(200, 27);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "Current Password:";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
+            this.panel9.Controls.Add(this.label25);
+            this.panel9.Location = new System.Drawing.Point(0, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1639, 54);
+            this.panel9.TabIndex = 0;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(19, 14);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(205, 29);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Password Settings";
+            // 
+            // uploadbtn
+            // 
+            this.uploadbtn.Location = new System.Drawing.Point(137, 732);
+            this.uploadbtn.Name = "uploadbtn";
+            this.uploadbtn.Size = new System.Drawing.Size(122, 38);
+            this.uploadbtn.TabIndex = 45;
+            this.uploadbtn.Text = "Choose File";
+            this.uploadbtn.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(265, 743);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 16);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "no file choosen";
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1453, 1021);
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 100);
+            this.ClientSize = new System.Drawing.Size(1924, 1021);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
@@ -497,8 +915,12 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Settings";
-            this.Text = "Form5";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Setting";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -516,7 +938,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -553,5 +984,35 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox gymMangerTextBox;
+        private System.Windows.Forms.TextBox gymEmailTextBox;
+        private System.Windows.Forms.TextBox gymContactTextBox;
+        private System.Windows.Forms.TextBox gymAddTextBox;
+        private System.Windows.Forms.Button updateSettingsButton;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox currencyTextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox systemNameTextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox confirmPassTextBox;
+        private System.Windows.Forms.TextBox newPassTextBox;
+        private System.Windows.Forms.TextBox currentPassTextBox;
+        private System.Windows.Forms.Button changePassButton;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button uploadbtn;
     }
 }

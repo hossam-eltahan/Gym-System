@@ -58,3 +58,23 @@ C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\Gym System.csproj.GenerateReso
 C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\Gym System.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.exe
 C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.pdb
+D:\faculityprijct\Gym-System\bin\Debug\WindowsFormsApp1.exe.config
+D:\faculityprijct\Gym-System\bin\Debug\WindowsFormsApp1.exe
+D:\faculityprijct\Gym-System\bin\Debug\WindowsFormsApp1.pdb
+D:\faculityprijct\Gym-System\obj\Debug\Gym System.csproj.AssemblyReference.cache
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.addmembershipfrm.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Add.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Form2.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Renewal.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Form3.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Settings.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Form6.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Form4.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Login.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Dashboard.resources
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\faculityprijct\Gym-System\obj\Debug\Gym System.csproj.GenerateResource.cache
+D:\faculityprijct\Gym-System\obj\Debug\Gym System.csproj.CoreCompileInputs.cache
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.exe
+D:\faculityprijct\Gym-System\obj\Debug\WindowsFormsApp1.pdb

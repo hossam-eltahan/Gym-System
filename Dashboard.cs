@@ -57,6 +57,8 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Form frm = new Form1();
+            frm.Show();
 
         }
 
@@ -109,7 +111,7 @@ namespace WindowsFormsApp1
         {
             Form frm = new addmembershipfrm();
             frm.Show();
-            this.Close();
+            //this.Close();
         }
 
 
@@ -138,6 +140,35 @@ namespace WindowsFormsApp1
         private void button11_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form frm=new Form4();
+            frm.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form frm =new Renewal();
+            frm.Show();
+        }
+
+        private void Dashboard_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Form frm = new Form6();
+            frm.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form form = new Settings();
+            form.Show();
         }
     }
 }

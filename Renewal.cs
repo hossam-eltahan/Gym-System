@@ -18,5 +18,10 @@ namespace WindowsFormsApp1
         }
 
         public static object Designer { get; internal set; }
+
+        private void Renewal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

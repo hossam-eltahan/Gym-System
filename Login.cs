@@ -17,39 +17,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            button1.Focus();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             // Check email and password
@@ -94,18 +61,14 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-
+        private void Login_Load(object sender, EventArgs e)
+        {
+            textBox2.Focus();
+        }
     }
 }
