@@ -503,10 +503,7 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-<<<<<<<< HEAD:Revenue Report.Designer.cs
-            // Form3
-            // Renewal
->>>>>>>> origin/features/addingrevenuereportmembershipreportfrm:Renewal.Designer.cs
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -666,12 +663,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-<<<<<<<< HEAD:Revenue Report.Designer.cs
+
             this.Name = "Form3";
             this.Text = "Form3";
             this.Name = "Renewal";
             this.Text = "Form2";
->>>>>>>> origin/features/addingrevenuereportmembershipreportfrm:Renewal.Designer.cs
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -755,5 +751,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private int features;
+        private int origin;
+        private int addingrevenuereportmembershipreportfrm;
+
+        public object Designer { get; private set; }
     }
 }

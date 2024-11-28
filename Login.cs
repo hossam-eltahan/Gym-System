@@ -87,6 +87,12 @@ namespace WindowsFormsApp1
                 {
                     e.Cancel = true;
                 }
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
 
 
 

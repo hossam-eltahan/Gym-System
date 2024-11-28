@@ -16,5 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        public static object Designer { get; internal set; }
     }
 }

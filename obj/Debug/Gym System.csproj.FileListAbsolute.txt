@@ -36,3 +36,5 @@ D:\New folder\Gym-System\obj\Debug\Gym System.csproj.CoreCompileInputs.cache
 D:\New folder\Gym-System\obj\Debug\WindowsFormsApp1.exe
 D:\New folder\Gym-System\obj\Debug\WindowsFormsApp1.pdb
 D:\New folder\Gym-System\obj\Debug\WindowsFormsApp1.addmembershipfrm.resources
+D:\Gym-System\obj\Debug\WindowsFormsApp1.addmembershipfrm.resources
+D:\Gym-System\obj\Debug\WindowsFormsApp1.Form6.resources
