@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\",
+  "WorkspaceRootPath": "C:\\Users\\HP\\Documents\\GitHub\\Gym-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form2.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,26 +13,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.Designer.cs",
-              "RelativeDocumentMoniker": "Form2.Designer.cs",
               "ToolTip": "D:\\hossam\\Faculty Data\\Open Source\\gym project\\Gym-System\\Form2.Designer.cs",
-              "RelativeToolTip": "Form2.Designer.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T08:20:04.475Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             }
           ]
         }

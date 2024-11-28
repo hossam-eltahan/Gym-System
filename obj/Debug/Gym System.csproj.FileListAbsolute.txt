@@ -38,3 +38,23 @@ D:\New folder\Gym-System\obj\Debug\WindowsFormsApp1.pdb
 D:\New folder\Gym-System\obj\Debug\WindowsFormsApp1.addmembershipfrm.resources
 D:\Gym-System\obj\Debug\WindowsFormsApp1.addmembershipfrm.resources
 D:\Gym-System\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\HP\Documents\GitHub\Gym-System\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\HP\Documents\GitHub\Gym-System\bin\Debug\WindowsFormsApp1.exe
+C:\Users\HP\Documents\GitHub\Gym-System\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\Gym System.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.addmembershipfrm.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Add.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Renewal.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Settings.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Form6.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Dashboard.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\Gym System.csproj.GenerateResource.cache
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\Gym System.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.exe
+C:\Users\HP\Documents\GitHub\Gym-System\obj\Debug\WindowsFormsApp1.pdb
