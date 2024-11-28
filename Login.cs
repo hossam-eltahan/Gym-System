@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
 
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -57,6 +57,7 @@ namespace WindowsFormsApp1
             {
                 // Login successful: open Dashboard
                 Form dashboard = new Dashboard();
+                this.Tag = "3";
                 this.Hide();
                 dashboard.Show();
             }
@@ -67,11 +68,30 @@ namespace WindowsFormsApp1
             }
         }
 
-        private bool isClosing = false; // Flag to prevent multiple closing actions
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (this.Tag.ToString() == "1")
+            {
+                if (MessageBox.Show(
+                     "Are you sure you want to exit?",
+                    "Confirm Exit",
+                       MessageBoxButtons.YesNo,
+                     MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    this.Tag = "2";
+                    Application.Exit();
+
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
 
 
         }

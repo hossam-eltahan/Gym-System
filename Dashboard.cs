@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
         {
             //Form form = new Login();
             //form.Show();
-            
+
             this.Close();
         }
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
@@ -92,6 +92,9 @@ namespace WindowsFormsApp1
             this.FormClosing += new FormClosingEventHandler(Form3_FormClosing);
         }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
