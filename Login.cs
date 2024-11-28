@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
         public Login()
         {
             InitializeComponent();
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,6 +46,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
 
 
 
@@ -87,15 +87,6 @@ namespace WindowsFormsApp1
                 {
                     e.Cancel = true;
                 }
-            }
-            else
-            {
-                Application.Exit();
-            }
-
-
-        }
-
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -106,5 +97,6 @@ namespace WindowsFormsApp1
         {
 
         }
+
     }
 }
