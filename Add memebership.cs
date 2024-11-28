@@ -26,5 +26,14 @@ namespace WindowsFormsApp1
         {
 
         }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form frm= new Add();
+            frm.Show();
+            this.Close();
+        }
+
     }
 }
