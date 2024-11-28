@@ -80,6 +80,7 @@ namespace WindowsFormsApp1
         }
 
 
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -103,6 +104,7 @@ namespace WindowsFormsApp1
 
 
 
+
         private void addmembershipbtn_Click(object sender, EventArgs e)
         {
             Form frm = new addmembershipfrm();
@@ -111,15 +113,30 @@ namespace WindowsFormsApp1
         }
 
 
+
         private void addMemberbtn_Click(object sender, EventArgs e)
         {
             Form addfrm = new Add();
             addfrm.Show();
+
             //this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form frm= new Form3();
+            frm.Show();
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form2();
+            frm.Show();
         }
 
 
 
-        
+
     }
 }

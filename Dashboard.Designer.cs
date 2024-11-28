@@ -448,6 +448,8 @@
             this.button7.Text = "Revenue Report";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
+
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -462,6 +464,8 @@
             this.button8.Text = "Membership Report";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
+
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -507,6 +511,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
 
+
             this.Controls.Add(this.pictureBox1);
             this.Name = "Dashboard";
             this.Text = "Form3";
@@ -543,6 +548,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
+
         private System.Windows.Forms.Button addMemberbtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
