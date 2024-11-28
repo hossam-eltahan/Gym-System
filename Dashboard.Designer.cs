@@ -37,7 +37,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-
             this.addMemberbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -179,7 +178,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-
             // addMemberbtn
             // 
             this.addMemberbtn.FlatAppearance.BorderSize = 0;
@@ -406,6 +404,7 @@
             this.button11.Text = "Logout";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // button10
             // 
@@ -448,7 +447,6 @@
             this.button7.Text = "Revenue Report";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
-
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
@@ -464,7 +462,6 @@
             this.button8.Text = "Membership Report";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
-
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
@@ -498,9 +495,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-
             this.ClientSize = new System.Drawing.Size(1474, 1021);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
@@ -510,8 +505,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-
-
             this.Controls.Add(this.pictureBox1);
             this.Name = "Dashboard";
             this.Text = "Form3";

@@ -135,8 +135,9 @@ namespace WindowsFormsApp1
             frm.Show();
         }
 
-
-
-
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
