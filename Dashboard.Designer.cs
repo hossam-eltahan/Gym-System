@@ -89,6 +89,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Dachboard = new System.Windows.Forms.Button();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+           
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -120,6 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -153,7 +157,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(71, 200);
+            this.button4.Location = new System.Drawing.Point(71, 259);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(257, 42);
             this.button4.TabIndex = 7;
@@ -183,7 +187,7 @@
             this.addMemberbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addMemberbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addMemberbtn.ForeColor = System.Drawing.Color.Silver;
-            this.addMemberbtn.Location = new System.Drawing.Point(59, 11);
+            this.addMemberbtn.Location = new System.Drawing.Point(56, 11);
             this.addMemberbtn.Name = "addMemberbtn";
             this.addMemberbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.addMemberbtn.Size = new System.Drawing.Size(254, 42);
@@ -201,9 +205,9 @@
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.addmembershipbtn);
-            this.panel1.Location = new System.Drawing.Point(12, 248);
+            this.panel1.Location = new System.Drawing.Point(12, 307);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 123);
+            this.panel1.Size = new System.Drawing.Size(313, 122);
             this.panel1.TabIndex = 13;
             this.panel1.Visible = false;
             // 
@@ -292,7 +296,7 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Location = new System.Drawing.Point(12, 250);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(316, 660);
+            this.panel2.Size = new System.Drawing.Size(316, 601);
             this.panel2.TabIndex = 14;
             // 
             // pictureBox13
@@ -813,18 +817,48 @@
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 0;
             this.pictureBox22.TabStop = false;
+
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.InitialImage = null;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 200);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 259);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(47, 42);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // Dachboard
+            // 
+            this.Dachboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Dachboard.FlatAppearance.BorderSize = 0;
+            this.Dachboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dachboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Dachboard.ForeColor = System.Drawing.Color.Silver;
+            this.Dachboard.Location = new System.Drawing.Point(71, 201);
+            this.Dachboard.Name = "Dachboard";
+            this.Dachboard.Size = new System.Drawing.Size(257, 42);
+            this.Dachboard.TabIndex = 16;
+            this.Dachboard.Text = "Dashboard";
+            this.Dachboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Dachboard.UseVisualStyleBackColor = false;
+            this.Dachboard.Click += new System.EventHandler(this.Dachboard_Click);
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.InitialImage = null;
+            this.pictureBox16.Location = new System.Drawing.Point(12, 201);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 17;
+            this.pictureBox16.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -885,6 +919,8 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.Dachboard);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
@@ -940,6 +976,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1009,5 +1046,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.Button Dachboard;
+        private System.Windows.Forms.PictureBox pictureBox16;
     }
 }
