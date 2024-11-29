@@ -193,7 +193,7 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click_(object sender, EventArgs e)
         {
             log = "no";
             Form form = new Form6();

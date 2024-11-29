@@ -783,7 +783,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Renewal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Renewal_Load);
+            //this.Load += new System.EventHandler(this.Renewal_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Renewal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

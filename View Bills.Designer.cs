@@ -67,7 +67,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.membershipTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.button12 = new System.Windows.Forms.Button();
+            //this.button12 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.postcodeTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
 
-            this.button12 = new System.Windows.Forms.Button();
+            //this.button12 = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -553,7 +553,7 @@
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.fullNameTextBox);
             this.panel5.Controls.Add(this.membershipTypeComboBox);
-            this.panel5.Controls.Add(this.button12);
+            //this.panel5.Controls.Add(this.button12);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.postcodeTextBox);
             this.panel5.Controls.Add(this.label11);
@@ -634,15 +634,15 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(33, 373);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(117, 40);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "Filter";
-            this.button12.UseVisualStyleBackColor = false;
+            //this.button12.BackColor = System.Drawing.Color.DodgerBlue;
+            //this.button12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            //this.button12.Location = new System.Drawing.Point(33, 373);
+            //this.button12.Name = "button12";
+            //this.button12.Size = new System.Drawing.Size(117, 40);
+            //this.button12.TabIndex = 3;
+            //this.button12.Text = "Filter";
+            //this.button12.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -993,19 +993,19 @@
             this.label16.Text = "show ";
             // button12
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button12.ForeColor = System.Drawing.Color.Silver;
-            this.button12.Location = new System.Drawing.Point(81, 209);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(257, 42);
-            this.button12.TabIndex = 34;
-            this.button12.Text = "Dashboard";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            //this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            //this.button12.FlatAppearance.BorderSize = 0;
+            //this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            //this.button12.ForeColor = System.Drawing.Color.Silver;
+            //this.button12.Location = new System.Drawing.Point(81, 209);
+            //this.button12.Name = "button12";
+            //this.button12.Size = new System.Drawing.Size(257, 42);
+            //this.button12.TabIndex = 34;
+            //this.button12.Text = "Dashboard";
+            //this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.button12.UseVisualStyleBackColor = false;
+            //this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // pictureBox16
             // 
@@ -1029,7 +1029,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.button12);
+            //this.Controls.Add(this.button12);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
@@ -1118,7 +1118,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.ComboBox membershipTypeComboBox;
-        private System.Windows.Forms.Button button12;
+        //private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox postcodeTextBox;
         private System.Windows.Forms.Label label11;
@@ -1156,7 +1156,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewButtonColumn Column10;
-        private System.Windows.Forms.Button button12;
+        //private System.Windows.Forms.Button button12;
         private System.Windows.Forms.PictureBox pictureBox16;
     }
 }

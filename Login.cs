@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             // Check email and password
-            if ((textBox2.Text == "ahmed") && (textBox1.Text == "1234"))
+            if ((textBox2.Text == "admin") && (textBox1.Text == "1234"))
             {
                 // Login successful: open Dashboard
                 Form dashboard = new Dashboard();

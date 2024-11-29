@@ -59,7 +59,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            //this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
@@ -90,7 +90,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Dachboard = new System.Windows.Forms.Button();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            //this.pictureBox16 = new System.Windows.Forms.PictureBox();
            
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -105,7 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.panel6.SuspendLayout();
@@ -123,7 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -258,7 +258,7 @@
             this.button2.Text = "View and Manage";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            //this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // addmembershipbtn
             // 
@@ -501,7 +501,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.pictureBox16);
+            //this.panel4.Controls.Add(this.pictureBox16);
             this.panel4.Location = new System.Drawing.Point(391, 168);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(394, 123);
@@ -533,14 +533,14 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pictureBox16.Image = global::WindowsFormsApp1.Properties.Resources.group;
-            this.pictureBox16.Location = new System.Drawing.Point(8, 16);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(95, 94);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 0;
-            this.pictureBox16.TabStop = false;
+            //this.pictureBox16.BackColor = System.Drawing.Color.DodgerBlue;
+            //this.pictureBox16.Image = global::WindowsFormsApp1.Properties.Resources.group;
+            //this.pictureBox16.Location = new System.Drawing.Point(8, 16);
+            //this.pictureBox16.Name = "pictureBox16";
+            //this.pictureBox16.Size = new System.Drawing.Size(95, 94);
+            //this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.pictureBox16.TabIndex = 0;
+            //this.pictureBox16.TabStop = false;
             // 
             // panel5
             // 
@@ -850,15 +850,15 @@
             // 
             // pictureBox16
             // 
-            this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.InitialImage = null;
-            this.pictureBox16.Location = new System.Drawing.Point(12, 201);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 17;
-            this.pictureBox16.TabStop = false;
+            //this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            //this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            //this.pictureBox16.InitialImage = null;
+            //this.pictureBox16.Location = new System.Drawing.Point(12, 201);
+            //this.pictureBox16.Name = "pictureBox16";
+            //this.pictureBox16.Size = new System.Drawing.Size(47, 42);
+            //this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            //this.pictureBox16.TabIndex = 17;
+            //this.pictureBox16.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -919,7 +919,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox16);
+            //this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.Dachboard);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -952,7 +952,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -976,7 +976,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1019,7 +1019,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox16;
+        //private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel5;
@@ -1047,6 +1047,6 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Button Dachboard;
-        private System.Windows.Forms.PictureBox pictureBox16;
+        //private System.Windows.Forms.PictureBox pictureBox16;
     }
 }
