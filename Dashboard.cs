@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
 
         }
 
+        private string log = "yes";
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -57,7 +58,9 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form frm = new Form1();
+            frm.Show();
+            this.Close();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -73,21 +76,26 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
+            log = "yes";
             //Form form = new Login();
             //form.Show();
 
             this.Close();
+            
         }
 
 
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (log == "yes")
+            {
+                Form form = new Login();
 
-            Form form = new Login();
+                form.Tag = "1";
+                form.Show();
+            }
 
-            form.Tag = "1";
-            form.Show();
 
 
         }
@@ -107,6 +115,7 @@ namespace WindowsFormsApp1
 
         private void addmembershipbtn_Click(object sender, EventArgs e)
         {
+            log = "no";
             Form frm = new addmembershipfrm();
             frm.Show();
             this.Close();
@@ -116,28 +125,78 @@ namespace WindowsFormsApp1
 
         private void addMemberbtn_Click(object sender, EventArgs e)
         {
+            log = "no";
             Form addfrm = new Add();
             addfrm.Show();
+            this.Close();
 
-            //this.Close();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            log = "no";
             Form frm= new Form3();
             frm.Show();
+            this.Close();
             
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            log = "no";
             Form frm = new Form2();
             frm.Show();
+            this.Close();
         }
 
         private void button11_Click_1(object sender, EventArgs e)
         {
+            log = "yes";
             this.Close();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Renewal();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form4();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Settings();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            log = "no";
+            Form form = new Form6();
+
+           
+            form.Show();
+            this.Close();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dachboard_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
