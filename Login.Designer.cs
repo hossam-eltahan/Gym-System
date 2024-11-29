@@ -159,6 +159,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources._3d_gym_equipment;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1802, 1021);
             this.Controls.Add(this.label3);
