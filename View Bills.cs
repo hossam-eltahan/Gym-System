@@ -143,5 +143,25 @@ namespace WindowsFormsApp1
             frm.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form form = new Form6();
+
+
+            form.Show();
+            this.Close();
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            log = "no";
+            Form form = new Dashboard();
+
+
+            form.Show();
+            this.Close();
+        }
     }
 }

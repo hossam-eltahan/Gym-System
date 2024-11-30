@@ -1800,6 +1800,46 @@
   <metadata name="Column10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="pictureBox17.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAjCAYAAAD17ghaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
+        cQAAEnEB89x6jgAAAYRJREFUWEftlk1LAlEUhvtR0SJaSAs3ubECS/oyQgshQdBAhUzJLCkkN0K4MaNy
+        Y0kIJY2WpkWf/+itM3DjXq85QpAD3cWzepn3PNy5h5mh4VELBokSUAJKwFwCVtsUCudl3NQeBSrVJnyB
+        CBZWvLisaFJuBHVSNz+LIQjMuVb1B+7bHxLxZBr+jU1ojZeueS+ok7r5WQwlYC6BkbFx7KWzKBTLArl8
+        Ec4lDybsDmRzJ1JuBHVSNz+LIQgMAkHANjmD0tWtdIS15itC0R0se9ZxrbWl3AjqpG5+FkNdQnMJzC66
+        v95xq2vJbwSok7r5WQxBgFYlEIohf1oS1uggc6SvoMVqw3bqEMdnF0LeC+oKbyX7X0MaQrZ0ZAy7Y/47
+        p9vMZ0ZQF3XyM3gEgWmnS//ydR5h/eEN4WgSa74gqvUnKTeCOqmbn8Uw1yVUAj+t4V3rHdHEvv5XpDWe
+        pdyIvteQcHv9SKQyApHYrn6TaZWCkbiUG0GdnXMYksBfowSUwH8XsOATZ5i2ABQm79QAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAqBAAAJ4EAAAwMAAAAQAgAKglAABGFQAAKAAAABAA

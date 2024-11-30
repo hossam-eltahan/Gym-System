@@ -122,5 +122,15 @@ namespace WindowsFormsApp1
             frm.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form form = new addmembershipfrm();
+
+
+            form.Show();
+            this.Close();
+        }
     }
 }

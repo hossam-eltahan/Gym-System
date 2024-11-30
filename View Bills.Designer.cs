@@ -67,7 +67,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.membershipTypeComboBox = new System.Windows.Forms.ComboBox();
-            //this.button12 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.postcodeTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -101,9 +100,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
-
-            //this.button12 = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -130,6 +129,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -534,6 +534,7 @@
             this.button1.Text = "Add New";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -553,7 +554,6 @@
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.fullNameTextBox);
             this.panel5.Controls.Add(this.membershipTypeComboBox);
-            //this.panel5.Controls.Add(this.button12);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.postcodeTextBox);
             this.panel5.Controls.Add(this.label11);
@@ -631,18 +631,6 @@
             this.membershipTypeComboBox.Name = "membershipTypeComboBox";
             this.membershipTypeComboBox.Size = new System.Drawing.Size(626, 36);
             this.membershipTypeComboBox.TabIndex = 46;
-            // 
-            // button12
-            // 
-            //this.button12.BackColor = System.Drawing.Color.DodgerBlue;
-            //this.button12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            //this.button12.Location = new System.Drawing.Point(33, 373);
-            //this.button12.Name = "button12";
-            //this.button12.Size = new System.Drawing.Size(117, 40);
-            //this.button12.TabIndex = 3;
-            //this.button12.Text = "Filter";
-            //this.button12.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -991,26 +979,10 @@
             this.label16.Size = new System.Drawing.Size(62, 28);
             this.label16.TabIndex = 19;
             this.label16.Text = "show ";
-            // button12
-            // 
-            //this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            //this.button12.FlatAppearance.BorderSize = 0;
-            //this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            //this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            //this.button12.ForeColor = System.Drawing.Color.Silver;
-            //this.button12.Location = new System.Drawing.Point(81, 209);
-            //this.button12.Name = "button12";
-            //this.button12.Size = new System.Drawing.Size(257, 42);
-            //this.button12.TabIndex = 34;
-            //this.button12.Text = "Dashboard";
-            //this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.button12.UseVisualStyleBackColor = false;
-            //this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
             this.pictureBox16.InitialImage = null;
             this.pictureBox16.Location = new System.Drawing.Point(22, 209);
             this.pictureBox16.Name = "pictureBox16";
@@ -1019,17 +991,47 @@
             this.pictureBox16.TabIndex = 35;
             this.pictureBox16.TabStop = false;
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button12.ForeColor = System.Drawing.Color.Silver;
+            this.button12.Location = new System.Drawing.Point(81, 213);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(257, 42);
+            this.button12.TabIndex = 43;
+            this.button12.Text = "Dashboard";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.InitialImage = null;
+            this.pictureBox17.Location = new System.Drawing.Point(22, 209);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 44;
+            this.pictureBox17.TabStop = false;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox16);
-            //this.Controls.Add(this.button12);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
@@ -1037,7 +1039,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1045,8 +1046,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Bills";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form4_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form4_FormClosing);
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1077,6 +1078,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1158,5 +1160,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column10;
         //private System.Windows.Forms.Button button12;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }

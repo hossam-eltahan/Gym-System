@@ -58,10 +58,11 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            log = "no";
             Form frm = new Form1();
             frm.Show();
-
             this.Close();
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -208,7 +209,44 @@ namespace WindowsFormsApp1
 
         private void Dachboard_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form6();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form1();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form6();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
             
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form4();
+            frm.Show();
+            this.Close();
         }
     }
 }

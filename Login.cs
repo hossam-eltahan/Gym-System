@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Properties;
 
 namespace WindowsFormsApp1
 {
@@ -66,9 +67,31 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private async void Login_Load(object sender, EventArgs e)
         {
-            textBox2.Focus();
+            
+            var img = Resources.gym;
+            var resizedImg = new Bitmap(img, new Size(1820, 1068)); 
+           
+
+            BackgroundWorker bgWorker = new BackgroundWorker();
+            bgWorker.DoWork += (s,args) =>
+            {
+                args.Result = resizedImg;
+               
+            };
+            
+            bgWorker.RunWorkerCompleted += (s, args) =>
+            {
+                
+                this.BackgroundImage = (Image)args.Result;
+                this.BackgroundImageLayout = ImageLayout.Stretch;
+            };
+            bgWorker.RunWorkerAsync();
         }
+
     }
+
+        
+    
 }

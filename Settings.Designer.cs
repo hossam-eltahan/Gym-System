@@ -62,6 +62,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.uploadbtn = new System.Windows.Forms.Button();
             this.gymMangerTextBox = new System.Windows.Forms.TextBox();
             this.gymEmailTextBox = new System.Windows.Forms.TextBox();
             this.gymContactTextBox = new System.Windows.Forms.TextBox();
@@ -88,10 +90,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.uploadbtn = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -114,6 +115,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -350,6 +352,7 @@
             this.button10.Text = "Settings";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button6
             // 
@@ -518,6 +521,7 @@
             this.button1.Text = "Add New";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -568,6 +572,24 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1468, 890);
             this.panel6.TabIndex = 27;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(265, 743);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 16);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "no file choosen";
+            // 
+            // uploadbtn
+            // 
+            this.uploadbtn.Location = new System.Drawing.Point(137, 732);
+            this.uploadbtn.Name = "uploadbtn";
+            this.uploadbtn.Size = new System.Drawing.Size(122, 38);
+            this.uploadbtn.TabIndex = 45;
+            this.uploadbtn.Text = "Choose File";
+            this.uploadbtn.UseVisualStyleBackColor = true;
             // 
             // gymMangerTextBox
             // 
@@ -889,23 +911,6 @@
             this.label25.TabIndex = 0;
             this.label25.Text = "Password Settings";
             // 
-            // uploadbtn
-            // 
-            this.uploadbtn.Location = new System.Drawing.Point(137, 732);
-            this.uploadbtn.Name = "uploadbtn";
-            this.uploadbtn.Size = new System.Drawing.Size(122, 38);
-            this.uploadbtn.TabIndex = 45;
-            this.uploadbtn.Text = "Choose File";
-            this.uploadbtn.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(265, 743);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 16);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "no file choosen";
             // button13
             // 
             this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -925,7 +930,6 @@
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
             this.pictureBox16.InitialImage = null;
             this.pictureBox16.Location = new System.Drawing.Point(23, 207);
             this.pictureBox16.Name = "pictureBox16";
@@ -934,6 +938,18 @@
             this.pictureBox16.TabIndex = 41;
             this.pictureBox16.TabStop = false;
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.InitialImage = null;
+            this.pictureBox17.Location = new System.Drawing.Point(23, 207);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 42;
+            this.pictureBox17.TabStop = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -941,6 +957,8 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 100);
             this.ClientSize = new System.Drawing.Size(1924, 1021);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label3);
@@ -953,7 +971,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -989,6 +1006,7 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1059,5 +1077,6 @@
         private System.Windows.Forms.Button uploadbtn;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }

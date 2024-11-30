@@ -64,21 +64,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.actionsColumn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.amountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SharpColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actionsColumn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,10 +98,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -505,6 +507,7 @@
             this.button1.Text = "Add New";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -531,6 +534,52 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1584, 727);
             this.panel6.TabIndex = 37;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(1153, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 28);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "search: ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1256, 70);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(282, 22);
+            this.textBox1.TabIndex = 22;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(152, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 28);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "entries";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(72, 61);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(74, 34);
+            this.numericUpDown1.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 28);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "show ";
             // 
             // dataGridView1
             // 
@@ -581,6 +630,44 @@
             this.dataGridView1.Size = new System.Drawing.Size(1517, 532);
             this.dataGridView1.TabIndex = 1;
             // 
+            // SharpColumn
+            // 
+            this.SharpColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.SharpColumn.HeaderText = "#";
+            this.SharpColumn.MaxInputLength = 3;
+            this.SharpColumn.MinimumWidth = 6;
+            this.SharpColumn.Name = "SharpColumn";
+            this.SharpColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SharpColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.SharpColumn.Width = 60;
+            // 
+            // TypeColumn
+            // 
+            this.TypeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TypeColumn.HeaderText = "Type";
+            this.TypeColumn.MaxInputLength = 10;
+            this.TypeColumn.MinimumWidth = 6;
+            this.TypeColumn.Name = "TypeColumn";
+            this.TypeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TypeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.TypeColumn.Width = 150;
+            // 
+            // amountColumn
+            // 
+            this.amountColumn.HeaderText = "Amount";
+            this.amountColumn.MaxInputLength = 15;
+            this.amountColumn.MinimumWidth = 6;
+            this.amountColumn.Name = "amountColumn";
+            this.amountColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.amountColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // actionsColumn
+            // 
+            this.actionsColumn.HeaderText = "Actions";
+            this.actionsColumn.MinimumWidth = 50;
+            this.actionsColumn.Name = "actionsColumn";
+            this.actionsColumn.UseColumnTextForButtonValue = true;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
@@ -617,93 +704,9 @@
             this.label3.Text = "Manage Membership Types";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1153, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 28);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "search: ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(1256, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 22);
-            this.textBox1.TabIndex = 22;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(152, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 28);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "entries";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(72, 61);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(74, 34);
-            this.numericUpDown1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 28);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "show ";
-            // 
-            // actionsColumn
-            // 
-            this.actionsColumn.HeaderText = "Actions";
-            this.actionsColumn.MinimumWidth = 50;
-            this.actionsColumn.Name = "actionsColumn";
-            this.actionsColumn.UseColumnTextForButtonValue = true;
-            // 
-            // amountColumn
-            // 
-            this.amountColumn.HeaderText = "Amount";
-            this.amountColumn.MaxInputLength = 15;
-            this.amountColumn.MinimumWidth = 6;
-            this.amountColumn.Name = "amountColumn";
-            this.amountColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.amountColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TypeColumn
-            // 
-            this.TypeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.TypeColumn.HeaderText = "Type";
-            this.TypeColumn.MaxInputLength = 10;
-            this.TypeColumn.MinimumWidth = 6;
-            this.TypeColumn.Name = "TypeColumn";
-            this.TypeColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TypeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.TypeColumn.Width = 150;
-            // 
-            // SharpColumn
-            // 
-            this.SharpColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.SharpColumn.HeaderText = "#";
-            this.SharpColumn.MaxInputLength = 3;
-            this.SharpColumn.MinimumWidth = 6;
-            this.SharpColumn.Name = "SharpColumn";
-            this.SharpColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SharpColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.SharpColumn.Width = 60;
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
             this.pictureBox16.InitialImage = null;
             this.pictureBox16.Location = new System.Drawing.Point(22, 203);
             this.pictureBox16.Name = "pictureBox16";
@@ -728,11 +731,25 @@
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.InitialImage = null;
+            this.pictureBox17.Location = new System.Drawing.Point(22, 203);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 38;
+            this.pictureBox17.TabStop = false;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1021);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button12);
@@ -744,7 +761,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -753,8 +769,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Membership Types";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form6_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form6_FormClosing);
+            this.Load += new System.EventHandler(this.Form6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -774,11 +790,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -833,5 +850,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn actionsColumn;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }

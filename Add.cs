@@ -104,7 +104,10 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            log = "no";
+            Form frm = new Add();
+            frm.Show();
+            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
