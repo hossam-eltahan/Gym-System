@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class addmembershipfrm : Form
     {
+        Entities db = new Entities();
         public addmembershipfrm()
         {
             InitializeComponent();
@@ -135,6 +136,18 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            membership_types mt = new membership_types();
+            mt.type = textBox1.Text;
+            mt.amount = int.Parse(numericUpDown1.Text);
+            db.membership_types.Add(mt);
+            db.SaveChanges();
+            MessageBox.Show("Membership Type Added Successfully");
+            textBox1.Text = "";
+            numericUpDown1.Text = "";
         }
     }
 }

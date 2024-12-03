@@ -67,30 +67,6 @@ namespace WindowsFormsApp1
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.fullNameTextBox = new System.Windows.Forms.TextBox();
-            this.membershipTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.uploadbtn = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.occupationTextBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.postcodeTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.contactNumberTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,6 +74,32 @@ namespace WindowsFormsApp1
             this.home = new System.Windows.Forms.Button();
             this.Dachboard = new System.Windows.Forms.Button();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.contactNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.postcodeTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.occupationTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.uploadbtn = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.membershipTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.fullNameTextBox = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -118,10 +120,10 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -527,6 +529,7 @@ namespace WindowsFormsApp1
             this.button1.Text = "Add New";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -557,6 +560,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1501, 719);
             this.tableLayoutPanel1.TabIndex = 39;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel4
             // 
@@ -593,269 +597,6 @@ namespace WindowsFormsApp1
             this.label4.Text = "Add Member";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.fullNameTextBox);
-            this.panel5.Controls.Add(this.membershipTypeComboBox);
-            this.panel5.Controls.Add(this.listBox2);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.uploadbtn);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.occupationTextBox);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.postcodeTextBox);
-            this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.textBox5);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.addressTextBox);
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.emailTextBox);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.contactNumberTextBox);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.numericUpDown1);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 77);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1495, 536);
-            this.panel5.TabIndex = 2;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // fullNameTextBox
-            // 
-            this.fullNameTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullNameTextBox.Location = new System.Drawing.Point(37, 50);
-            this.fullNameTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.fullNameTextBox.Name = "fullNameTextBox";
-            this.fullNameTextBox.Size = new System.Drawing.Size(627, 38);
-            this.fullNameTextBox.TabIndex = 47;
-            this.fullNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // membershipTypeComboBox
-            // 
-            this.membershipTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.membershipTypeComboBox.FormattingEnabled = true;
-            this.membershipTypeComboBox.Items.AddRange(new object[] {
-            "Basic - $300",
-            "Gold - $1000",
-            "Silver - $750",
-            "Bronze - $500",
-            "Premium - $100"});
-            this.membershipTypeComboBox.Location = new System.Drawing.Point(38, 419);
-            this.membershipTypeComboBox.Name = "membershipTypeComboBox";
-            this.membershipTypeComboBox.Size = new System.Drawing.Size(626, 36);
-            this.membershipTypeComboBox.TabIndex = 46;
-            this.membershipTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // listBox2
-            // 
-            this.listBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 28;
-            this.listBox2.Items.AddRange(new object[] {
-            "male",
-            "female"});
-            this.listBox2.Location = new System.Drawing.Point(908, 50);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(335, 32);
-            this.listBox2.TabIndex = 45;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(919, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 31);
-            this.label16.TabIndex = 44;
-            this.label16.Text = "gender";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(864, 422);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(143, 25);
-            this.label15.TabIndex = 42;
-            this.label15.Text = "no file choosen";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(691, 379);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(170, 31);
-            this.label14.TabIndex = 41;
-            this.label14.Text = "member photo";
-            // 
-            // uploadbtn
-            // 
-            this.uploadbtn.Location = new System.Drawing.Point(696, 415);
-            this.uploadbtn.Name = "uploadbtn";
-            this.uploadbtn.Size = new System.Drawing.Size(162, 38);
-            this.uploadbtn.TabIndex = 40;
-            this.uploadbtn.Text = "Choose File";
-            this.uploadbtn.UseVisualStyleBackColor = true;
-            this.uploadbtn.Click += new System.EventHandler(this.uploadbtn_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(33, 379);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(196, 31);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "membership type";
-            // 
-            // occupationTextBox
-            // 
-            this.occupationTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.occupationTextBox.Location = new System.Drawing.Point(697, 321);
-            this.occupationTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.occupationTextBox.Name = "occupationTextBox";
-            this.occupationTextBox.Size = new System.Drawing.Size(547, 34);
-            this.occupationTextBox.TabIndex = 26;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(692, 287);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 31);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "occupation";
-            // 
-            // postcodeTextBox
-            // 
-            this.postcodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.postcodeTextBox.Location = new System.Drawing.Point(38, 321);
-            this.postcodeTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.postcodeTextBox.Name = "postcodeTextBox";
-            this.postcodeTextBox.Size = new System.Drawing.Size(626, 34);
-            this.postcodeTextBox.TabIndex = 24;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(33, 287);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 31);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "post code";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBox5.Location = new System.Drawing.Point(696, 230);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(547, 34);
-            this.textBox5.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(691, 196);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 31);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "country";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextBox.Location = new System.Drawing.Point(38, 230);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(626, 34);
-            this.addressTextBox.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(33, 196);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 31);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "address";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.emailTextBox.Location = new System.Drawing.Point(697, 138);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(547, 34);
-            this.emailTextBox.TabIndex = 18;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(692, 104);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 31);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "email";
-            // 
-            // contactNumberTextBox
-            // 
-            this.contactNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactNumberTextBox.Location = new System.Drawing.Point(37, 138);
-            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.contactNumberTextBox.Name = "contactNumberTextBox";
-            this.contactNumberTextBox.Size = new System.Drawing.Size(627, 38);
-            this.contactNumberTextBox.TabIndex = 16;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 31);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "contact number";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.numericUpDown1.Location = new System.Drawing.Point(698, 47);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(160, 34);
-            this.numericUpDown1.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(692, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 31);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "age";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 31);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "full name";
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -877,6 +618,7 @@ namespace WindowsFormsApp1
             this.button12.TabIndex = 0;
             this.button12.Text = "submit";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label3
             // 
@@ -903,6 +645,7 @@ namespace WindowsFormsApp1
             this.home.Size = new System.Drawing.Size(63, 49);
             this.home.TabIndex = 40;
             this.home.UseVisualStyleBackColor = false;
+            this.home.Click += new System.EventHandler(this.home_Click);
             // 
             // Dachboard
             // 
@@ -932,11 +675,290 @@ namespace WindowsFormsApp1
             this.pictureBox17.TabIndex = 42;
             this.pictureBox17.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(32, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "full name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(694, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 31);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Date of birth";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(32, 104);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(178, 31);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "contact number";
+            // 
+            // contactNumberTextBox
+            // 
+            this.contactNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNumberTextBox.Location = new System.Drawing.Point(37, 138);
+            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.contactNumberTextBox.Name = "contactNumberTextBox";
+            this.contactNumberTextBox.Size = new System.Drawing.Size(627, 38);
+            this.contactNumberTextBox.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(698, 187);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 31);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "email";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.emailTextBox.Location = new System.Drawing.Point(700, 230);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(547, 34);
+            this.emailTextBox.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(33, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 31);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "address";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.Location = new System.Drawing.Point(38, 230);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(626, 34);
+            this.addressTextBox.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(698, 285);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(95, 31);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "country";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.textBox5.Location = new System.Drawing.Point(699, 319);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(547, 34);
+            this.textBox5.TabIndex = 22;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(33, 287);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 31);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "post code";
+            // 
+            // postcodeTextBox
+            // 
+            this.postcodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.postcodeTextBox.Location = new System.Drawing.Point(38, 321);
+            this.postcodeTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.postcodeTextBox.Name = "postcodeTextBox";
+            this.postcodeTextBox.Size = new System.Drawing.Size(626, 34);
+            this.postcodeTextBox.TabIndex = 24;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(698, 387);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(130, 31);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "occupation";
+            // 
+            // occupationTextBox
+            // 
+            this.occupationTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.occupationTextBox.Location = new System.Drawing.Point(696, 421);
+            this.occupationTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.occupationTextBox.Name = "occupationTextBox";
+            this.occupationTextBox.Size = new System.Drawing.Size(547, 34);
+            this.occupationTextBox.TabIndex = 26;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(33, 379);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(196, 31);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "membership type";
+            // 
+            // uploadbtn
+            // 
+            this.uploadbtn.Location = new System.Drawing.Point(700, 495);
+            this.uploadbtn.Name = "uploadbtn";
+            this.uploadbtn.Size = new System.Drawing.Size(162, 38);
+            this.uploadbtn.TabIndex = 40;
+            this.uploadbtn.Text = "Choose File";
+            this.uploadbtn.UseVisualStyleBackColor = true;
+            this.uploadbtn.Click += new System.EventHandler(this.uploadbtn_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(698, 458);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(170, 31);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "member photo";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(868, 502);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(143, 25);
+            this.label15.TabIndex = 42;
+            this.label15.Text = "no file choosen";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(693, 104);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(88, 31);
+            this.label16.TabIndex = 44;
+            this.label16.Text = "gender";
+            // 
+            // membershipTypeComboBox
+            // 
+            this.membershipTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.membershipTypeComboBox.FormattingEnabled = true;
+            this.membershipTypeComboBox.Location = new System.Drawing.Point(38, 419);
+            this.membershipTypeComboBox.Name = "membershipTypeComboBox";
+            this.membershipTypeComboBox.Size = new System.Drawing.Size(626, 36);
+            this.membershipTypeComboBox.TabIndex = 46;
+            this.membershipTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // fullNameTextBox
+            // 
+            this.fullNameTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullNameTextBox.Location = new System.Drawing.Point(37, 50);
+            this.fullNameTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.fullNameTextBox.Name = "fullNameTextBox";
+            this.fullNameTextBox.Size = new System.Drawing.Size(627, 38);
+            this.fullNameTextBox.TabIndex = 47;
+            this.fullNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(697, 53);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(350, 30);
+            this.dateTimePicker1.TabIndex = 48;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button13);
+            this.panel5.Controls.Add(this.pictureBox18);
+            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.dateTimePicker1);
+            this.panel5.Controls.Add(this.fullNameTextBox);
+            this.panel5.Controls.Add(this.membershipTypeComboBox);
+            this.panel5.Controls.Add(this.label16);
+            this.panel5.Controls.Add(this.label15);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.uploadbtn);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.occupationTextBox);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.postcodeTextBox);
+            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Controls.Add(this.addressTextBox);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.emailTextBox);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.contactNumberTextBox);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 77);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1495, 536);
+            this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.comboBox1.Location = new System.Drawing.Point(696, 138);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(469, 36);
+            this.comboBox1.TabIndex = 49;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(1025, 486);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox18.TabIndex = 50;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.IndianRed;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(1086, 493);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(91, 40);
+            this.button13.TabIndex = 51;
+            this.button13.Text = "cancel";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click_1);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1818, 785);
+            this.ClientSize = new System.Drawing.Size(1924, 979);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.Dachboard);
             this.Controls.Add(this.home);
@@ -949,7 +971,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -980,11 +1001,11 @@ namespace WindowsFormsApp1
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,13 +1049,26 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button home;
+        private System.Windows.Forms.Button Dachboard;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox fullNameTextBox;
+        private System.Windows.Forms.ComboBox membershipTypeComboBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button uploadbtn;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox occupationTextBox;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox postcodeTextBox;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox addressTextBox;
@@ -1043,21 +1077,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox contactNumberTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox occupationTextBox;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox postcodeTextBox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button uploadbtn;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button home;
-        private System.Windows.Forms.ComboBox membershipTypeComboBox;
-        private System.Windows.Forms.TextBox fullNameTextBox;
-        private System.Windows.Forms.Button Dachboard;
-        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button13;
     }
 }
