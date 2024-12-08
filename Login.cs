@@ -90,6 +90,42 @@ namespace WindowsFormsApp1
             bgWorker.RunWorkerAsync();
         }
 
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text== "Enter Your Email")
+            {
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.White;
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "Enter Your Email";
+                textBox2.ForeColor = Color.Silver;
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Enter Password")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.White;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Enter Password";
+                textBox1.ForeColor = Color.Silver;
+                //textBox1.PasswordChar = '*';
+            }
+        }
     }
 
         

@@ -761,7 +761,7 @@
             // pictureBox22
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox22.Image = global::WindowsFormsApp1.Properties.Resources.cancel;
+            this.pictureBox22.Image = global::WindowsFormsApp1.Properties.Resources.cancel1;
             this.pictureBox22.Location = new System.Drawing.Point(8, 16);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(95, 94);
@@ -772,7 +772,7 @@
             // pictureBox21
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox21.Image = global::WindowsFormsApp1.Properties.Resources.bill;
+            this.pictureBox21.Image = global::WindowsFormsApp1.Properties.Resources.bill1;
             this.pictureBox21.Location = new System.Drawing.Point(8, 16);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(95, 94);
@@ -783,7 +783,7 @@
             // pictureBox20
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox20.Image = global::WindowsFormsApp1.Properties.Resources.user;
+            this.pictureBox20.Image = global::WindowsFormsApp1.Properties.Resources.add_group;
             this.pictureBox20.Location = new System.Drawing.Point(8, 16);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(95, 94);
@@ -794,7 +794,7 @@
             // pictureBox18
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox18.Image = global::WindowsFormsApp1.Properties.Resources.warning;
+            this.pictureBox18.Image = global::WindowsFormsApp1.Properties.Resources.time_left;
             this.pictureBox18.Location = new System.Drawing.Point(8, 16);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(95, 94);
@@ -805,7 +805,7 @@
             // pictureBox19
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox19.Image = global::WindowsFormsApp1.Properties.Resources.revenue;
+            this.pictureBox19.Image = global::WindowsFormsApp1.Properties.Resources.increase;
             this.pictureBox19.Location = new System.Drawing.Point(8, 16);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(95, 94);
@@ -816,7 +816,7 @@
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox17.Image = global::WindowsFormsApp1.Properties.Resources.member_card;
+            this.pictureBox17.Image = global::WindowsFormsApp1.Properties.Resources.member_card1;
             this.pictureBox17.Location = new System.Drawing.Point(8, 16);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(95, 94);
@@ -827,7 +827,7 @@
             // pictureBox23
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox23.Image = global::WindowsFormsApp1.Properties.Resources.group2;
+            this.pictureBox23.Image = global::WindowsFormsApp1.Properties.Resources.group_chat;
             this.pictureBox23.Location = new System.Drawing.Point(8, 16);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(95, 94);
