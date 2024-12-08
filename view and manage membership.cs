@@ -12,15 +12,64 @@ namespace WindowsFormsApp1
 {
     public partial class Form6 : Form
     {
+
         public Form6()
         {
             InitializeComponent();
         }
 
+        Gym_SystemEntities db=new Gym_SystemEntities();
+        private void LoadData()
+        {
+            // Get the data from the database and bind it to the DataGridView
+            var members = db.new_member_table.ToList();
+
+            // Bind data to DataGridView
+            dataGridView1.DataSource = members;
+
+            // Customize the DataGridView to make it more readable
+            CustomizeDataGridView();
+        }
+
+        private void CustomizeDataGridView()
+        {
+            // Customize the column headers to make them more readable
+            dataGridView1.Columns["full name"].HeaderText = "Full Name";
+            dataGridView1.Columns["contact number"].HeaderText = "Contact Number";
+            dataGridView1.Columns["address"].HeaderText = "Address";
+            dataGridView1.Columns["post code"].HeaderText = "Post Code";
+            dataGridView1.Columns["age"].HeaderText = "Age";
+            dataGridView1.Columns["gender"].HeaderText = "Gender";
+            dataGridView1.Columns["email"].HeaderText = "Email";
+            dataGridView1.Columns["country"].HeaderText = "Country";
+            dataGridView1.Columns["occupation"].HeaderText = "Occupation";
+            dataGridView1.Columns["membership photo"].HeaderText = "Membership Photo";
+            dataGridView1.Columns["membership type foreign"].HeaderText = "Membership Type";
+
+            // Optionally, you can set column widths for better readability
+            dataGridView1.Columns["full name"].Width = 150;
+            dataGridView1.Columns["contact number"].Width = 120;
+            dataGridView1.Columns["address"].Width = 200;
+            dataGridView1.Columns["post code"].Width = 100;
+            dataGridView1.Columns["age"].Width = 50;
+            dataGridView1.Columns["gender"].Width = 80;
+            dataGridView1.Columns["email"].Width = 150;
+            dataGridView1.Columns["country"].Width = 100;
+            dataGridView1.Columns["occupation"].Width = 150;
+
+            // Optionally, format the 'membership photo' column (if the data is an image, you can show a thumbnail)
+            dataGridView1.Columns["membership photo"].DefaultCellStyle.NullValue = "No Image"; // or show a placeholder text
+
+            // You can also adjust other properties like text alignment, font, etc.
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
         private void Form6_Load(object sender, EventArgs e)
         {
-
+            // Call LoadData method when the form loads
+            LoadData();
         }
+
 
         private void label7_Click(object sender, EventArgs e)
         {

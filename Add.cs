@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
+        Gym_SystemEntities db = new Gym_SystemEntities();
+
         public Add()
         {
             InitializeComponent();
@@ -23,6 +26,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
 
         private void uploadbtn_Click(object sender, EventArgs e)
         {
@@ -36,6 +40,7 @@ namespace WindowsFormsApp1
                 string filePath = openFileDialog.FileName;
 
                 label1.Text = filePath;
+
             }
         }
 
@@ -191,6 +196,23 @@ namespace WindowsFormsApp1
             Form frm = new Dashboard();
             frm.Show();
             this.Close();
+        }
+
+        private void submit(object sender, EventArgs e)
+        {
+            log = "yes";
+            Form frm = new Form();
+            frm.Show();
+            this.Close();
+            new_member_table member = new new_member_table();
+            member.full_name=fullNameTextBox.Text;
+            member.contact_number=int.Parse(contactNumberTextBox.Text);
+            member.address=addressTextBox.Text;
+            member.post_code=postcodeTextBox.Text;
+            member.email=emailTextBox.Text;
+            //member.age = int.Parse();
+
+
         }
     }
 }
