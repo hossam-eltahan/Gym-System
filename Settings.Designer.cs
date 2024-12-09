@@ -64,10 +64,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.uploadbtn = new System.Windows.Forms.Button();
-            this.gymMangerTextBox = new System.Windows.Forms.TextBox();
+            this.gymManagerTextBox = new System.Windows.Forms.TextBox();
             this.gymEmailTextBox = new System.Windows.Forms.TextBox();
             this.gymContactTextBox = new System.Windows.Forms.TextBox();
-            this.gymAddTextBox = new System.Windows.Forms.TextBox();
+            this.gymAddressTextBox = new System.Windows.Forms.TextBox();
             this.updateSettingsButton = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -144,7 +144,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
@@ -156,7 +156,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(23, 30);
@@ -168,7 +168,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
@@ -180,9 +180,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(1, 85);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 85);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(373, 104);
             this.pictureBox3.TabIndex = 20;
@@ -190,7 +190,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -206,7 +206,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.pictureBox13);
             this.panel2.Controls.Add(this.pictureBox14);
             this.panel2.Controls.Add(this.pictureBox15);
@@ -352,7 +352,6 @@
             this.button10.Text = "Settings";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button6
             // 
@@ -416,6 +415,7 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -427,7 +427,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Add Members";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
@@ -525,7 +525,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -552,10 +552,10 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.uploadbtn);
-            this.panel6.Controls.Add(this.gymMangerTextBox);
+            this.panel6.Controls.Add(this.gymManagerTextBox);
             this.panel6.Controls.Add(this.gymEmailTextBox);
             this.panel6.Controls.Add(this.gymContactTextBox);
-            this.panel6.Controls.Add(this.gymAddTextBox);
+            this.panel6.Controls.Add(this.gymAddressTextBox);
             this.panel6.Controls.Add(this.updateSettingsButton);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label10);
@@ -576,7 +576,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(265, 743);
+            this.label12.Location = new System.Drawing.Point(239, 743);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(97, 16);
             this.label12.TabIndex = 46;
@@ -584,60 +584,72 @@
             // 
             // uploadbtn
             // 
-            this.uploadbtn.Location = new System.Drawing.Point(137, 732);
+            this.uploadbtn.Location = new System.Drawing.Point(111, 732);
             this.uploadbtn.Name = "uploadbtn";
             this.uploadbtn.Size = new System.Drawing.Size(122, 38);
             this.uploadbtn.TabIndex = 45;
             this.uploadbtn.Text = "Choose File";
             this.uploadbtn.UseVisualStyleBackColor = true;
             // 
-            // gymMangerTextBox
+            // gymManagerTextBox
             // 
-            this.gymMangerTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gymMangerTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.gymMangerTextBox.Location = new System.Drawing.Point(83, 609);
-            this.gymMangerTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.gymMangerTextBox.MaxLength = 20;
-            this.gymMangerTextBox.Multiline = true;
-            this.gymMangerTextBox.Name = "gymMangerTextBox";
-            this.gymMangerTextBox.Size = new System.Drawing.Size(1362, 48);
-            this.gymMangerTextBox.TabIndex = 43;
+            this.gymManagerTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymManagerTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.gymManagerTextBox.Location = new System.Drawing.Point(57, 609);
+            this.gymManagerTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gymManagerTextBox.MaxLength = 20;
+            this.gymManagerTextBox.Multiline = true;
+            this.gymManagerTextBox.Name = "gymManagerTextBox";
+            this.gymManagerTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.gymManagerTextBox.TabIndex = 43;
+            this.gymManagerTextBox.Text = "Enter GYM manager name";
+            this.gymManagerTextBox.Enter += new System.EventHandler(this.gymManagerTextBox_Enter);
+            this.gymManagerTextBox.Leave += new System.EventHandler(this.gymManagerTextBox_Leave);
             // 
             // gymEmailTextBox
             // 
-            this.gymEmailTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gymEmailTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.gymEmailTextBox.Location = new System.Drawing.Point(83, 516);
+            this.gymEmailTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymEmailTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.gymEmailTextBox.Location = new System.Drawing.Point(57, 516);
             this.gymEmailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gymEmailTextBox.MaxLength = 20;
             this.gymEmailTextBox.Multiline = true;
             this.gymEmailTextBox.Name = "gymEmailTextBox";
             this.gymEmailTextBox.Size = new System.Drawing.Size(1362, 48);
             this.gymEmailTextBox.TabIndex = 42;
+            this.gymEmailTextBox.Text = "Enter GYM Email";
+            this.gymEmailTextBox.Enter += new System.EventHandler(this.gymEmailTextBox_Enter);
+            this.gymEmailTextBox.Leave += new System.EventHandler(this.gymEmailTextBox_Leave);
             // 
             // gymContactTextBox
             // 
-            this.gymContactTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gymContactTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.gymContactTextBox.Location = new System.Drawing.Point(83, 417);
+            this.gymContactTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymContactTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.gymContactTextBox.Location = new System.Drawing.Point(57, 417);
             this.gymContactTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gymContactTextBox.MaxLength = 20;
             this.gymContactTextBox.Multiline = true;
             this.gymContactTextBox.Name = "gymContactTextBox";
             this.gymContactTextBox.Size = new System.Drawing.Size(1362, 48);
             this.gymContactTextBox.TabIndex = 41;
+            this.gymContactTextBox.Text = "Enter GYM contact";
+            this.gymContactTextBox.Enter += new System.EventHandler(this.gymContactTextBox_Enter);
+            this.gymContactTextBox.Leave += new System.EventHandler(this.gymContactTextBox_Leave);
             // 
-            // gymAddTextBox
+            // gymAddressTextBox
             // 
-            this.gymAddTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gymAddTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.gymAddTextBox.Location = new System.Drawing.Point(83, 323);
-            this.gymAddTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.gymAddTextBox.MaxLength = 20;
-            this.gymAddTextBox.Multiline = true;
-            this.gymAddTextBox.Name = "gymAddTextBox";
-            this.gymAddTextBox.Size = new System.Drawing.Size(1362, 48);
-            this.gymAddTextBox.TabIndex = 40;
+            this.gymAddressTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gymAddressTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.gymAddressTextBox.Location = new System.Drawing.Point(57, 323);
+            this.gymAddressTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.gymAddressTextBox.MaxLength = 20;
+            this.gymAddressTextBox.Multiline = true;
+            this.gymAddressTextBox.Name = "gymAddressTextBox";
+            this.gymAddressTextBox.Size = new System.Drawing.Size(1362, 48);
+            this.gymAddressTextBox.TabIndex = 40;
+            this.gymAddressTextBox.Text = "Enter GYM address";
+            this.gymAddressTextBox.Enter += new System.EventHandler(this.gymAddressTextBox_Enter);
+            this.gymAddressTextBox.Leave += new System.EventHandler(this.gymAddressTextBox_Leave);
             // 
             // updateSettingsButton
             // 
@@ -645,7 +657,7 @@
             this.updateSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateSettingsButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateSettingsButton.ForeColor = System.Drawing.Color.White;
-            this.updateSettingsButton.Location = new System.Drawing.Point(88, 794);
+            this.updateSettingsButton.Location = new System.Drawing.Point(62, 794);
             this.updateSettingsButton.Margin = new System.Windows.Forms.Padding(4);
             this.updateSettingsButton.Name = "updateSettingsButton";
             this.updateSettingsButton.Size = new System.Drawing.Size(180, 48);
@@ -658,7 +670,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(83, 577);
+            this.label11.Location = new System.Drawing.Point(57, 577);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(159, 27);
@@ -670,7 +682,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(83, 484);
+            this.label10.Location = new System.Drawing.Point(57, 484);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(130, 27);
@@ -682,7 +694,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(83, 388);
+            this.label9.Location = new System.Drawing.Point(57, 388);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(152, 27);
@@ -694,7 +706,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(83, 291);
+            this.label8.Location = new System.Drawing.Point(57, 291);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(152, 27);
@@ -703,22 +715,25 @@
             // 
             // currencyTextBox
             // 
-            this.currencyTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currencyTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.currencyTextBox.Location = new System.Drawing.Point(83, 225);
+            this.currencyTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currencyTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.currencyTextBox.Location = new System.Drawing.Point(57, 225);
             this.currencyTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.currencyTextBox.MaxLength = 20;
             this.currencyTextBox.Multiline = true;
             this.currencyTextBox.Name = "currencyTextBox";
             this.currencyTextBox.Size = new System.Drawing.Size(1362, 48);
             this.currencyTextBox.TabIndex = 7;
+            this.currencyTextBox.Text = "Enter your currency";
+            this.currencyTextBox.Enter += new System.EventHandler(this.currencyTextBox_Enter);
+            this.currencyTextBox.Leave += new System.EventHandler(this.currencyTextBox_Leave);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(83, 189);
+            this.label7.Location = new System.Drawing.Point(57, 189);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 27);
@@ -730,7 +745,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(83, 691);
+            this.label6.Location = new System.Drawing.Point(57, 691);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 27);
@@ -740,23 +755,26 @@
             // systemNameTextBox
             // 
             this.systemNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.systemNameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.systemNameTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.systemNameTextBox.Location = new System.Drawing.Point(88, 128);
+            this.systemNameTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.systemNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.systemNameTextBox.Location = new System.Drawing.Point(57, 127);
             this.systemNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.systemNameTextBox.MaxLength = 50;
             this.systemNameTextBox.Multiline = true;
             this.systemNameTextBox.Name = "systemNameTextBox";
             this.systemNameTextBox.Size = new System.Drawing.Size(1362, 48);
             this.systemNameTextBox.TabIndex = 2;
+            this.systemNameTextBox.Text = "Enter System Name";
             this.systemNameTextBox.TextChanged += new System.EventHandler(this.systemNameTextBox_TextChanged);
+            this.systemNameTextBox.Enter += new System.EventHandler(this.systemNameTextBox_Enter);
+            this.systemNameTextBox.Leave += new System.EventHandler(this.systemNameTextBox_Leave);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(83, 87);
+            this.label5.Location = new System.Drawing.Point(57, 87);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 27);
@@ -805,39 +823,48 @@
             // 
             // confirmPassTextBox
             // 
-            this.confirmPassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmPassTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.confirmPassTextBox.Location = new System.Drawing.Point(83, 331);
+            this.confirmPassTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPassTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.confirmPassTextBox.Location = new System.Drawing.Point(57, 322);
             this.confirmPassTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.confirmPassTextBox.MaxLength = 20;
             this.confirmPassTextBox.Multiline = true;
             this.confirmPassTextBox.Name = "confirmPassTextBox";
             this.confirmPassTextBox.Size = new System.Drawing.Size(1362, 48);
             this.confirmPassTextBox.TabIndex = 43;
+            this.confirmPassTextBox.Text = "Confirm new password";
+            this.confirmPassTextBox.Enter += new System.EventHandler(this.confirmPassTextBox_Enter);
+            this.confirmPassTextBox.Leave += new System.EventHandler(this.confirmPassTextBox_Leave);
             // 
             // newPassTextBox
             // 
-            this.newPassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newPassTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.newPassTextBox.Location = new System.Drawing.Point(83, 228);
+            this.newPassTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.newPassTextBox.Location = new System.Drawing.Point(57, 219);
             this.newPassTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.newPassTextBox.MaxLength = 20;
             this.newPassTextBox.Multiline = true;
             this.newPassTextBox.Name = "newPassTextBox";
             this.newPassTextBox.Size = new System.Drawing.Size(1362, 48);
             this.newPassTextBox.TabIndex = 42;
+            this.newPassTextBox.Text = "Enter new password";
+            this.newPassTextBox.Enter += new System.EventHandler(this.newPassTextBox_Enter);
+            this.newPassTextBox.Leave += new System.EventHandler(this.newPassTextBox_Leave);
             // 
             // currentPassTextBox
             // 
-            this.currentPassTextBox.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentPassTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.currentPassTextBox.Location = new System.Drawing.Point(83, 129);
+            this.currentPassTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentPassTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.currentPassTextBox.Location = new System.Drawing.Point(57, 120);
             this.currentPassTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.currentPassTextBox.MaxLength = 20;
             this.currentPassTextBox.Multiline = true;
             this.currentPassTextBox.Name = "currentPassTextBox";
             this.currentPassTextBox.Size = new System.Drawing.Size(1362, 48);
             this.currentPassTextBox.TabIndex = 41;
+            this.currentPassTextBox.Text = "Enter current password";
+            this.currentPassTextBox.Enter += new System.EventHandler(this.currentPassTextBox_Enter);
+            this.currentPassTextBox.Leave += new System.EventHandler(this.currentPassTextBox_Leave);
             // 
             // changePassButton
             // 
@@ -845,7 +872,7 @@
             this.changePassButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changePassButton.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changePassButton.ForeColor = System.Drawing.Color.White;
-            this.changePassButton.Location = new System.Drawing.Point(85, 412);
+            this.changePassButton.Location = new System.Drawing.Point(59, 403);
             this.changePassButton.Margin = new System.Windows.Forms.Padding(4);
             this.changePassButton.Name = "changePassButton";
             this.changePassButton.Size = new System.Drawing.Size(204, 48);
@@ -858,7 +885,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(83, 299);
+            this.label15.Location = new System.Drawing.Point(57, 290);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(202, 27);
@@ -870,7 +897,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(83, 196);
+            this.label16.Location = new System.Drawing.Point(57, 187);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(167, 27);
@@ -882,7 +909,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label17.Location = new System.Drawing.Point(83, 97);
+            this.label17.Location = new System.Drawing.Point(57, 88);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(200, 27);
@@ -913,7 +940,7 @@
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -1047,10 +1074,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox gymMangerTextBox;
+        private System.Windows.Forms.TextBox gymManagerTextBox;
         private System.Windows.Forms.TextBox gymEmailTextBox;
         private System.Windows.Forms.TextBox gymContactTextBox;
-        private System.Windows.Forms.TextBox gymAddTextBox;
+        private System.Windows.Forms.TextBox gymAddressTextBox;
         private System.Windows.Forms.Button updateSettingsButton;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

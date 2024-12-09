@@ -319,6 +319,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\muscle.png" />
+    <None Include="Resources\muscle %281%29.png" />
+    <None Include="Resources\new-folder.png" />
+    <None Include="Resources\gearwheel.png" />
+    <None Include="Resources\image-gallery.png" />
+    <None Include="Resources\add.png" />
     <None Include="Resources\cancel1.png" />
     <None Include="Resources\calendar.png" />
     <None Include="Resources\bill1.png" />

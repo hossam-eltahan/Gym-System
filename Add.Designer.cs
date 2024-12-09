@@ -36,6 +36,14 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -45,13 +53,18 @@ namespace WindowsFormsApp1
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.postCodeTextBox = new System.Windows.Forms.TextBox();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.membershipTypeComboBox = new System.Windows.Forms.ComboBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -62,11 +75,9 @@ namespace WindowsFormsApp1
             this.label13 = new System.Windows.Forms.Label();
             this.occupationTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.postcodeTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.countrytxtbx = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -82,35 +93,12 @@ namespace WindowsFormsApp1
             this.Dachboard = new System.Windows.Forms.Button();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.home = new System.Windows.Forms.Button();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -119,14 +107,26 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
@@ -138,11 +138,11 @@ namespace WindowsFormsApp1
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(75, 30);
+            this.label1.Location = new System.Drawing.Point(89, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 52);
             this.label1.TabIndex = 17;
@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -166,7 +166,7 @@ namespace WindowsFormsApp1
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.pictureBox13);
             this.panel2.Controls.Add(this.pictureBox14);
             this.panel2.Controls.Add(this.pictureBox15);
@@ -187,6 +187,102 @@ namespace WindowsFormsApp1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(316, 601);
             this.panel2.TabIndex = 24;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.InitialImage = null;
+            this.pictureBox13.Location = new System.Drawing.Point(0, 470);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 18;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.InitialImage = null;
+            this.pictureBox14.Location = new System.Drawing.Point(0, 404);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 19;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.InitialImage = null;
+            this.pictureBox15.Location = new System.Drawing.Point(0, 334);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 20;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.InitialImage = null;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 269);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 16;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.InitialImage = null;
+            this.pictureBox7.Location = new System.Drawing.Point(0, 205);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 17;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.InitialImage = null;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 140);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 18;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.InitialImage = null;
+            this.pictureBox9.Location = new System.Drawing.Point(0, 77);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 19;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.InitialImage = null;
+            this.pictureBox10.Location = new System.Drawing.Point(0, 11);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 20;
+            this.pictureBox10.TabStop = false;
             // 
             // button11
             // 
@@ -323,6 +419,18 @@ namespace WindowsFormsApp1
             this.panel1.TabIndex = 23;
             this.panel1.Visible = false;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.InitialImage = null;
+            this.pictureBox11.Location = new System.Drawing.Point(0, 64);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 16;
+            this.pictureBox11.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -332,6 +440,18 @@ namespace WindowsFormsApp1
             this.panel3.Size = new System.Drawing.Size(307, 10);
             this.panel3.TabIndex = 16;
             this.panel3.Visible = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.InitialImage = null;
+            this.pictureBox12.Location = new System.Drawing.Point(0, 11);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(47, 42);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 17;
+            this.pictureBox12.TabStop = false;
             // 
             // button2
             // 
@@ -394,6 +514,16 @@ namespace WindowsFormsApp1
             this.panel4.Size = new System.Drawing.Size(1495, 68);
             this.panel4.TabIndex = 1;
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::WindowsFormsApp1.Properties.Resources.keyboard;
+            this.pictureBox16.Location = new System.Drawing.Point(38, 6);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(45, 54);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 1;
+            this.pictureBox16.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -410,6 +540,8 @@ namespace WindowsFormsApp1
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.addressTextBox);
+            this.panel5.Controls.Add(this.postCodeTextBox);
             this.panel5.Controls.Add(this.fullNameTextBox);
             this.panel5.Controls.Add(this.membershipTypeComboBox);
             this.panel5.Controls.Add(this.listBox2);
@@ -420,11 +552,9 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.occupationTextBox);
             this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.postcodeTextBox);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.countrytxtbx);
             this.panel5.Controls.Add(this.label10);
-            this.panel5.Controls.Add(this.addressTextBox);
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.emailTextBox);
             this.panel5.Controls.Add(this.label8);
@@ -440,19 +570,50 @@ namespace WindowsFormsApp1
             this.panel5.TabIndex = 2;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.addressTextBox.Location = new System.Drawing.Point(39, 230);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(627, 38);
+            this.addressTextBox.TabIndex = 49;
+            this.addressTextBox.Text = "Enter your address";
+            this.addressTextBox.Enter += new System.EventHandler(this.addressTextBox_Enter);
+            this.addressTextBox.Leave += new System.EventHandler(this.addressTextBox_Leave);
+            // 
+            // postCodeTextBox
+            // 
+            this.postCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postCodeTextBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.postCodeTextBox.Location = new System.Drawing.Point(39, 321);
+            this.postCodeTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.postCodeTextBox.Name = "postCodeTextBox";
+            this.postCodeTextBox.Size = new System.Drawing.Size(627, 38);
+            this.postCodeTextBox.TabIndex = 48;
+            this.postCodeTextBox.Text = "Enter your post code";
+            this.postCodeTextBox.Enter += new System.EventHandler(this.postCodeTextBox_Enter);
+            this.postCodeTextBox.Leave += new System.EventHandler(this.postCodeTextBox_Leave);
+            // 
             // fullNameTextBox
             // 
             this.fullNameTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.fullNameTextBox.Location = new System.Drawing.Point(37, 50);
             this.fullNameTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(627, 38);
             this.fullNameTextBox.TabIndex = 47;
+            this.fullNameTextBox.Text = "Enter your full name";
             this.fullNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.fullNameTextBox.Enter += new System.EventHandler(this.fullNameTextBox_Enter);
+            this.fullNameTextBox.Leave += new System.EventHandler(this.fullNameTextBox_Leave);
             // 
             // membershipTypeComboBox
             // 
             this.membershipTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.membershipTypeComboBox.ForeColor = System.Drawing.Color.DarkGray;
             this.membershipTypeComboBox.FormattingEnabled = true;
             this.membershipTypeComboBox.Items.AddRange(new object[] {
             "Basic - $300",
@@ -464,7 +625,10 @@ namespace WindowsFormsApp1
             this.membershipTypeComboBox.Name = "membershipTypeComboBox";
             this.membershipTypeComboBox.Size = new System.Drawing.Size(626, 36);
             this.membershipTypeComboBox.TabIndex = 46;
+            this.membershipTypeComboBox.Text = "Choose membership type";
             this.membershipTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.membershipTypeComboBox.Enter += new System.EventHandler(this.membershipTypeComboBox_Enter);
+            this.membershipTypeComboBox.Leave += new System.EventHandler(this.membershipTypeComboBox_Leave);
             // 
             // listBox2
             // 
@@ -474,7 +638,7 @@ namespace WindowsFormsApp1
             this.listBox2.Items.AddRange(new object[] {
             "male",
             "female"});
-            this.listBox2.Location = new System.Drawing.Point(908, 50);
+            this.listBox2.Location = new System.Drawing.Point(908, 47);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(335, 32);
             this.listBox2.TabIndex = 45;
@@ -484,20 +648,20 @@ namespace WindowsFormsApp1
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(919, 13);
+            this.label16.Location = new System.Drawing.Point(902, 13);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 31);
+            this.label16.Size = new System.Drawing.Size(90, 31);
             this.label16.TabIndex = 44;
-            this.label16.Text = "gender";
+            this.label16.Text = "Gender";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(864, 422);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(143, 25);
+            this.label15.Size = new System.Drawing.Size(146, 25);
             this.label15.TabIndex = 42;
-            this.label15.Text = "no file choosen";
+            this.label15.Text = "No file choosen";
             // 
             // label14
             // 
@@ -507,7 +671,7 @@ namespace WindowsFormsApp1
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(170, 31);
             this.label14.TabIndex = 41;
-            this.label14.Text = "member photo";
+            this.label14.Text = "Member Photo";
             // 
             // uploadbtn
             // 
@@ -525,18 +689,22 @@ namespace WindowsFormsApp1
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(33, 379);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(196, 31);
+            this.label13.Size = new System.Drawing.Size(201, 31);
             this.label13.TabIndex = 27;
-            this.label13.Text = "membership type";
+            this.label13.Text = "Membership Type";
             // 
             // occupationTextBox
             // 
             this.occupationTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.occupationTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.occupationTextBox.Location = new System.Drawing.Point(697, 321);
             this.occupationTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.occupationTextBox.Name = "occupationTextBox";
             this.occupationTextBox.Size = new System.Drawing.Size(547, 34);
             this.occupationTextBox.TabIndex = 26;
+            this.occupationTextBox.Text = "Enter occupation";
+            this.occupationTextBox.Enter += new System.EventHandler(this.occupationTextBox_Enter);
+            this.occupationTextBox.Leave += new System.EventHandler(this.occupationTextBox_Leave);
             // 
             // label12
             // 
@@ -544,18 +712,9 @@ namespace WindowsFormsApp1
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(692, 287);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 31);
+            this.label12.Size = new System.Drawing.Size(133, 31);
             this.label12.TabIndex = 25;
-            this.label12.Text = "occupation";
-            // 
-            // postcodeTextBox
-            // 
-            this.postcodeTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.postcodeTextBox.Location = new System.Drawing.Point(38, 321);
-            this.postcodeTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.postcodeTextBox.Name = "postcodeTextBox";
-            this.postcodeTextBox.Size = new System.Drawing.Size(626, 34);
-            this.postcodeTextBox.TabIndex = 24;
+            this.label12.Text = "Occupation";
             // 
             // label11
             // 
@@ -563,18 +722,22 @@ namespace WindowsFormsApp1
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(33, 287);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(117, 31);
+            this.label11.Size = new System.Drawing.Size(118, 31);
             this.label11.TabIndex = 23;
-            this.label11.Text = "post code";
+            this.label11.Text = "Post Code";
             // 
-            // textBox5
+            // countrytxtbx
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.textBox5.Location = new System.Drawing.Point(696, 230);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(547, 34);
-            this.textBox5.TabIndex = 22;
+            this.countrytxtbx.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.countrytxtbx.ForeColor = System.Drawing.Color.DarkGray;
+            this.countrytxtbx.Location = new System.Drawing.Point(696, 230);
+            this.countrytxtbx.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.countrytxtbx.Name = "countrytxtbx";
+            this.countrytxtbx.Size = new System.Drawing.Size(547, 34);
+            this.countrytxtbx.TabIndex = 22;
+            this.countrytxtbx.Text = "Enter your country";
+            this.countrytxtbx.Enter += new System.EventHandler(this.countrytxtbx_Enter);
+            this.countrytxtbx.Leave += new System.EventHandler(this.countrytxtbx_Leave);
             // 
             // label10
             // 
@@ -582,18 +745,9 @@ namespace WindowsFormsApp1
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(691, 196);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 31);
+            this.label10.Size = new System.Drawing.Size(98, 31);
             this.label10.TabIndex = 21;
-            this.label10.Text = "country";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressTextBox.Location = new System.Drawing.Point(38, 230);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(626, 34);
-            this.addressTextBox.TabIndex = 20;
+            this.label10.Text = "Country";
             // 
             // label9
             // 
@@ -601,18 +755,22 @@ namespace WindowsFormsApp1
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(33, 196);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 31);
+            this.label9.Size = new System.Drawing.Size(98, 31);
             this.label9.TabIndex = 19;
-            this.label9.Text = "address";
+            this.label9.Text = "Address";
             // 
             // emailTextBox
             // 
             this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.emailTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.emailTextBox.Location = new System.Drawing.Point(697, 138);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(547, 34);
             this.emailTextBox.TabIndex = 18;
+            this.emailTextBox.Text = "Enter your email";
+            this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
+            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // label8
             // 
@@ -622,16 +780,20 @@ namespace WindowsFormsApp1
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 31);
             this.label8.TabIndex = 17;
-            this.label8.Text = "email";
+            this.label8.Text = "Email";
             // 
             // contactNumberTextBox
             // 
             this.contactNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNumberTextBox.ForeColor = System.Drawing.Color.DarkGray;
             this.contactNumberTextBox.Location = new System.Drawing.Point(37, 138);
             this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.Size = new System.Drawing.Size(627, 38);
             this.contactNumberTextBox.TabIndex = 16;
+            this.contactNumberTextBox.Text = "Enter your contact number";
+            this.contactNumberTextBox.Enter += new System.EventHandler(this.contactNumberTextBox_Enter);
+            this.contactNumberTextBox.Leave += new System.EventHandler(this.contactNumberTextBox_Leave);
             // 
             // label7
             // 
@@ -639,9 +801,9 @@ namespace WindowsFormsApp1
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(32, 104);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 31);
+            this.label7.Size = new System.Drawing.Size(186, 31);
             this.label7.TabIndex = 15;
-            this.label7.Text = "contact number";
+            this.label7.Text = "Contact Number";
             // 
             // numericUpDown1
             // 
@@ -657,9 +819,9 @@ namespace WindowsFormsApp1
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(692, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 31);
+            this.label5.Size = new System.Drawing.Size(55, 31);
             this.label5.TabIndex = 11;
-            this.label5.Text = "age";
+            this.label5.Text = "Age";
             // 
             // label6
             // 
@@ -667,9 +829,9 @@ namespace WindowsFormsApp1
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(32, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.Size = new System.Drawing.Size(119, 31);
             this.label6.TabIndex = 0;
-            this.label6.Text = "full name";
+            this.label6.Text = "Full Name";
             // 
             // panel6
             // 
@@ -710,7 +872,7 @@ namespace WindowsFormsApp1
             // 
             // Dachboard
             // 
-            this.Dachboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Dachboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.Dachboard.FlatAppearance.BorderSize = 0;
             this.Dachboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Dachboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -726,7 +888,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox17
             // 
-            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
             this.pictureBox17.InitialImage = null;
             this.pictureBox17.Location = new System.Drawing.Point(22, 203);
@@ -746,16 +908,6 @@ namespace WindowsFormsApp1
             this.home.Size = new System.Drawing.Size(63, 49);
             this.home.TabIndex = 40;
             this.home.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::WindowsFormsApp1.Properties.Resources.keyboard;
-            this.pictureBox16.Location = new System.Drawing.Point(39, 6);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(45, 54);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 1;
-            this.pictureBox16.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -783,7 +935,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.InitialImage = null;
             this.pictureBox2.Location = new System.Drawing.Point(22, 30);
@@ -795,7 +947,7 @@ namespace WindowsFormsApp1
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Location = new System.Drawing.Point(0, 78);
             this.pictureBox3.Name = "pictureBox3";
@@ -803,129 +955,9 @@ namespace WindowsFormsApp1
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.InitialImage = null;
-            this.pictureBox13.Location = new System.Drawing.Point(0, 470);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 18;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.InitialImage = null;
-            this.pictureBox14.Location = new System.Drawing.Point(0, 404);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 19;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.InitialImage = null;
-            this.pictureBox15.Location = new System.Drawing.Point(0, 334);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 20;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.InitialImage = null;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 269);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 16;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.InitialImage = null;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 205);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 17;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.InitialImage = null;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 140);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 18;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.InitialImage = null;
-            this.pictureBox9.Location = new System.Drawing.Point(0, 77);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 19;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.InitialImage = null;
-            this.pictureBox10.Location = new System.Drawing.Point(0, 11);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 20;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.InitialImage = null;
-            this.pictureBox11.Location = new System.Drawing.Point(0, 64);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 16;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.InitialImage = null;
-            this.pictureBox12.Location = new System.Drawing.Point(0, 11);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 17;
-            this.pictureBox12.TabStop = false;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(373, 1051);
@@ -936,7 +968,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1818, 785);
+            this.ClientSize = new System.Drawing.Size(1818, 894);
             this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.Dachboard);
             this.Controls.Add(this.home);
@@ -960,20 +992,6 @@ namespace WindowsFormsApp1
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_FormClosing);
             this.Load += new System.EventHandler(this.Add_Load);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -982,8 +1000,22 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1035,9 +1067,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox countrytxtbx;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label label8;
@@ -1046,7 +1077,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox occupationTextBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox postcodeTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label14;
@@ -1059,5 +1089,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.Button Dachboard;
         private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.TextBox postCodeTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
     }
 }

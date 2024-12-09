@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.loginbtn = new System.Windows.Forms.Button();
+            this.password_textbox = new System.Windows.Forms.TextBox();
+            this.email_textbox = new System.Windows.Forms.TextBox();
+            this.remember_checkbox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,64 +44,64 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // loginbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(449, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Log In";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loginbtn.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginbtn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginbtn.ForeColor = System.Drawing.Color.White;
+            this.loginbtn.Location = new System.Drawing.Point(449, 403);
+            this.loginbtn.Name = "loginbtn";
+            this.loginbtn.Size = new System.Drawing.Size(101, 42);
+            this.loginbtn.TabIndex = 2;
+            this.loginbtn.Text = "Log In";
+            this.loginbtn.UseVisualStyleBackColor = false;
+            this.loginbtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // password_textbox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(779, 547);
-            this.textBox1.MaxLength = 4;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(414, 38);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Enter Password";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.password_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.password_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.password_textbox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.password_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.password_textbox.Location = new System.Drawing.Point(779, 547);
+            this.password_textbox.MaxLength = 4;
+            this.password_textbox.Multiline = true;
+            this.password_textbox.Name = "password_textbox";
+            this.password_textbox.Size = new System.Drawing.Size(414, 38);
+            this.password_textbox.TabIndex = 1;
+            this.password_textbox.Text = "Password";
+            this.password_textbox.Enter += new System.EventHandler(this.password_textbox_Enter_1);
+            this.password_textbox.Leave += new System.EventHandler(this.password_textbox_Leave_1);
             // 
-            // textBox2
+            // email_textbox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(779, 505);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(414, 36);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "Enter Your Email";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.email_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.email_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.email_textbox.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.email_textbox.ForeColor = System.Drawing.Color.Silver;
+            this.email_textbox.Location = new System.Drawing.Point(779, 505);
+            this.email_textbox.Multiline = true;
+            this.email_textbox.Name = "email_textbox";
+            this.email_textbox.Size = new System.Drawing.Size(414, 36);
+            this.email_textbox.TabIndex = 0;
+            this.email_textbox.Text = "Someone@example.com";
+            //this.email_textbox.TextChanged += new System.EventHandler(this.email_textbox_TextChanged);
+            this.email_textbox.Enter += new System.EventHandler(this.email_textbox_Enter_1);
+            this.email_textbox.Leave += new System.EventHandler(this.email_textbox_Leave);
             // 
-            // checkBox1
+            // remember_checkbox
             // 
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe Script", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.checkBox1.Location = new System.Drawing.Point(779, 611);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(281, 57);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Remember Me";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.remember_checkbox.BackColor = System.Drawing.Color.Transparent;
+            this.remember_checkbox.Font = new System.Drawing.Font("Segoe Script", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.remember_checkbox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.remember_checkbox.Location = new System.Drawing.Point(779, 611);
+            this.remember_checkbox.Name = "remember_checkbox";
+            this.remember_checkbox.Size = new System.Drawing.Size(281, 57);
+            this.remember_checkbox.TabIndex = 3;
+            this.remember_checkbox.Text = "Remember Me";
+            this.remember_checkbox.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -134,7 +134,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(235, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 46);
+            this.label3.Size = new System.Drawing.Size(132, 45);
             this.label3.TabIndex = 9;
             this.label3.Text = "System";
             // 
@@ -144,7 +144,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.loginbtn);
             this.groupBox1.Location = new System.Drawing.Point(711, 212);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(601, 553);
@@ -184,9 +184,9 @@
             this.ClientSize = new System.Drawing.Size(1802, 1021);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.remember_checkbox);
+            this.Controls.Add(this.password_textbox);
+            this.Controls.Add(this.email_textbox);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -208,10 +208,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button loginbtn;
+        private System.Windows.Forms.TextBox password_textbox;
+        private System.Windows.Forms.TextBox email_textbox;
+        private System.Windows.Forms.CheckBox remember_checkbox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;

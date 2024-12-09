@@ -159,10 +159,6 @@ namespace WindowsFormsApp1
 
         
 
-        private void Dashboard_Load_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -247,6 +243,21 @@ namespace WindowsFormsApp1
             Form frm = new Form4();
             frm.Show();
             this.Close();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

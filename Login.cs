@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             // Check email and password
-            if ((textBox2.Text == "admin") && (textBox1.Text == "1234"))
+            if ((email_textbox.Text == "admin") && (password_textbox.Text == "1234"))
             {
                 // Login successful: open Dashboard
                 Form dashboard = new Dashboard();
@@ -62,10 +62,10 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        //private void textBox2_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private async void Login_Load(object sender, EventArgs e)
         {
@@ -90,42 +90,49 @@ namespace WindowsFormsApp1
             bgWorker.RunWorkerAsync();
         }
 
-        private void textBox2_Enter(object sender, EventArgs e)
+
+
+        
+
+        private void email_textbox_Enter_1(object sender, EventArgs e)
         {
-            if (textBox2.Text== "Enter Your Email")
+
+            if (email_textbox.Text == "Someone@example.com")
             {
-                textBox2.Text = "";
-                textBox2.ForeColor = Color.White;
+                email_textbox.Text = "";
+                email_textbox.ForeColor = Color.White;
+            }
+
+        }
+
+        private void email_textbox_Leave(object sender, EventArgs e)
+        {
+            if (email_textbox.Text == "")
+            {
+                email_textbox.Text = "Someone@example.com";
+                email_textbox.ForeColor = Color.Silver;
             }
         }
 
-        private void textBox2_Leave(object sender, EventArgs e)
+        private void password_textbox_Enter_1(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (password_textbox.Text == "Password")
             {
-                textBox2.Text = "Enter Your Email";
-                textBox2.ForeColor = Color.Silver;
+                password_textbox.Text = "";
+                password_textbox.ForeColor = Color.White;
             }
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void password_textbox_Leave_1(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Enter Password")
+            if (password_textbox.Text == "")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.White;
+                password_textbox.Text = "Password";
+                password_textbox.ForeColor = Color.Silver;
             }
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "Enter Password";
-                textBox1.ForeColor = Color.Silver;
-                //textBox1.PasswordChar = '*';
-            }
-        }
+
     }
 
         
