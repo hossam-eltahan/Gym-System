@@ -566,7 +566,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(523, 34);
             this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Enter Membership Type";
+            this.textBox1.Text = " ";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -601,6 +602,7 @@
             this.button12.TabIndex = 0;
             this.button12.Text = "submit";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // home
             // 

@@ -219,48 +219,64 @@ namespace WindowsFormsApp1
 
         //اضافه البانل دي للفورم الاساسيه
 
-        private Panel CreateCard(int id, string fullname, decimal contactno, string address, string occupation, string post_code, string email,
-                                    string age, string gender, string country, string membership_type_forign, byte[] membership_photo)
+        private Panel CreateCard(int id, string fullname, string contactno, string address, string occupation,
+                           string post_code, string email, int age, string gender, string country,
+                           string membership_type_forign, string membership_photo, DateTime start_date, DateTime end_date)
         {
             Panel card = new Panel
             {
                 BorderStyle = BorderStyle.FixedSingle,
                 Width = 200,
-                Height = 200,
+                Height = 250, // زود الارتفاع لتناسب الحقول الجديدة
                 Margin = new Padding(10),
                 BackColor = System.Drawing.Color.AliceBlue,
-                Tag = id, // تخزين ID البطاقة
-                          //BackgroundImage = Resources.Image2,
-                          //BackgroundImageLayout = ImageLayout.Stretch // تكييف الصورة مع حجم البطاقة
+                Tag = id // تخزين ID البطاقة
             };
 
+            // عنوان البطاقة
             Label cardTitle = new Label
             {
                 Text = fullname,
                 Font = new System.Drawing.Font("Arial", 14, System.Drawing.FontStyle.Bold),
-                Dock = DockStyle.Fill,
+                Dock = DockStyle.Top,
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                 Height = 40
             };
 
+            // إضافة تفاصيل العضوية
+            Label membershipDates = new Label
+            {
+                Text = $"المدة: {start_date.ToShortDateString()} - {end_date.ToShortDateString()}",
+                Font = new System.Drawing.Font("Arial", 10),
+                Dock = DockStyle.Top,
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+            };
 
+            // زر عرض التفاصيل
             Button detailsButton = new Button
             {
                 Text = "عرض التفاصيل",
                 Dock = DockStyle.Bottom,
                 BackColor = System.Drawing.Color.LightSkyBlue,
-                Height = 30,
-                Width = 20
+                Height = 30
             };
-            detailsButton.Click += (sender, e) => MessageBox.Show($"ID: {id}\nfull name: {fullname}\ncontact number: {contactno}\naddress: {address}\n" +
-                $"job: {occupation}\npost code: {post_code}\nemail: {email}\nage: {age}\ngender: {gender}\ncountry: {country}\n" +
-                $"membership type: {membership_type_forign}\n{membership_photo}");
+            detailsButton.Click += (sender, e) =>
+            {
+                MessageBox.Show($"ID: {id}\nالاسم الكامل: {fullname}\nرقم الاتصال: {contactno}\n" +
+                                $"العنوان: {address}\nالوظيفة: {occupation}\nالرمز البريدي: {post_code}\n" +
+                                $"الإيميل: {email}\nالعمر: {age}\nالنوع: {gender}\nالدولة: {country}\n" +
+                                $"نوع العضوية: {membership_type_forign}\nالصورة: {membership_photo}\n" +
+                                $"تاريخ البداية: {start_date.ToShortDateString()}\nتاريخ النهاية: {end_date.ToShortDateString()}");
+            };
 
+            // ترتيب العناصر داخل البطاقة
             card.Controls.Add(detailsButton);
+            card.Controls.Add(membershipDates);
             card.Controls.Add(cardTitle);
 
             return card;
         }
+
 
         private Gym_SystemEntities db = new Gym_SystemEntities();
 
@@ -271,70 +287,73 @@ namespace WindowsFormsApp1
             {
                 var members = db.new_member_table.ToList();
 
-                flowPanel.Controls.Clear(); // تنظيف البطاقات القديمة
+                flowPanel.Controls.Clear();
 
                 foreach (var member in members)
                 {
-                    Panel card = CreateCard(member.id, member.full_name, member.contact_number, member.address, member.occupation, member.post_code, member.email,
-                        member.age, member.gender, member.country, member.membership_type_forign, member.membership_photo);
+                    Panel card = CreateCard(member.id, member.full_name, member.contact_number, member.address,
+                                            member.occupation, member.post_code, member.email, member.age,
+                                            member.gender, member.country, member.membership_type_forign,
+                                            member.membership_photo, member.start_date, member.end_date);
                     flowPanel.Controls.Add(card);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message);
+                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            string searchText = searchBox.Text.Trim().ToLower(); // تحويل النص المدخل إلى أحرف صغيرة
+            // قراءة النص المدخل وتحويله إلى أحرف صغيرة
+            string searchText = searchBox.Text.Trim().ToLower();
 
+            // التكرار على جميع البطاقات داخل flowPanel
             foreach (Control control in flowPanel.Controls)
             {
-                if (control is Panel card)
+                if (control is Panel card) // التأكد أن العنصر هو Panel
                 {
-                    // Retrieve the card ID and full name
-                    int id = card.Tag != null ? (int)card.Tag : -1;
-                    Label titleLabel = card.Controls.OfType<Label>().FirstOrDefault();
+                    // استرجاع ID من Tag الخاص بالبطاقة
+                    int cardId = card.Tag is int id ? id : -1;
 
-                    // Default visibility to false
+                    // البحث عن الـ Label الذي يحتوي على الاسم
+                    Label nameLabel = card.Controls.OfType<Label>().FirstOrDefault();
+
+                    // افتراض عدم وجود تطابق
                     bool isMatch = false;
 
-                    if (titleLabel != null)
+                    if (nameLabel != null)
                     {
-                        string fullname = titleLabel.Text.ToLower(); // تحويل الاسم الكامل إلى أحرف صغيرة
+                        // قراءة النص من الاسم وتحويله إلى أحرف صغيرة
+                        string cardName = nameLabel.Text.ToLower();
 
-                        // Check if the search text is a valid number
-                        bool isNumericSearch = int.TryParse(searchText, out int searchId);
-
-                        // If searchText is a valid number, compare it with the id
-                        if (isNumericSearch && id == searchId)
+                        // التحقق مما إذا كان النص المدخل رقميًا
+                        if (int.TryParse(searchText, out int searchId))
                         {
-                            isMatch = true;
+                            // إذا كان البحث رقميًا، نطابقه مع ID
+                            isMatch = (cardId == searchId);
                         }
-                        else if (fullname.Contains(searchText)) // Otherwise, search in fullname
+                        else
                         {
-                            isMatch = true;
+                            // إذا كان البحث نصيًا، نبحث في الاسم
+                            isMatch = cardName.Contains(searchText);
                         }
                     }
 
-                    // Toggle visibility based on match
+                    // التحكم في ظهور البطاقة بناءً على وجود تطابق
                     card.Visible = isMatch;
                 }
             }
 
-            // Optional: Show a message if no matches are found
-            bool anyVisible = flowPanel.Controls.OfType<Panel>().Any(c => c.Visible);
-            if (!anyVisible)
+            // عرض رسالة إذا لم يتم العثور على أي نتائج
+            if (!flowPanel.Controls.OfType<Panel>().Any(c => c.Visible))
             {
                 MessageBox.Show("لا توجد نتائج مطابقة للبحث.", "نتائج البحث", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-
-
-
-        private void viewmember_Load(object sender, EventArgs e) { }
+        //private void viewmember_Load(object sender, EventArgs e) { }
     }
 }

@@ -16,16 +16,19 @@ namespace WindowsFormsApp1
     {
         public int id { get; set; }
         public string full_name { get; set; }
-        public decimal contact_number { get; set; }
+        public string contact_number { get; set; }
         public string address { get; set; }
         public string post_code { get; set; }
-        public string age { get; set; }
+        public int age { get; set; }
         public string gender { get; set; }
         public string email { get; set; }
         public string country { get; set; }
         public string occupation { get; set; }
-        public byte[] membership_photo { get; set; }
+        public string membership_photo { get; set; }
         public string membership_type_forign { get; set; }
+        public int number_of_month { get; set; }
+        public System.DateTime start_date { get; set; }
+        public System.DateTime end_date { get; set; }
     
         public virtual membership_report_table membership_report_table { get; set; }
         public virtual membership_type_table membership_type_table { get; set; }

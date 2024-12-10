@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
+        private Gym_SystemEntities db = new Gym_SystemEntities();
+
         public Add()
         {
             InitializeComponent();
@@ -25,20 +29,26 @@ namespace WindowsFormsApp1
 
         }
 
+        private string selectedPhotoPath = "default.jpg"; // Default photo
+
         private void uploadbtn_Click(object sender, EventArgs e)
         {
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
-            openFileDialog.Title = "Select an Image File";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string filePath = openFileDialog.FileName;
+                openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    selectedPhotoPath = openFileDialog.FileName; // Store the selected file path
+                    MessageBox.Show("Photo selected: " + selectedPhotoPath);
+                    label15.Text = "Choosen";
 
-                label1.Text = filePath;
+                    pictureBox18.Image = Image.FromFile(selectedPhotoPath);
+                    pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
+                    button13.Visible = true;
+                }
             }
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -50,9 +60,9 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Add_Load(object sender, EventArgs e)
+        private async void Add_Load(object sender, EventArgs e)
         {
-
+            await LoadMembershipTypesAsync();
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -60,25 +70,53 @@ namespace WindowsFormsApp1
 
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listBox2.Items.Add("male");
-            listBox2.Items.Add("female");
-        }
+
 
         private void button13_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            membershipTypeComboBox.Items.Add("Basic - $300");
-            membershipTypeComboBox.Items.Add("Gold - $1000");
-            membershipTypeComboBox.Items.Add("Silver - $750");
-            membershipTypeComboBox.Items.Add("Bronze - $500");
-            membershipTypeComboBox.Items.Add("Premium - $1200");
+
         }
+
+
+        private async Task LoadMembershipTypesAsync()
+        {
+            try
+            {
+                // Clear existing items in the ComboBox
+                membershipTypeComboBox.Items.Clear();
+
+                // Fetch membership types asynchronously
+                var membershipTypes = await Task.Run(() => db.membership_type_table.Select(mt => mt.membershiptype).ToList());
+                var membershipamount = await Task.Run(() => db.membership_type_table.Select(mt => mt.amount).ToList());
+
+
+
+                for (int i = 0; i < membershipTypes.Count; i++)
+                {
+                    membershipTypeComboBox.Items.Add(membershipTypes[i] + "  $" + membershipamount[i]);
+                }
+
+                // Populate the ComboBox
+
+
+                // Optionally, set the first item as selected
+                if (membershipTypeComboBox.Items.Count > 0)
+                {
+                    membershipTypeComboBox.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading membership types: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
@@ -105,10 +143,6 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            log = "no";
-            Form frm = new Add();
-            frm.Show();
-            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -194,146 +228,211 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void fullNameTextBox_Enter(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
-            if (fullNameTextBox.Text == "Enter your full name")
+            
+        }
+
+        // Helper function to validate email format
+        private bool IsValidEmail(string email)
+        {
+            try
             {
-                fullNameTextBox.Text = "";
-                fullNameTextBox.ForeColor = Color.Black;
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
             }
         }
 
-        private void fullNameTextBox_Leave(object sender, EventArgs e)
+        // Clear form inputs method
+        private void ClearFormInputs()
         {
-            if (fullNameTextBox.Text == "")
-            {
-                fullNameTextBox.Text = "Enter your full name";
-                fullNameTextBox.ForeColor = Color.DarkGray;
-            }
+            fullNameTextBox.Text = "";
+            numericUpDown1.Value = 1;
+            listBox2.SelectedIndex = -1;
+            contactNumberTextBox.Text = "";
+            emailTextBox.Text = "";
+            addressTextBox.Text = "";
+            countrytxtbx.Text = "";
+            postCodeTextBox.Text = "";
+            occupationTextBox.Text = "";
+            membershipTypeComboBox.SelectedIndex = -1;
+            selectedPhotoPath = "default.jpg";
         }
 
-        private void contactNumberTextBox_Enter(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
-            if (contactNumberTextBox.Text == "Enter your contact number")
-            {
-                contactNumberTextBox.Text = "";
-                contactNumberTextBox.ForeColor = Color.Black;
-            }
+
         }
 
-        private void contactNumberTextBox_Leave(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (contactNumberTextBox.Text == "")
-            {
-                contactNumberTextBox.Text = "Enter your contact number";
-                contactNumberTextBox.ForeColor = Color.DarkGray;
-            }
+
         }
 
-        private void addressTextBox_Enter(object sender, EventArgs e)
+        private void button13_Click_1(object sender, EventArgs e)
         {
-            if (addressTextBox.Text == "Enter your address")
-            {
-                addressTextBox.Text = "";
-                addressTextBox.ForeColor = Color.Black;
-            }
+            selectedPhotoPath = "default.jpg";
+            pictureBox18.Image = null;
+            label15.Text = "no file choosen";
+            button13.Visible = false;
+
         }
 
-        private void addressTextBox_Leave(object sender, EventArgs e)
+        private void home_Click(object sender, EventArgs e)
         {
-            if (addressTextBox.Text == "")
-            {
-                addressTextBox.Text = "Enter your address";
-                addressTextBox.ForeColor = Color.DarkGray;
-            }
-            }
 
-            private void postCodeTextBox_Enter(object sender, EventArgs e)
-        {
-            if (postCodeTextBox.Text == "Enter your post code")
-            {
-                postCodeTextBox.Text = "";
-                postCodeTextBox.ForeColor = Color.Black;
-            }
+            log = "no";
+            Form frm = new Dashboard();
+            frm.Show();
+            this.Close();
+
         }
 
-        private void postCodeTextBox_Leave(object sender, EventArgs e)
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-            if (postCodeTextBox.Text == "")
-            {
-                postCodeTextBox.Text = "Enter your post code";
-                postCodeTextBox.ForeColor = Color.DarkGray;
-            }
+
         }
 
-        private void membershipTypeComboBox_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (membershipTypeComboBox.Text == "Choose membership type")
-            {
-                membershipTypeComboBox.Text = "";
-                membershipTypeComboBox.ForeColor = Color.Black;
-            }
+
+            log = "no";
+            Form frm = new addmembershipfrm();
+            frm.Show();
+            this.Close();
         }
 
-        private void membershipTypeComboBox_Leave(object sender, EventArgs e)
+        private void button12_Click_1(object sender, EventArgs e)
         {
-            if (membershipTypeComboBox.Text == "")
+            try
             {
-                membershipTypeComboBox.Text = "Choose membership type";
-                membershipTypeComboBox.ForeColor = Color.Black;
-            }
-        }
+                // Create a new member object
+                new_member_table m = new new_member_table();
 
-        private void emailTextBox_Enter(object sender, EventArgs e)
-        {
-            if (emailTextBox.Text == "Enter your email")
-            {
-                emailTextBox.Text = "";
-                emailTextBox.ForeColor = Color.Black;
-            }
-        }
+                // Input validation
+                DateTime minimumDate = new DateTime(1900, 1, 1); // Minimum allowable DOB
+                if (string.IsNullOrWhiteSpace(fullNameTextBox.Text))
+                {
+                    MessageBox.Show("Full Name cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (numericUpDown1.Value < 10)
+                {
+                    MessageBox.Show("age is invalid.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(listBox2.Text))
+                {
+                    MessageBox.Show("Gender must be selected.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(contactNumberTextBox.Text))
+                {
+                    MessageBox.Show("Contact Number cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(emailTextBox.Text) || !IsValidEmail(emailTextBox.Text))
+                {
+                    MessageBox.Show("Enter a valid Email.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(addressTextBox.Text))
+                {
+                    MessageBox.Show("Address cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(countrytxtbx.Text))
+                {
+                    MessageBox.Show("Country cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (membershipTypeComboBox.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Select a Membership Type.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (numericUpDown2.Value <= 0)
+                {
+                    MessageBox.Show("Enter a valid number.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-        private void emailTextBox_Leave(object sender, EventArgs e)
-        {
-            if (emailTextBox.Text == "")
-            {
-                emailTextBox.Text = "Enter your email";
-                emailTextBox.ForeColor = Color.DarkGray;
-            }
-        }
-        private void countrytxtbx_Enter(object sender, EventArgs e)
-        {
-            if (countrytxtbx.Text == "Enter your country")
-            {
-                countrytxtbx.Text = "";
-                countrytxtbx.ForeColor = Color.Black;
-            }
-        }
+                // Assign values from the form inputs
+                m.full_name = fullNameTextBox.Text;
+                m.age = Convert.ToInt32(numericUpDown1.Value);
+                m.gender = listBox2.Text;
+                m.contact_number = contactNumberTextBox.Text;
+                m.email = emailTextBox.Text;
+                m.address = addressTextBox.Text;
+                m.country = countrytxtbx.Text;
+                m.post_code = postCodeTextBox.Text;
+                m.occupation = occupationTextBox.Text;
+                m.number_of_month = Convert.ToInt32(numericUpDown2.Value);
 
-        private void countrytxtbx_Leave(object sender, EventArgs e)
-        {
-            if (countrytxtbx.Text == "")
-            {
-                countrytxtbx.Text = "Enter your country";
-                countrytxtbx.ForeColor = Color.DarkGray;
-            }
-        }
+                // Assign the selected membership type
+                m.membership_type_forign = membershipTypeComboBox.Text; // Assuming ComboBox index matches membership type ID
 
-        private void occupationTextBox_Enter(object sender, EventArgs e)
-        {
-            if (occupationTextBox.Text == "Enter occupation")
-            {
-                occupationTextBox.Text = "";
-                occupationTextBox.ForeColor = Color.Black;
-            }
-        }
+                // Generate a random membership number
+                // Random rand = new Random();
+                //m.membership_number = "CA-" + rand.Next(100000, 999999).ToString();
 
-        private void occupationTextBox_Leave(object sender, EventArgs e)
-        {
-            if (occupationTextBox.Text == "")
+
+                // Assign the current date as the creation date
+                m.start_date = DateTime.Today;
+                m.end_date = m.start_date.AddMonths(((int)numericUpDown2.Value));
+
+                // Handle photo upload
+                // Handle photo upload
+                if (selectedPhotoPath != "default.jpg")
+                {
+                    // Define the destination folder for photos
+                    string destinationFolder = Path.Combine(Application.StartupPath, "Photos");
+
+                    // Ensure the destination folder exists
+                    if (!Directory.Exists(destinationFolder))
+                    {
+                        Directory.CreateDirectory(destinationFolder);
+                    }
+
+                    // Define the destination path
+                    string destinationPath = Path.Combine(destinationFolder, Path.GetFileName(selectedPhotoPath));
+
+                    // Copy the selected photo to the destination folder
+                    File.Copy(selectedPhotoPath, destinationPath, true);
+
+                     //Save only the file name to the database
+                     m.membership_photo = Path.GetFileName(selectedPhotoPath);
+                }
+                else
+                {
+                    // Use the default photo if none was selected
+                    m.membership_photo = "default.jpg";
+                }
+
+
+                // Calculate the expiry date (e.g., 1 year from today)
+                // m.expiry_date = DateTime.Today.AddYears(1);
+
+                //m.bills = null; // Add billing logic if applicable
+                //m.renews = null; // Add renewal logic if applicable
+
+                // Add the new member to the database
+                db.new_member_table.Add(m);
+                db.SaveChanges();
+
+                // Show success message
+                MessageBox.Show("Member added successfully!");
+
+                // Clear the form inputs
+                ClearFormInputs();
+            }
+            catch (Exception ex)
             {
-                occupationTextBox.Text = "Enter occupation";
-                occupationTextBox.ForeColor = Color.DarkGray;
+                MessageBox.Show($"An error occurred: {ex.Message}\n\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

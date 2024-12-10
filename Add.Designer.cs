@@ -63,6 +63,8 @@ namespace WindowsFormsApp1
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.postCodeTextBox = new System.Windows.Forms.TextBox();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
@@ -98,6 +100,8 @@ namespace WindowsFormsApp1
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.button13 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -114,6 +118,7 @@ namespace WindowsFormsApp1
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
@@ -122,6 +127,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -540,6 +546,10 @@ namespace WindowsFormsApp1
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.button13);
+            this.panel5.Controls.Add(this.pictureBox18);
+            this.panel5.Controls.Add(this.numericUpDown2);
+            this.panel5.Controls.Add(this.label17);
             this.panel5.Controls.Add(this.addressTextBox);
             this.panel5.Controls.Add(this.postCodeTextBox);
             this.panel5.Controls.Add(this.fullNameTextBox);
@@ -570,6 +580,24 @@ namespace WindowsFormsApp1
             this.panel5.TabIndex = 2;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.numericUpDown2.Location = new System.Drawing.Point(716, 421);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(191, 34);
+            this.numericUpDown2.TabIndex = 51;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(710, 379);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(197, 31);
+            this.label17.TabIndex = 50;
+            this.label17.Text = "number of month";
+            // 
             // addressTextBox
             // 
             this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -580,8 +608,6 @@ namespace WindowsFormsApp1
             this.addressTextBox.Size = new System.Drawing.Size(627, 38);
             this.addressTextBox.TabIndex = 49;
             this.addressTextBox.Text = "Enter your address";
-            this.addressTextBox.Enter += new System.EventHandler(this.addressTextBox_Enter);
-            this.addressTextBox.Leave += new System.EventHandler(this.addressTextBox_Leave);
             // 
             // postCodeTextBox
             // 
@@ -593,8 +619,6 @@ namespace WindowsFormsApp1
             this.postCodeTextBox.Size = new System.Drawing.Size(627, 38);
             this.postCodeTextBox.TabIndex = 48;
             this.postCodeTextBox.Text = "Enter your post code";
-            this.postCodeTextBox.Enter += new System.EventHandler(this.postCodeTextBox_Enter);
-            this.postCodeTextBox.Leave += new System.EventHandler(this.postCodeTextBox_Leave);
             // 
             // fullNameTextBox
             // 
@@ -607,8 +631,6 @@ namespace WindowsFormsApp1
             this.fullNameTextBox.TabIndex = 47;
             this.fullNameTextBox.Text = "Enter your full name";
             this.fullNameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            this.fullNameTextBox.Enter += new System.EventHandler(this.fullNameTextBox_Enter);
-            this.fullNameTextBox.Leave += new System.EventHandler(this.fullNameTextBox_Leave);
             // 
             // membershipTypeComboBox
             // 
@@ -627,8 +649,6 @@ namespace WindowsFormsApp1
             this.membershipTypeComboBox.TabIndex = 46;
             this.membershipTypeComboBox.Text = "Choose membership type";
             this.membershipTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.membershipTypeComboBox.Enter += new System.EventHandler(this.membershipTypeComboBox_Enter);
-            this.membershipTypeComboBox.Leave += new System.EventHandler(this.membershipTypeComboBox_Leave);
             // 
             // listBox2
             // 
@@ -642,7 +662,6 @@ namespace WindowsFormsApp1
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(335, 32);
             this.listBox2.TabIndex = 45;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -657,7 +676,7 @@ namespace WindowsFormsApp1
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(864, 422);
+            this.label15.Location = new System.Drawing.Point(1147, 430);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(146, 25);
             this.label15.TabIndex = 42;
@@ -667,7 +686,7 @@ namespace WindowsFormsApp1
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(691, 379);
+            this.label14.Location = new System.Drawing.Point(971, 379);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(170, 31);
             this.label14.TabIndex = 41;
@@ -675,7 +694,7 @@ namespace WindowsFormsApp1
             // 
             // uploadbtn
             // 
-            this.uploadbtn.Location = new System.Drawing.Point(696, 415);
+            this.uploadbtn.Location = new System.Drawing.Point(979, 421);
             this.uploadbtn.Name = "uploadbtn";
             this.uploadbtn.Size = new System.Drawing.Size(162, 38);
             this.uploadbtn.TabIndex = 40;
@@ -703,8 +722,6 @@ namespace WindowsFormsApp1
             this.occupationTextBox.Size = new System.Drawing.Size(547, 34);
             this.occupationTextBox.TabIndex = 26;
             this.occupationTextBox.Text = "Enter occupation";
-            this.occupationTextBox.Enter += new System.EventHandler(this.occupationTextBox_Enter);
-            this.occupationTextBox.Leave += new System.EventHandler(this.occupationTextBox_Leave);
             // 
             // label12
             // 
@@ -736,8 +753,6 @@ namespace WindowsFormsApp1
             this.countrytxtbx.Size = new System.Drawing.Size(547, 34);
             this.countrytxtbx.TabIndex = 22;
             this.countrytxtbx.Text = "Enter your country";
-            this.countrytxtbx.Enter += new System.EventHandler(this.countrytxtbx_Enter);
-            this.countrytxtbx.Leave += new System.EventHandler(this.countrytxtbx_Leave);
             // 
             // label10
             // 
@@ -769,8 +784,6 @@ namespace WindowsFormsApp1
             this.emailTextBox.Size = new System.Drawing.Size(547, 34);
             this.emailTextBox.TabIndex = 18;
             this.emailTextBox.Text = "Enter your email";
-            this.emailTextBox.Enter += new System.EventHandler(this.emailTextBox_Enter);
-            this.emailTextBox.Leave += new System.EventHandler(this.emailTextBox_Leave);
             // 
             // label8
             // 
@@ -792,8 +805,6 @@ namespace WindowsFormsApp1
             this.contactNumberTextBox.Size = new System.Drawing.Size(627, 38);
             this.contactNumberTextBox.TabIndex = 16;
             this.contactNumberTextBox.Text = "Enter your contact number";
-            this.contactNumberTextBox.Enter += new System.EventHandler(this.contactNumberTextBox_Enter);
-            this.contactNumberTextBox.Leave += new System.EventHandler(this.contactNumberTextBox_Leave);
             // 
             // label7
             // 
@@ -852,8 +863,9 @@ namespace WindowsFormsApp1
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(132, 55);
             this.button12.TabIndex = 0;
-            this.button12.Text = "submit";
+            this.button12.Text = " submit";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
             // 
             // label3
             // 
@@ -964,6 +976,26 @@ namespace WindowsFormsApp1
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(1289, 407);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(88, 65);
+            this.pictureBox18.TabIndex = 52;
+            this.pictureBox18.TabStop = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Firebrick;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Location = new System.Drawing.Point(1280, 372);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(109, 38);
+            this.button13.TabIndex = 53;
+            this.button13.Text = " delete";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Visible = false;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1009,6 +1041,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -1017,6 +1050,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1091,5 +1125,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.TextBox postCodeTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button13;
     }
 }

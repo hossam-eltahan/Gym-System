@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class addmembershipfrm : Form
     {
+
+        private Gym_SystemEntities db = new Gym_SystemEntities();
         public addmembershipfrm()
         {
             InitializeComponent();
@@ -22,6 +24,12 @@ namespace WindowsFormsApp1
 
         }
 
+        private void ClearFormInputs()
+        {
+            textBox1.Text = "";
+            numericUpDown1.Value = 1;
+            
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.Visible = !panel1.Visible;
@@ -154,5 +162,42 @@ namespace WindowsFormsApp1
                 textBox1.ForeColor = Color.Silver;
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+           try{
+                membership_type_table m = new membership_type_table();
+
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("membership type cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (numericUpDown1.Value <= 0)
+            {
+                MessageBox.Show("amount is invalid.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            m.membershiptype = textBox1.Text;
+            m.amount = numericUpDown1.Value;
+
+            db.membership_type_table.Add(m);
+            db.SaveChanges();
+
+            MessageBox.Show("Membership type added successfully!");
+
+            ClearFormInputs();
+           } 
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}\n\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+}
     }
 }
