@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
             InitializeUI();
             LoadData();
+        }
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
         }
         private void InitializeUI()
         {
@@ -75,47 +81,85 @@ namespace WindowsFormsApp1
             //اضافه البانل دي للفورم الاساسيه
             this.Controls.Add(flowPanel);
         }
-        private Panel CreateCard(string membershiptype, int amount)
+        private Panel CreateCard(string membershipType, int amount)
         {
             Panel card = new Panel
             {
                 BorderStyle = BorderStyle.FixedSingle,
-                Width = 200,
-                Height = 200,
+                Width = 250,
+                Height = 250,
                 Margin = new Padding(10),
                 BackColor = System.Drawing.Color.LightGray,
-
-                Tag = membershiptype, // تخزين ID 
-                                      //BackgroundImage = Resources.Image2,
-                                      //BackgroundImageLayout = ImageLayout.Stretch // تكييف الصورة مع حجم البطاقة
+                Tag = membershipType // Use the membership type as a unique identifier
             };
 
+            // Membership type title
             Label cardTitle = new Label
             {
-                Text = membershiptype.ToUpperInvariant(),
-                Font = new System.Drawing.Font("Arial", 40, System.Drawing.FontStyle.Bold),
-                Dock = DockStyle.Fill,
+                Text = membershipType.ToUpperInvariant(),
+                Font = new System.Drawing.Font("Arial", 16, System.Drawing.FontStyle.Bold),
+                Dock = DockStyle.Top,
                 TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
                 Height = 40
             };
+
+            // Amount
             Label amountLabel = new Label
             {
-                Text = "Amount: " + amount.ToString(),
-                Font = new System.Drawing.Font("Arial", 17, System.Drawing.FontStyle.Bold),
+                Text = $"Amount: {amount} $",
+                Font = new System.Drawing.Font("Arial", 12),
                 Dock = DockStyle.Top,
-                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Height = 30
             };
 
+            // Edit button
+            Button editButton = new Button
+            {
+                Text = "Edit",
+                Dock = DockStyle.Bottom,
+                BackColor = System.Drawing.Color.LightGreen,
+                Height = 30
+            };
+            editButton.Click += (sender, e) =>
+            {
+                // Open the Add Membership form with existing data
+                addmembershipfrm addForm = new addmembershipfrm();
+                addForm.LoadMembershipData(membershipType);
+                addForm.ShowDialog();
 
+                // Refresh data after editing
+                LoadData();
+            };
 
-            card.Controls.Add(cardTitle);
+            // Delete button
+            Button deleteButton = new Button
+            {
+                Text = "Delete",
+                Dock = DockStyle.Bottom,
+                BackColor = System.Drawing.Color.Red,
+                Height = 30
+            };
+            deleteButton.Click += (sender, e) =>
+            {
+                if (MessageBox.Show($"Are you sure you want to delete the membership type '{membershipType}'?",
+                    "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    DeleteMembership(membershipType);
+                }
+            };
+
+            // Add components to the card
+            card.Controls.Add(deleteButton);
+            card.Controls.Add(editButton);
             card.Controls.Add(amountLabel);
-
+            card.Controls.Add(cardTitle);
 
             return card;
         }
 
-        Gym_SystemEntities db = new Gym_SystemEntities();
+
+        Gym_SystemEntities6 db = new Gym_SystemEntities6();
         private void LoadData()
         {
             try
@@ -138,6 +182,28 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message);
+            }
+        }
+        private void DeleteMembership(string membershipType)
+        {
+            try
+            {
+                var membership = db.membership_type_table.FirstOrDefault(m => m.membershiptype == membershipType);
+                if (membership != null)
+                {
+                    db.membership_type_table.Remove(membership);
+                    db.SaveChanges();
+                    MessageBox.Show("Membership type deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData(); // Refresh the membership list
+                }
+                else
+                {
+                    MessageBox.Show("Membership type not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -176,9 +242,35 @@ namespace WindowsFormsApp1
 
 
 
+        private Image pathz(string photoPath)
+        {
+            string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
 
+            if (File.Exists(filePath))
+            {
+                return Image.FromFile(filePath); // Return the image from the file
+            }
+            return Properties.Resources.Book;
+        }
         private void Form6_Load(object sender, EventArgs e)
         {
+            using (var context = new Gym_SystemEntities6())
+            {
+                var entity = context.setting_table.FirstOrDefault();
+
+                if (entity == null)
+                {
+                    label1.Text = "Gym System";
+                    label2.Text = "Gym Manager";
+                    //pictureBox2.Image = 
+                }
+                else
+                {
+                    label1.Text = entity.system_name;
+                    label2.Text = entity.Gym_manager;
+                    pictureBox2.Image = pathz(entity.logo);
+                }
+            }
             // Call LoadData method when the form loads
             LoadData();
         }

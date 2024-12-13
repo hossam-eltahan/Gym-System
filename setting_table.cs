@@ -20,6 +20,6 @@ namespace WindowsFormsApp1
         public string Gym_contact { get; set; }
         public string Gym_email { get; set; }
         public string Gym_manager { get; set; }
-        public byte[] logo { get; set; }
+        public string logo { get; set; }
     }
 }

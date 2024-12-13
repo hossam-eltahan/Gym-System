@@ -62,6 +62,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.uploadbtn = new System.Windows.Forms.Button();
             this.gymManagerTextBox = new System.Windows.Forms.TextBox();
@@ -111,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -447,7 +450,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.pictureBox11);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox12);
@@ -461,7 +464,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
             this.pictureBox11.InitialImage = null;
             this.pictureBox11.Location = new System.Drawing.Point(0, 64);
@@ -473,7 +476,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Location = new System.Drawing.Point(3, 113);
             this.panel3.Name = "panel3";
@@ -483,7 +486,7 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
             this.pictureBox12.InitialImage = null;
             this.pictureBox12.Location = new System.Drawing.Point(0, 11);
@@ -550,6 +553,8 @@
             // 
             this.panel6.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.button12);
+            this.panel6.Controls.Add(this.pictureBox18);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.uploadbtn);
             this.panel6.Controls.Add(this.gymManagerTextBox);
@@ -570,8 +575,29 @@
             this.panel6.Location = new System.Drawing.Point(412, 123);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1468, 890);
+            this.panel6.Size = new System.Drawing.Size(1493, 907);
             this.panel6.TabIndex = 27;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Firebrick;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(327, 670);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(109, 38);
+            this.button12.TabIndex = 54;
+            this.button12.Text = " delete";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Location = new System.Drawing.Point(342, 714);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(77, 56);
+            this.pictureBox18.TabIndex = 43;
+            this.pictureBox18.TabStop = false;
             // 
             // label12
             // 
@@ -603,8 +629,6 @@
             this.gymManagerTextBox.Size = new System.Drawing.Size(1362, 48);
             this.gymManagerTextBox.TabIndex = 43;
             this.gymManagerTextBox.Text = "Enter GYM manager name";
-            this.gymManagerTextBox.Enter += new System.EventHandler(this.gymManagerTextBox_Enter);
-            this.gymManagerTextBox.Leave += new System.EventHandler(this.gymManagerTextBox_Leave);
             // 
             // gymEmailTextBox
             // 
@@ -618,8 +642,6 @@
             this.gymEmailTextBox.Size = new System.Drawing.Size(1362, 48);
             this.gymEmailTextBox.TabIndex = 42;
             this.gymEmailTextBox.Text = "Enter GYM Email";
-            this.gymEmailTextBox.Enter += new System.EventHandler(this.gymEmailTextBox_Enter);
-            this.gymEmailTextBox.Leave += new System.EventHandler(this.gymEmailTextBox_Leave);
             // 
             // gymContactTextBox
             // 
@@ -633,8 +655,6 @@
             this.gymContactTextBox.Size = new System.Drawing.Size(1362, 48);
             this.gymContactTextBox.TabIndex = 41;
             this.gymContactTextBox.Text = "Enter GYM contact";
-            this.gymContactTextBox.Enter += new System.EventHandler(this.gymContactTextBox_Enter);
-            this.gymContactTextBox.Leave += new System.EventHandler(this.gymContactTextBox_Leave);
             // 
             // gymAddressTextBox
             // 
@@ -648,8 +668,6 @@
             this.gymAddressTextBox.Size = new System.Drawing.Size(1362, 48);
             this.gymAddressTextBox.TabIndex = 40;
             this.gymAddressTextBox.Text = "Enter GYM address";
-            this.gymAddressTextBox.Enter += new System.EventHandler(this.gymAddressTextBox_Enter);
-            this.gymAddressTextBox.Leave += new System.EventHandler(this.gymAddressTextBox_Leave);
             // 
             // updateSettingsButton
             // 
@@ -664,6 +682,7 @@
             this.updateSettingsButton.TabIndex = 16;
             this.updateSettingsButton.Text = "Update Settings";
             this.updateSettingsButton.UseVisualStyleBackColor = false;
+            this.updateSettingsButton.Click += new System.EventHandler(this.updateSettingsButton_Click);
             // 
             // label11
             // 
@@ -725,8 +744,6 @@
             this.currencyTextBox.Size = new System.Drawing.Size(1362, 48);
             this.currencyTextBox.TabIndex = 7;
             this.currencyTextBox.Text = "Enter your currency";
-            this.currencyTextBox.Enter += new System.EventHandler(this.currencyTextBox_Enter);
-            this.currencyTextBox.Leave += new System.EventHandler(this.currencyTextBox_Leave);
             // 
             // label7
             // 
@@ -757,7 +774,7 @@
             this.systemNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.systemNameTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.systemNameTextBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.systemNameTextBox.Location = new System.Drawing.Point(57, 127);
+            this.systemNameTextBox.Location = new System.Drawing.Point(69, 135);
             this.systemNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.systemNameTextBox.MaxLength = 50;
             this.systemNameTextBox.Multiline = true;
@@ -765,9 +782,6 @@
             this.systemNameTextBox.Size = new System.Drawing.Size(1362, 48);
             this.systemNameTextBox.TabIndex = 2;
             this.systemNameTextBox.Text = "Enter System Name";
-            this.systemNameTextBox.TextChanged += new System.EventHandler(this.systemNameTextBox_TextChanged);
-            this.systemNameTextBox.Enter += new System.EventHandler(this.systemNameTextBox_Enter);
-            this.systemNameTextBox.Leave += new System.EventHandler(this.systemNameTextBox_Leave);
             // 
             // label5
             // 
@@ -833,8 +847,6 @@
             this.confirmPassTextBox.Size = new System.Drawing.Size(1362, 48);
             this.confirmPassTextBox.TabIndex = 43;
             this.confirmPassTextBox.Text = "Confirm new password";
-            this.confirmPassTextBox.Enter += new System.EventHandler(this.confirmPassTextBox_Enter);
-            this.confirmPassTextBox.Leave += new System.EventHandler(this.confirmPassTextBox_Leave);
             // 
             // newPassTextBox
             // 
@@ -848,8 +860,6 @@
             this.newPassTextBox.Size = new System.Drawing.Size(1362, 48);
             this.newPassTextBox.TabIndex = 42;
             this.newPassTextBox.Text = "Enter new password";
-            this.newPassTextBox.Enter += new System.EventHandler(this.newPassTextBox_Enter);
-            this.newPassTextBox.Leave += new System.EventHandler(this.newPassTextBox_Leave);
             // 
             // currentPassTextBox
             // 
@@ -863,8 +873,6 @@
             this.currentPassTextBox.Size = new System.Drawing.Size(1362, 48);
             this.currentPassTextBox.TabIndex = 41;
             this.currentPassTextBox.Text = "Enter current password";
-            this.currentPassTextBox.Enter += new System.EventHandler(this.currentPassTextBox_Enter);
-            this.currentPassTextBox.Leave += new System.EventHandler(this.currentPassTextBox_Leave);
             // 
             // changePassButton
             // 
@@ -879,6 +887,7 @@
             this.changePassButton.TabIndex = 23;
             this.changePassButton.Text = "Change Password";
             this.changePassButton.UseVisualStyleBackColor = false;
+            this.changePassButton.Click += new System.EventHandler(this.changePassButton_Click);
             // 
             // label15
             // 
@@ -983,9 +992,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 100);
-            this.ClientSize = new System.Drawing.Size(1924, 1021);
+            this.ClientSize = new System.Drawing.Size(1924, 1076);
             this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label3);
@@ -998,8 +1006,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Settings";
@@ -1007,6 +1017,7 @@
             this.Text = "Setting";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Settings_FormClosing);
+            this.Load += new System.EventHandler(this.Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1026,6 +1037,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -1105,5 +1117,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Button button12;
     }
 }

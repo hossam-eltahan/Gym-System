@@ -131,5 +131,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
+        }
     }
 }

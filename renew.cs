@@ -12,10 +12,13 @@ namespace WindowsFormsApp1
     using System;
     using System.Collections.Generic;
     
-    public partial class membership_type_table
+    public partial class renew
     {
-        public string membershiptype { get; set; }
-        public decimal amount { get; set; }
         public int id { get; set; }
+        public Nullable<int> member_id { get; set; }
+        public Nullable<decimal> total_amount { get; set; }
+        public Nullable<System.DateTime> renew_date { get; set; }
+    
+        public virtual new_member_table new_member_table { get; set; }
     }
 }

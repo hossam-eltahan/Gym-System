@@ -16,6 +16,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
+        }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {

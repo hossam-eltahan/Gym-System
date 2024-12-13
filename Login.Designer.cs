@@ -87,7 +87,6 @@
             this.email_textbox.Size = new System.Drawing.Size(414, 36);
             this.email_textbox.TabIndex = 0;
             this.email_textbox.Text = "Someone@example.com";
-            //this.email_textbox.TextChanged += new System.EventHandler(this.email_textbox_TextChanged);
             this.email_textbox.Enter += new System.EventHandler(this.email_textbox_Enter_1);
             this.email_textbox.Leave += new System.EventHandler(this.email_textbox_Leave);
             // 
@@ -193,7 +192,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "1";
-            this.Text = "Login";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);

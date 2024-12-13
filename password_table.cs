@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class password_table
     {
         public string current_password { get; set; }
-        public string new_password { get; set; }
-        public string confirm_new_pasword { get; set; }
+        public string Email { get; set; }
+        public int id { get; set; }
     }
 }

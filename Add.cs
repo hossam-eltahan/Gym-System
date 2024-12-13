@@ -8,20 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+
 
 namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
-        private Gym_SystemEntities db = new Gym_SystemEntities();
+        private Gym_SystemEntities6 db  =new Gym_SystemEntities6();
 
         public Add()
         {
             InitializeComponent();
         }
-
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
+        }
 
         private string log = "yes";
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -40,9 +46,14 @@ namespace WindowsFormsApp1
                 {
                     selectedPhotoPath = openFileDialog.FileName; // Store the selected file path
                     MessageBox.Show("Photo selected: " + selectedPhotoPath);
-                    label15.Text = "Choosen";
+                    label15.Text = "Chosen";
 
-                    pictureBox18.Image = Image.FromFile(selectedPhotoPath);
+                    // Load the image without locking the file
+                    using (var stream = new MemoryStream(File.ReadAllBytes(selectedPhotoPath)))
+                    {
+                        pictureBox18.Image = Image.FromStream(stream);
+                    }
+
                     pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
                     button13.Visible = true;
                 }
@@ -59,10 +70,39 @@ namespace WindowsFormsApp1
         {
 
         }
+        private Image pathz(string photoPath)
+        {
+            string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
 
+            if (File.Exists(filePath))
+            {
+                return Image.FromFile(filePath); // Return the image from the file
+            }
+            return Properties.Resources.Book;
+        }
         private async void Add_Load(object sender, EventArgs e)
         {
+            using (var context = new Gym_SystemEntities6())
+            {
+                var entity = context.setting_table.FirstOrDefault();
+
+                if (entity == null)
+                {
+                    label1.Text = "Gym System";
+                    label2.Text = "Gym Manager";
+                    //pictureBox2.Image = 
+                }
+                else
+                {
+                    label1.Text = entity.system_name;
+                    label2.Text = entity.Gym_manager;
+                    pictureBox2.Image = pathz(entity.logo);
+                }
+            }
             await LoadMembershipTypesAsync();
+            numericUpDown2.Enabled = false;
+            numericUpDown2.Minimum = 0;
+            numericUpDown2.Value = 0;
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -93,14 +133,17 @@ namespace WindowsFormsApp1
                 // Fetch membership types asynchronously
                 var membershipTypes = await Task.Run(() => db.membership_type_table.Select(mt => mt.membershiptype).ToList());
                 var membershipamount = await Task.Run(() => db.membership_type_table.Select(mt => mt.amount).ToList());
+              
 
 
 
                 for (int i = 0; i < membershipTypes.Count; i++)
                 {
                     membershipTypeComboBox.Items.Add(membershipTypes[i] + "  $" + membershipamount[i]);
-                }
 
+                    //membershipTypeComboBox.Items[i] =membershipaid[i].ToString();
+                }
+                
                 // Populate the ComboBox
 
 
@@ -230,7 +273,7 @@ namespace WindowsFormsApp1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         // Helper function to validate email format
@@ -305,16 +348,52 @@ namespace WindowsFormsApp1
             frm.Show();
             this.Close();
         }
+        private int? editingMemberId = null; // Nullable int to store the ID of the member being edited
+
+        public void LoadMemberData(int memberId)
+        {
+            var member = db.new_member_table.Find(memberId);
+            if (member != null)
+            {
+                // Populate the form fields with existing member data
+                fullNameTextBox.Text = member.full_name;
+                numericUpDown1.Value = member.age;
+                listBox2.Text = member.gender;
+                contactNumberTextBox.Text = member.contact_number;
+                emailTextBox.Text = member.email;
+                addressTextBox.Text = member.address;
+                countrytxtbx.Text = member.country;
+                postCodeTextBox.Text = member.post_code;
+                occupationTextBox.Text = member.occupation;
+                membershipTypeComboBox.Text = member.membership_type_forign;
+              
+                
+
+                // Prevent changes to start_date and end_date
+               // numericUpDown2.Value = member.number_of_month;
+
+               // numericUpDown2.Enabled = false;
+
+                // Load photo
+                string photoPath = Path.Combine(Application.StartupPath, "Photos", member.membership_photo);
+                if (File.Exists(photoPath))
+                {
+                    pictureBox18.Image = Image.FromFile(photoPath);
+                }
+
+                // Store the editingMemberId for use during updates
+                editingMemberId = memberId;
+            }
+        }
+
+
+
 
         private void button12_Click_1(object sender, EventArgs e)
         {
             try
             {
-                // Create a new member object
-                new_member_table m = new new_member_table();
-
                 // Input validation
-                DateTime minimumDate = new DateTime(1900, 1, 1); // Minimum allowable DOB
                 if (string.IsNullOrWhiteSpace(fullNameTextBox.Text))
                 {
                     MessageBox.Show("Full Name cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -322,7 +401,7 @@ namespace WindowsFormsApp1
                 }
                 if (numericUpDown1.Value < 10)
                 {
-                    MessageBox.Show("age is invalid.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Age is invalid.", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (string.IsNullOrWhiteSpace(listBox2.Text))
@@ -345,87 +424,84 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Address cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (string.IsNullOrWhiteSpace(countrytxtbx.Text))
-                {
-                    MessageBox.Show("Country cannot be empty.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
                 if (membershipTypeComboBox.SelectedIndex == -1)
                 {
                     MessageBox.Show("Select a Membership Type.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (numericUpDown2.Value <= 0)
+               
+
+                // Check if editing an existing member
+                if (editingMemberId != null)
                 {
-                    MessageBox.Show("Enter a valid number.", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Assign values from the form inputs
-                m.full_name = fullNameTextBox.Text;
-                m.age = Convert.ToInt32(numericUpDown1.Value);
-                m.gender = listBox2.Text;
-                m.contact_number = contactNumberTextBox.Text;
-                m.email = emailTextBox.Text;
-                m.address = addressTextBox.Text;
-                m.country = countrytxtbx.Text;
-                m.post_code = postCodeTextBox.Text;
-                m.occupation = occupationTextBox.Text;
-                m.number_of_month = Convert.ToInt32(numericUpDown2.Value);
-
-                // Assign the selected membership type
-                m.membership_type_forign = membershipTypeComboBox.Text; // Assuming ComboBox index matches membership type ID
-
-                // Generate a random membership number
-                // Random rand = new Random();
-                //m.membership_number = "CA-" + rand.Next(100000, 999999).ToString();
-
-
-                // Assign the current date as the creation date
-                m.start_date = DateTime.Today;
-                m.end_date = m.start_date.AddMonths(((int)numericUpDown2.Value));
-
-                // Handle photo upload
-                // Handle photo upload
-                if (selectedPhotoPath != "default.jpg")
-                {
-                    // Define the destination folder for photos
-                    string destinationFolder = Path.Combine(Application.StartupPath, "Photos");
-
-                    // Ensure the destination folder exists
-                    if (!Directory.Exists(destinationFolder))
+                    // Fetch the existing member
+                    var member = db.new_member_table.Find(editingMemberId);
+                    if (member != null)
                     {
-                        Directory.CreateDirectory(destinationFolder);
+                        // Update member properties except start_date and end_date
+                        member.full_name = fullNameTextBox.Text;
+                        member.age = Convert.ToInt32(numericUpDown1.Value);
+                        member.gender = listBox2.Text;
+                        member.contact_number = contactNumberTextBox.Text;
+                        member.email = emailTextBox.Text;
+                        member.address = addressTextBox.Text;
+                        member.country = countrytxtbx.Text;
+                        member.post_code = postCodeTextBox.Text;
+                        member.occupation = occupationTextBox.Text;
+                        member.membership_type_forign = membershipTypeComboBox.Text;
+
+                        member.enddate = member.startdate.AddMonths(Convert.ToInt32(numericUpDown2.Value));
+
+                        // Preserve original start_date and end_date
+                        // Handle photo upload
+                        if (selectedPhotoPath != "default.jpg")
+                        {
+                            string destinationFolder = Path.Combine(Application.StartupPath, "Photos");
+                            if (!Directory.Exists(destinationFolder))
+                            {
+                                Directory.CreateDirectory(destinationFolder);
+                            }
+                            string destinationPath = Path.Combine(destinationFolder, Path.GetFileName(selectedPhotoPath));
+                            File.Copy(selectedPhotoPath, destinationPath, true);
+                            member.membership_photo = Path.GetFileName(selectedPhotoPath);
+                        }
+
+                        db.SaveChanges();
+                        MessageBox.Show("Member updated successfully!");
                     }
-
-                    // Define the destination path
-                    string destinationPath = Path.Combine(destinationFolder, Path.GetFileName(selectedPhotoPath));
-
-                    // Copy the selected photo to the destination folder
-                    File.Copy(selectedPhotoPath, destinationPath, true);
-
-                     //Save only the file name to the database
-                     m.membership_photo = Path.GetFileName(selectedPhotoPath);
+                    else
+                    {
+                        MessageBox.Show("Member not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    // Use the default photo if none was selected
-                    m.membership_photo = "default.jpg";
+                    // Add a new member logic
+                    new_member_table m = new new_member_table
+                    {
+                        full_name = fullNameTextBox.Text,
+                        age = Convert.ToInt32(numericUpDown1.Value),
+                        gender = listBox2.Text,
+                        contact_number = contactNumberTextBox.Text,
+                        email = emailTextBox.Text,
+                        address = addressTextBox.Text,
+                        country = countrytxtbx.Text,
+                        post_code = postCodeTextBox.Text,
+                        occupation = occupationTextBox.Text,
+                        membership_type_forign = membershipTypeComboBox.Text,
+                        startdate = DateTime.Today,
+                        enddate = DateTime.Today.AddMonths(Convert.ToInt32(numericUpDown2.Value)),
+                        membership_photo = selectedPhotoPath != "default.jpg"
+                                            ? SavePhoto(selectedPhotoPath)
+                                            : "default.jpg"
+                    };
+
+                 
+
+                    db.new_member_table.Add(m);
+                    db.SaveChanges();
+                    MessageBox.Show("Member added successfully!");
                 }
-
-
-                // Calculate the expiry date (e.g., 1 year from today)
-                // m.expiry_date = DateTime.Today.AddYears(1);
-
-                //m.bills = null; // Add billing logic if applicable
-                //m.renews = null; // Add renewal logic if applicable
-
-                // Add the new member to the database
-                db.new_member_table.Add(m);
-                db.SaveChanges();
-
-                // Show success message
-                MessageBox.Show("Member added successfully!");
 
                 // Clear the form inputs
                 ClearFormInputs();
@@ -434,6 +510,52 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show($"An error occurred: {ex.Message}\n\n{ex.StackTrace}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+
+        // Helper function to save photo
+        private string SavePhoto(string photoPath)
+        {
+            string destinationFolder = Path.Combine(Application.StartupPath, "Photos");
+
+            if (!Directory.Exists(destinationFolder))
+            {
+                Directory.CreateDirectory(destinationFolder);
+            }
+
+            string destinationPath = Path.Combine(destinationFolder, Path.GetFileName(photoPath));
+
+            try
+            {
+                // Ensure the source file is not locked or in use
+                using (FileStream sourceStream = new FileStream(photoPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    // Copy the file to the destination folder
+                    using (FileStream destinationStream = new FileStream(destinationPath, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        sourceStream.CopyTo(destinationStream);
+                    }
+                }
+                return Path.GetFileName(photoPath);
+            }
+            catch (IOException ex)
+            {
+                MessageBox.Show($"An error occurred while copying the file: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "default.jpg"; // return the default image if an error occurs
+            }
+        }
+
+        private void button13_Click_2(object sender, EventArgs e)
+        {
+            pictureBox18.Image = null;
+            button13.Visible = false;
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }

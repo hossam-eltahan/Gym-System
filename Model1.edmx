@@ -15,10 +15,11 @@
         </EntityType>
         <EntityType Name="membership_type_table">
           <Key>
-            <PropertyRef Name="membershiptype" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="membershiptype" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="amount" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="new_member_table">
           <Key>
@@ -37,20 +38,25 @@
           <Property Name="membership photo" Type="nvarchar" MaxLength="100" />
           <Property Name="membership type forign" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="number of month" Type="int" Nullable="false" />
-          <Property Name="start date" Type="date" Nullable="false" />
-          <Property Name="end date" Type="date" Nullable="false" />
+          <Property Name="startdate" Type="date" Nullable="false" />
+          <Property Name="enddate" Type="date" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Gym_System.dbo.password_table' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="password_table">
           <Key>
-            <PropertyRef Name="current password" />
-            <PropertyRef Name="new password" />
-            <PropertyRef Name="confirm new pasword" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="current password" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="new password" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="confirm new pasword" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="renew">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="member_id" Type="int" />
+          <Property Name="total_amount" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="renew_date" Type="date" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -72,7 +78,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <Property Name="Gym contact" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Gym email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Gym manager" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="logo" Type="varbinary(max)" />
+          <Property Name="logo" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -96,19 +102,26 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Renew_Member">
+          <End Role="new_member_table" Type="Self.new_member_table" Multiplicity="0..1" />
+          <End Role="renew" Type="Self.renew" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="new_member_table">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="renew">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="Gym_SystemModelStoreContainer">
           <EntitySet Name="membership_report_table" EntityType="Self.membership_report_table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="membership_type_table" EntityType="Self.membership_type_table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="new_member_table" EntityType="Self.new_member_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="password_table" EntityType="Self.password_table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="renew" EntityType="Self.renew" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="setting_table" EntityType="Self.setting_table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="password_table" EntityType="Self.password_table" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [password_table].[current password] AS [current password], 
-    [password_table].[new password] AS [new password], 
-    [password_table].[confirm new pasword] AS [confirm new pasword]
-    FROM [dbo].[password_table] AS [password_table]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="revenue_report" EntityType="Self.revenue_report" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [revenue_report].[revenue_start_date] AS [revenue_start_date], 
@@ -118,6 +131,10 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <AssociationSet Name="FK_membership_report_table_new_member_table" Association="Self.FK_membership_report_table_new_member_table">
             <End Role="new_member_table" EntitySet="new_member_table" />
             <End Role="membership_report_table" EntitySet="membership_report_table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Renew_Member" Association="Self.FK_Renew_Member">
+            <End Role="new_member_table" EntitySet="new_member_table" />
+            <End Role="renew" EntitySet="renew" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -135,11 +152,11 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
         </EntityType>
         <EntityType Name="membership_type_table">
           <Key>
-            <PropertyRef Name="membershiptype" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="membershiptype" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <NavigationProperty Name="new_member_table" Relationship="Self.FK_new_member_table_membership_type_table" FromRole="membership_type_table" ToRole="new_member_table" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="new_member_table">
           <Key>
@@ -147,7 +164,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="full_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="contact_number" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="contact_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="post_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="age" Type="Int32" Nullable="false" />
@@ -155,13 +172,23 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="occupation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="membership_photo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="membership_photo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="membership_type_forign" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="membership_report_table" Relationship="Self.FK_membership_report_table_new_member_table" FromRole="new_member_table" ToRole="membership_report_table" />
-          <NavigationProperty Name="membership_type_table" Relationship="Self.FK_new_member_table_membership_type_table" FromRole="new_member_table" ToRole="membership_type_table" />
           <Property Name="number_of_month" Type="Int32" Nullable="false" />
-          <Property Name="start_date" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="end_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="startdate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="enddate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="membership_report_table" Relationship="Self.FK_membership_report_table_new_member_table" FromRole="new_member_table" ToRole="membership_report_table" />
+          <NavigationProperty Name="renews" Relationship="Self.FK_Renew_Member" FromRole="new_member_table" ToRole="renew" />
+        </EntityType>
+        <EntityType Name="renew">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="member_id" Type="Int32" />
+          <Property Name="total_amount" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="renew_date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="new_member_table" Relationship="Self.FK_Renew_Member" FromRole="renew" ToRole="new_member_table" />
         </EntityType>
         <EntityType Name="setting_table">
           <Key>
@@ -173,7 +200,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <Property Name="Gym_contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Gym_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Gym_manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -187,13 +214,11 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
         </EntityType>
         <EntityType Name="password_table">
           <Key>
-            <PropertyRef Name="current_password" />
-            <PropertyRef Name="new_password" />
-            <PropertyRef Name="confirm_new_pasword" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="current_password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="new_password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="confirm_new_pasword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="revenue_report">
           <Key>
@@ -215,22 +240,23 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_new_member_table_membership_type_table">
-          <End Role="membership_type_table" Type="Self.membership_type_table" Multiplicity="1" />
-          <End Role="new_member_table" Type="Self.new_member_table" Multiplicity="*" />
+        <Association Name="FK_Renew_Member">
+          <End Role="new_member_table" Type="Self.new_member_table" Multiplicity="0..1" />
+          <End Role="renew" Type="Self.renew" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="membership_type_table">
-              <PropertyRef Name="membershiptype" />
+            <Principal Role="new_member_table">
+              <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="new_member_table">
-              <PropertyRef Name="membership_type_forign" />
+            <Dependent Role="renew">
+              <PropertyRef Name="member_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Gym_SystemEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Gym_SystemEntities6" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="membership_report_table" EntityType="Self.membership_report_table" />
           <EntitySet Name="membership_type_table" EntityType="Self.membership_type_table" />
           <EntitySet Name="new_member_table" EntityType="Self.new_member_table" />
+          <EntitySet Name="renews" EntityType="Self.renew" />
           <EntitySet Name="setting_table" EntityType="Self.setting_table" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="password_table" EntityType="Self.password_table" />
@@ -239,9 +265,9 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
             <End Role="new_member_table" EntitySet="new_member_table" />
             <End Role="membership_report_table" EntitySet="membership_report_table" />
           </AssociationSet>
-          <AssociationSet Name="FK_new_member_table_membership_type_table" Association="Self.FK_new_member_table_membership_type_table">
-            <End Role="membership_type_table" EntitySet="membership_type_table" />
+          <AssociationSet Name="FK_Renew_Member" Association="Self.FK_Renew_Member">
             <End Role="new_member_table" EntitySet="new_member_table" />
+            <End Role="renew" EntitySet="renews" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -249,7 +275,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Gym_SystemModelStoreContainer" CdmEntityContainer="Gym_SystemEntities">
+        <EntityContainerMapping StorageEntityContainer="Gym_SystemModelStoreContainer" CdmEntityContainer="Gym_SystemEntities6">
           <EntitySetMapping Name="membership_report_table">
             <EntityTypeMapping TypeName="Gym_SystemModel.membership_report_table">
               <MappingFragment StoreEntitySet="membership_report_table">
@@ -264,15 +290,13 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
               <MappingFragment StoreEntitySet="membership_type_table">
                 <ScalarProperty Name="membershiptype" ColumnName="membershiptype" />
                 <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="new_member_table">
             <EntityTypeMapping TypeName="Gym_SystemModel.new_member_table">
               <MappingFragment StoreEntitySet="new_member_table">
-                <ScalarProperty Name="end_date" ColumnName="end date" />
-                <ScalarProperty Name="start_date" ColumnName="start date" />
-                <ScalarProperty Name="number_of_month" ColumnName="number of month" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="full_name" ColumnName="full name" />
                 <ScalarProperty Name="contact_number" ColumnName="contact number" />
@@ -285,6 +309,19 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
                 <ScalarProperty Name="occupation" ColumnName="occupation" />
                 <ScalarProperty Name="membership_photo" ColumnName="membership photo" />
                 <ScalarProperty Name="membership_type_forign" ColumnName="membership type forign" />
+                <ScalarProperty Name="number_of_month" ColumnName="number of month" />
+                <ScalarProperty Name="startdate" ColumnName="startdate" />
+                <ScalarProperty Name="enddate" ColumnName="enddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="renews">
+            <EntityTypeMapping TypeName="Gym_SystemModel.renew">
+              <MappingFragment StoreEntitySet="renew">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+                <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+                <ScalarProperty Name="renew_date" ColumnName="renew_date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -315,9 +352,9 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <EntitySetMapping Name="password_table">
             <EntityTypeMapping TypeName="Gym_SystemModel.password_table">
               <MappingFragment StoreEntitySet="password_table">
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="current_password" ColumnName="current password" />
-                <ScalarProperty Name="new_password" ColumnName="new password" />
-                <ScalarProperty Name="confirm_new_pasword" ColumnName="confirm new pasword" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

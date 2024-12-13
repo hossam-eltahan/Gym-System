@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +19,13 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
+        }
 
+        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -25,6 +34,23 @@ namespace WindowsFormsApp1
         private void memberchipToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async Task LoadTotalMemberAsync()
+        {
+            try
+            {
+                // حساب عدد الصفوف مباشرة
+                var memberCount = await db.new_member_table.CountAsync();
+
+                // تحديث واجهة المستخدم
+                label4.Invoke((MethodInvoker)(() => label4.Text = memberCount.ToString()));
+            }
+            catch (Exception ex)
+            {
+                // للتعامل مع الأخطاء إذا حدثت
+                MessageBox.Show($"حدث خطأ: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private string log = "yes";
@@ -109,7 +135,7 @@ namespace WindowsFormsApp1
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -120,7 +146,7 @@ namespace WindowsFormsApp1
             log = "no";
             Form frm = new addmembershipfrm();
             frm.Show();
-            //this.Close();
+            this.Close();
         }
 
 
@@ -234,7 +260,11 @@ namespace WindowsFormsApp1
 
         private void button15_Click(object sender, EventArgs e)
         {
-            
+            log = "no";
+            Form frm = new Form1();
+            frm.Tag = "4";
+            frm.Show();
+            this.Close();
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -256,6 +286,133 @@ namespace WindowsFormsApp1
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form1();
+            frm.Tag = "2";
+            frm.Show();
+            this.Close();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            log = "no";
+            Form frm = new Form1();
+            frm.Tag = "3";
+            frm.Show();
+            this.Close();
+        }
+
+        //int countmember=Select Count (* from 
+
+
+       
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+        private void DisplayTotalMembers()
+        {
+            try
+            {
+                // Connection string to the database
+                string connectionString = "Server=AHMEDHAMADA;Database=Gym_System;Integrated Security=True;";
+
+                // Queries to fetch different metrics
+                string query1 = "SELECT COUNT(*) FROM new_member_table";
+                string query2 = "SELECT COUNT(*) FROM membership_type_table";
+                string query3 = "SELECT COUNT(*) FROM new_member_table WHERE enddate BETWEEN GETDATE() AND DATEADD(DAY, 4, GETDATE())";
+                string query4 = "SELECT COUNT(*) FROM new_member_table WHERE enddate < GETDATE()";
+                string query5 = "SELECT COUNT(*) FROM new_member_table WHERE startdate >= DATEADD(DAY, -3, GETDATE())";
+                string query6 = "SELECT SUM(total_amount) FROM renew";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Commands for each query
+                    SqlCommand cmd1 = new SqlCommand(query1, conn);
+                    SqlCommand cmd2 = new SqlCommand(query2, conn);
+                    SqlCommand cmd3 = new SqlCommand(query3, conn);
+                    SqlCommand cmd4 = new SqlCommand(query4, conn);
+                    SqlCommand cmd5 = new SqlCommand(query5, conn);
+                    SqlCommand cmd6 = new SqlCommand(query6, conn);
+
+                    // Execute each query and store results
+                    int totalMembers = (int)cmd1.ExecuteScalar();
+                    int totalMembershipType = (int)cmd2.ExecuteScalar();
+                    int expiringSoonMembers = (int)cmd3.ExecuteScalar();
+                    int expiredMembers = (int)cmd4.ExecuteScalar();
+                    int newMembers = (int)cmd5.ExecuteScalar();
+                    decimal totalRevenue = cmd6.ExecuteScalar() != DBNull.Value ? (decimal)cmd6.ExecuteScalar() : 0m;
+
+                    // Update labels
+                    label4.Text = totalMembers.ToString();
+                    label5.Text = totalMembershipType.ToString();
+                    label6.Text = expiringSoonMembers.ToString();
+                    label10.Text = expiredMembers.ToString();
+                    label8.Text = newMembers.ToString();
+                    label7.Text = totalRevenue.ToString("C2"); // Currency format
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private Image pathz(string photoPath)
+        {
+            string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
+
+            if (File.Exists(filePath))
+            {
+                return Image.FromFile(filePath); // Return the image from the file
+            }
+            return Properties.Resources.Book;
+        }
+        private void Dashboard_Load_2(object sender, EventArgs e)
+        {
+            using (var context = new Gym_SystemEntities6())
+            {
+                var entity = context.setting_table.FirstOrDefault();
+
+                if (entity == null) {
+                    label1.Text = "Gym System";
+                    label2.Text = "Gym Manager";
+                    //pictureBox2.Image = 
+                }
+                else
+                {
+                    label1.Text = entity.system_name;
+                    label2.Text = entity.Gym_manager;
+                    pictureBox2.Image = pathz(entity.logo);
+                }
+            }
+                DisplayTotalMembers();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,11 +22,56 @@ namespace WindowsFormsApp1
             InitializeUI();
             LoadData();
         }
+        private Image pathz(string photoPath)
+        {
+            string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
 
+            if (File.Exists(filePath))
+            {
+                return Image.FromFile(filePath); // Return the image from the file
+            }
+            return Properties.Resources.Book;
+        }
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadData();
+            using (var context = new Gym_SystemEntities6())
+            {
+                var entity = context.setting_table.FirstOrDefault();
 
+                if (entity == null)
+                {
+                    label1.Text = "Gym System";
+                    label2.Text = "Gym Manager";
+                    //pictureBox2.Image = 
+                }
+                else
+                {
+                    label1.Text = entity.system_name;
+                    label2.Text = entity.Gym_manager;
+                    pictureBox2.Image = pathz(entity.logo);
+                }
+            }
+            if (this.Tag.ToString() == "1")
+            {
+                LoadData();
+            }
+            else if(this.Tag.ToString()=="2")
+            {
+                loadexpiresoonmember();
+            }
+            else if(this.Tag.ToString() =="3")
+            {
+                loadexpiremember();
+            }
+            else if (this.Tag.ToString()== "4")
+            {
+                loadnewmember();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -220,20 +266,20 @@ namespace WindowsFormsApp1
         //اضافه البانل دي للفورم الاساسيه
 
         private Panel CreateCard(int id, string fullname, string contactno, string address, string occupation,
-                           string post_code, string email, int age, string gender, string country,
-                           string membership_type_forign, string membership_photo, DateTime start_date, DateTime end_date)
+                         string post_code, string email, int age, string gender, string country,
+                         string membership_type_forign, string membership_photo,int numberofmonth, DateTime start_date, DateTime end_date)
         {
             Panel card = new Panel
             {
                 BorderStyle = BorderStyle.FixedSingle,
                 Width = 200,
-                Height = 250, // زود الارتفاع لتناسب الحقول الجديدة
+                Height = 300, // Adjusted for additional buttons
                 Margin = new Padding(10),
                 BackColor = System.Drawing.Color.AliceBlue,
-                Tag = id // تخزين ID البطاقة
+                Tag = id // Store the member ID for reference
             };
 
-            // عنوان البطاقة
+            // Title of the card
             Label cardTitle = new Label
             {
                 Text = fullname,
@@ -243,48 +289,125 @@ namespace WindowsFormsApp1
                 Height = 40
             };
 
-            // إضافة تفاصيل العضوية
+            // Membership duration (ensuring start_date and end_date are on separate lines)
             Label membershipDates = new Label
             {
-                Text = $"المدة: {start_date.ToShortDateString()} - {end_date.ToShortDateString()}",
+                Text = $"From: {start_date.ToShortDateString()}\nTo: {end_date.ToShortDateString()}",
                 Font = new System.Drawing.Font("Arial", 10),
                 Dock = DockStyle.Top,
-                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+                TextAlign = System.Drawing.ContentAlignment.MiddleCenter,
+                Height = 40
             };
 
-            // زر عرض التفاصيل
+            // Display photo (default if not available)
+            PictureBox memberPhoto = new PictureBox
+            {
+                Width = 100,
+                Height = 100,
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Dock = DockStyle.Top,
+                Image = LoadMemberPhoto(id) // Use the method to load the photo by member ID
+            };
+
+            // View details button
             Button detailsButton = new Button
             {
-                Text = "عرض التفاصيل",
+                Text = "View Details",
                 Dock = DockStyle.Bottom,
                 BackColor = System.Drawing.Color.LightSkyBlue,
                 Height = 30
             };
             detailsButton.Click += (sender, e) =>
             {
-                MessageBox.Show($"ID: {id}\nالاسم الكامل: {fullname}\nرقم الاتصال: {contactno}\n" +
-                                $"العنوان: {address}\nالوظيفة: {occupation}\nالرمز البريدي: {post_code}\n" +
-                                $"الإيميل: {email}\nالعمر: {age}\nالنوع: {gender}\nالدولة: {country}\n" +
-                                $"نوع العضوية: {membership_type_forign}\nالصورة: {membership_photo}\n" +
-                                $"تاريخ البداية: {start_date.ToShortDateString()}\nتاريخ النهاية: {end_date.ToShortDateString()}");
+                MessageBox.Show($"ID: {id}\nFull Name: {fullname}\nContact Number: {contactno}\n" +
+                                $"Address: {address}\nOccupation: {occupation}\nPost Code: {post_code}\n" +
+                                $"Email: {email}\nAge: {age}\nGender: {gender}\nCountry: {country}\n" +
+                                $"Membership Type: {membership_type_forign}\n" +
+                                $"Number of months: {numberofmonth}\n" +
+                                $"Start Date: {start_date.ToShortDateString()}\nEnd Date: {end_date.ToShortDateString()}");
             };
 
-            // ترتيب العناصر داخل البطاقة
+            // Update button
+            Button updateButton = new Button
+            {
+                Text = "Update",
+                Dock = DockStyle.Bottom,
+                BackColor = System.Drawing.Color.LightGreen,
+                Height = 30
+            };
+            updateButton.Click += (sender, e) =>
+            {
+                // Open the Add form to edit the member
+                Add addForm = new Add();
+                addForm.LoadMemberData(id); // Pass member ID to load data for editing
+                addForm.Show();
+            };
+
+            // Delete button
+            Button deleteButton = new Button
+            {
+                Text = "Delete",
+                Dock = DockStyle.Bottom,
+                BackColor = System.Drawing.Color.Red,
+                Height = 30
+            };
+            deleteButton.Click += (sender, e) =>
+            {
+                if (MessageBox.Show($"Are you sure you want to delete member {fullname}?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    DeleteMember(id);
+                }
+            };
+
+            // Arrange the controls inside the card
+            card.Controls.Add(deleteButton);
+            card.Controls.Add(updateButton);
             card.Controls.Add(detailsButton);
             card.Controls.Add(membershipDates);
+            card.Controls.Add(memberPhoto); // Add the member photo to the card
             card.Controls.Add(cardTitle);
 
             return card;
         }
 
+        // Method to load the member photo or use a default if not available
+        private Image LoadMemberPhoto(int memberId)
+        {
+            // Retrieve the member record from the database using the correct table (e.g., new_member_table)
+            var member = db.new_member_table.FirstOrDefault(m => m.id == memberId);
 
-        private Gym_SystemEntities db = new Gym_SystemEntities();
+            if (member != null)
+            {
+                string photoPath = member.membership_photo;
+
+                // Check if the photo file exists in the specified folder
+                string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
+
+                if (File.Exists(filePath))
+                {
+                    return Image.FromFile(filePath); // Return the image from the file
+                }
+            }
+
+            // Return a default photo if the member does not have a photo or the file is not found
+            return Properties.Resources.user;
+        }
+
+
+
+
+
+
+
+
+        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
 
         // تحميل البيانات وعرض البطاقات
         private void LoadData()
         {
             try
             {
+                // Fetch data from the database using the correct table (new_member_table)
                 var members = db.new_member_table.ToList();
 
                 flowPanel.Controls.Clear();
@@ -294,7 +417,7 @@ namespace WindowsFormsApp1
                     Panel card = CreateCard(member.id, member.full_name, member.contact_number, member.address,
                                             member.occupation, member.post_code, member.email, member.age,
                                             member.gender, member.country, member.membership_type_forign,
-                                            member.membership_photo, member.start_date, member.end_date);
+                                            member.membership_photo,member.number_of_month, member.startdate, member.enddate);
                     flowPanel.Controls.Add(card);
                 }
             }
@@ -304,56 +427,172 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void loadexpiresoonmember()
+        {
+            try
+            {
+                // Fetch data from the database using the correct table (new_member_table)
+                var members = db.new_member_table.ToList();
+
+                flowPanel.Controls.Clear();
+
+                TimeSpan time = TimeSpan.FromDays(4);
+
+                foreach (var member in members)
+                {
+                    // Compare only the date part, ignoring the time component
+                    if ((member.enddate - DateTime.Today) <= time && (member.enddate >DateTime.Today))
+                    {
+                        Panel card = CreateCard(member.id, member.full_name, member.contact_number, member.address,
+                                                member.occupation, member.post_code, member.email, member.age,
+                                                member.gender, member.country, member.membership_type_forign,
+                                                member.membership_photo,member.number_of_month, member.startdate, member.enddate);
+                        flowPanel.Controls.Add(card);   
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void loadexpiremember()
+        {
+            try
+            {
+                // Fetch data from the database using the correct table (new_member_table)
+                var members = db.new_member_table.ToList();
+
+                flowPanel.Controls.Clear();
+
+                TimeSpan time = TimeSpan.Zero;
+
+                foreach (var member in members)
+                {
+                    if (member.enddate - DateTime.Today <= time)
+                    {
+                        Panel card = CreateCard(member.id, member.full_name, member.contact_number, member.address,
+                                                member.occupation, member.post_code, member.email, member.age,
+                                                member.gender, member.country, member.membership_type_forign,
+                                                member.membership_photo,member.number_of_month, member.startdate, member.enddate);
+                        flowPanel.Controls.Add(card);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void loadnewmember()
+        {
+            try
+            {
+                // Fetch data from the database using the correct table (new_member_table)
+                var members = db.new_member_table.ToList();
+
+                flowPanel.Controls.Clear();
+
+                TimeSpan time = TimeSpan.FromDays(3);
+
+                foreach (var member in members)
+                {
+                    if (DateTime.Now-member.startdate <= time)
+                    {
+                        Panel card = CreateCard(member.id, member.full_name, member.contact_number, member.address,
+                                                member.occupation, member.post_code, member.email, member.age,
+                                                member.gender, member.country, member.membership_type_forign,
+                                                member.membership_photo,member.number_of_month, member.startdate, member.enddate);
+                        flowPanel.Controls.Add(card);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حدث خطأ أثناء تحميل البيانات: " + ex.Message, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DeleteMember(int memberId)
+        {
+            try
+            {
+                var member = db.new_member_table.Find(memberId);
+                if (member != null)
+                {
+                    db.new_member_table.Remove(member);
+                    db.SaveChanges();
+                    MessageBox.Show("Member deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData(); // Reload the data to update the UI
+                }
+                else
+                {
+                    MessageBox.Show("Member not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            // قراءة النص المدخل وتحويله إلى أحرف صغيرة
+            // Get the search text and trim any extra spaces
             string searchText = searchBox.Text.Trim().ToLower();
 
-            // التكرار على جميع البطاقات داخل flowPanel
+            // Loop through all the cards inside the flowPanel
             foreach (Control control in flowPanel.Controls)
             {
-                if (control is Panel card) // التأكد أن العنصر هو Panel
+                if (control is Panel card) // Ensure the element is a Panel
                 {
-                    // استرجاع ID من Tag الخاص بالبطاقة
+                    // Retrieve ID from the Tag of the card
                     int cardId = card.Tag is int id ? id : -1;
 
-                    // البحث عن الـ Label الذي يحتوي على الاسم
+                    // Search for the Label that contains the name
                     Label nameLabel = card.Controls.OfType<Label>().FirstOrDefault();
 
-                    // افتراض عدم وجود تطابق
+                    // Assume no match initially
                     bool isMatch = false;
 
                     if (nameLabel != null)
                     {
-                        // قراءة النص من الاسم وتحويله إلى أحرف صغيرة
+                        // Read the text from the name and convert it to lowercase
                         string cardName = nameLabel.Text.ToLower();
 
-                        // التحقق مما إذا كان النص المدخل رقميًا
+                        // Check if the search text is a number (ID search)
                         if (int.TryParse(searchText, out int searchId))
                         {
-                            // إذا كان البحث رقميًا، نطابقه مع ID
+                            // Match the ID if it's a valid number
                             isMatch = (cardId == searchId);
                         }
                         else
                         {
-                            // إذا كان البحث نصيًا، نبحث في الاسم
-                            isMatch = cardName.Contains(searchText);
+                            // Otherwise, perform a text search on the full name
+                            isMatch = cardName.Contains(searchText); // Check if the name contains the search text
                         }
                     }
 
-                    // التحكم في ظهور البطاقة بناءً على وجود تطابق
+                    // Control the visibility of the card based on whether a match was found
                     card.Visible = isMatch;
                 }
             }
 
-            // عرض رسالة إذا لم يتم العثور على أي نتائج
+            // If no matches are found, show a message
             if (!flowPanel.Controls.OfType<Panel>().Any(c => c.Visible))
             {
-                MessageBox.Show("لا توجد نتائج مطابقة للبحث.", "نتائج البحث", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No matching results found.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        //private void viewmember_Load(object sender, EventArgs e) { }
-    }
+
+
+
+
+        //private void viewmember_Load(object sender, EventArgs e) { }
+    }
+
 }

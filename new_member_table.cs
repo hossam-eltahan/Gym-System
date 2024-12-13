@@ -14,6 +14,12 @@ namespace WindowsFormsApp1
     
     public partial class new_member_table
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public new_member_table()
+        {
+            this.renews = new HashSet<renew>();
+        }
+    
         public int id { get; set; }
         public string full_name { get; set; }
         public string contact_number { get; set; }
@@ -27,10 +33,11 @@ namespace WindowsFormsApp1
         public string membership_photo { get; set; }
         public string membership_type_forign { get; set; }
         public int number_of_month { get; set; }
-        public System.DateTime start_date { get; set; }
-        public System.DateTime end_date { get; set; }
+        public System.DateTime startdate { get; set; }
+        public System.DateTime enddate { get; set; }
     
         public virtual membership_report_table membership_report_table { get; set; }
-        public virtual membership_type_table membership_type_table { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<renew> renews { get; set; }
     }
 }

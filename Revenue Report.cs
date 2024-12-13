@@ -14,7 +14,16 @@ namespace WindowsFormsApp1
     {
         public Form3()
         {
+            SuspendLayout();
             InitializeComponent();
+            ResumeLayout();
+
+           // InitializeComponent();
+        }
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            this.DoubleBuffered = true;
         }
         private string log = "yes";
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -131,6 +140,11 @@ namespace WindowsFormsApp1
 
             form.Show();
             this.Close();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
