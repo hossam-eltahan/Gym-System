@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         private string editingMembershipType = null; // Track the membership type being edited
 
 
-        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
+        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
 
         protected override void OnHandleCreated(EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         private string log = "yes";
         private void Form5_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
 
                     var entity = context.setting_table.FirstOrDefault();
@@ -264,6 +264,15 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == " Add amembership Type")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.White;
             }
         }
     }

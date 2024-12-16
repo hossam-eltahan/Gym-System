@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         private async void button1_Click(object sender, EventArgs e)
         {
             // التحقق من البريد الإلكتروني وكلمة المرور بشكل غير متزامن
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 // استخدام async لتحميل البيانات بشكل غير متزامن
                 var entity = await Task.Run(() => context.password_table.FirstOrDefault(x => x.Email == email_textbox.Text));

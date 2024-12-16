@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 var entity = context.setting_table.FirstOrDefault();
 
@@ -400,7 +400,7 @@ namespace WindowsFormsApp1
 
 
 
-        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
+        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
 
         // تحميل البيانات وعرض البطاقات
         private void LoadData()

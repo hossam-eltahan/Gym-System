@@ -611,11 +611,15 @@
             // fullNameTextBox
             // 
             this.fullNameTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullNameTextBox.ForeColor = System.Drawing.Color.Silver;
             this.fullNameTextBox.Location = new System.Drawing.Point(33, 57);
             this.fullNameTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(627, 38);
             this.fullNameTextBox.TabIndex = 47;
+            this.fullNameTextBox.Text = "Enter member name";
+            this.fullNameTextBox.Enter += new System.EventHandler(this.fullNameTextBox_Enter);
+            this.fullNameTextBox.Leave += new System.EventHandler(this.fullNameTextBox_Leave);
             // 
             // membershipTypeComboBox
             // 
@@ -703,11 +707,15 @@
             // contactNumberTextBox
             // 
             this.contactNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactNumberTextBox.ForeColor = System.Drawing.Color.Silver;
             this.contactNumberTextBox.Location = new System.Drawing.Point(33, 146);
             this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.contactNumberTextBox.Name = "contactNumberTextBox";
             this.contactNumberTextBox.Size = new System.Drawing.Size(627, 38);
             this.contactNumberTextBox.TabIndex = 16;
+            this.contactNumberTextBox.Text = "Enter conatct number";
+            this.contactNumberTextBox.Enter += new System.EventHandler(this.contactNumberTextBox_Enter);
+            this.contactNumberTextBox.Leave += new System.EventHandler(this.contactNumberTextBox_Leave);
             // 
             // label7
             // 
@@ -731,7 +739,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
@@ -775,6 +783,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.DodgerBlue;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(395, 30);

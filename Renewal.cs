@@ -353,7 +353,7 @@ namespace WindowsFormsApp1
             // Return a default photo if the member does not have a photo or the file is not found
             return Properties.Resources.user;
         }
-        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
+        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
 
         // تحميل البيانات وعرض البطاقات
         private void LoadData()
@@ -555,7 +555,7 @@ namespace WindowsFormsApp1
         }
         private void Renewal_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 var entity = context.setting_table.FirstOrDefault();
 

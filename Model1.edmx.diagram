@@ -4,15 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fb2e866279794d4d85b0deda67a542a9" Name="Diagram1">
+      <Diagram DiagramId="0acb0078502e4814a4eef719b750374f" Name="Diagram1">
         <EntityTypeShape EntityType="Gym_SystemModel.membership_report_table" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Gym_SystemModel.membership_type_table" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Gym_SystemModel.new_member_table" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gym_SystemModel.password_table" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Gym_SystemModel.renew" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Gym_SystemModel.setting_table" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Gym_SystemModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Gym_SystemModel.password_table" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Gym_SystemModel.revenue_report" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gym_SystemModel.setting_table" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Gym_SystemModel.revenue_report" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
         <AssociationConnector Association="Gym_SystemModel.FK_membership_report_table_new_member_table" ManuallyRouted="false" />
         <AssociationConnector Association="Gym_SystemModel.FK_Renew_Member" ManuallyRouted="false" />
       </Diagram>

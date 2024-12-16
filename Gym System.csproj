@@ -104,9 +104,6 @@
     <Compile Include="setting_table.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="view and manage membership.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,6 +331,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -344,6 +344,14 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\dashboard2.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\dashboard1.png" />
+    <None Include="Resources\male-silhouette-variant-showing-muscles %281%29.png" />
+    <None Include="Resources\male-silhouette-variant-showing-muscles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

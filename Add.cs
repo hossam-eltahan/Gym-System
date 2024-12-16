@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
-        private Gym_SystemEntities6 db  =new Gym_SystemEntities6();
+        private Gym_SystemEntities7 db  =new Gym_SystemEntities7();
 
         public Add()
         {
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
         }
         private async void Add_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 var entity = context.setting_table.FirstOrDefault();
 
@@ -555,6 +555,155 @@ namespace WindowsFormsApp1
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             
+
+        }
+
+        private void fullNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (fullNameTextBox.Text == "Enter your full name")
+            {
+                fullNameTextBox.Text = "";
+                fullNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void fullNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (fullNameTextBox.Text == "")
+            {
+                fullNameTextBox.Text = "Enter your full name";
+                fullNameTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void contactNumberTextBox_Enter(object sender, EventArgs e)
+        {
+            if (contactNumberTextBox.Text == "Enter your contact number")
+            {
+                contactNumberTextBox.Text = "";
+                contactNumberTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void contactNumberTextBox_Leave(object sender, EventArgs e)
+        {
+            if (contactNumberTextBox.Text == "")
+            {
+                contactNumberTextBox.Text = "Enter your contact number";
+                contactNumberTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void addressTextBox_Enter(object sender, EventArgs e)
+        {
+        if (addressTextBox.Text == "Enter your address")
+         {
+                addressTextBox.Text = "";
+                addressTextBox.ForeColor = Color.Black;
+         }
+        }
+
+        private void addressTextBox_Leave(object sender, EventArgs e)
+        {
+            if (addressTextBox.Text == "")
+            {
+                addressTextBox.Text = "Enter your address";
+                addressTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void postCodeTextBox_Enter(object sender, EventArgs e)
+        {
+            if (postCodeTextBox.Text == "Enter your post code")
+            {
+                postCodeTextBox.Text = "";
+                postCodeTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void postCodeTextBox_Leave(object sender, EventArgs e)
+        {
+            if (postCodeTextBox.Text == "")
+            {
+                postCodeTextBox.Text = "Enter your post code";
+                postCodeTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void membershipTypeComboBox_Enter(object sender, EventArgs e)
+        {
+            if (membershipTypeComboBox.Text == "Choose membership type")
+            {
+                membershipTypeComboBox.Text = "";
+                membershipTypeComboBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void membershipTypeComboBox_Leave(object sender, EventArgs e)
+        {
+            if (membershipTypeComboBox.Text == "")
+            {
+                membershipTypeComboBox.Text = "Choose membership type";
+                membershipTypeComboBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void emailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "Enter your email")
+            {
+                emailTextBox.Text = "";
+                emailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "")
+            {
+                emailTextBox.Text = "Enter your email";
+                emailTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void countrytxtbx_Enter(object sender, EventArgs e)
+        {
+            if (countrytxtbx.Text == "Enter your country")
+            {
+                countrytxtbx.Text = "";
+                countrytxtbx.ForeColor = Color.Black;
+            }
+        }
+
+        private void countrytxtbx_Leave(object sender, EventArgs e)
+        {
+            if (countrytxtbx.Text == "")
+            {
+                countrytxtbx.Text = "Enter your country";
+                countrytxtbx.ForeColor = Color.Silver;
+            }
+        }
+
+        private void occupationTextBox_Enter(object sender, EventArgs e)
+        {
+            if (occupationTextBox.Text == "Enter occupation")
+            {
+                occupationTextBox.Text = "";
+                occupationTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void occupationTextBox_Leave(object sender, EventArgs e)
+        {
+            if (occupationTextBox.Text == "")
+            {
+                occupationTextBox.Text = "Enter occupation";
+                occupationTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Gym_SystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Gym_SystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="membership_report_table">
           <Key>
             <PropertyRef Name="idforign" />
@@ -80,16 +80,6 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <Property Name="Gym manager" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="logo" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <Association Name="FK_membership_report_table_new_member_table">
           <End Role="new_member_table" Type="Self.new_member_table" Multiplicity="1" />
           <End Role="membership_report_table" Type="Self.membership_report_table" Multiplicity="0..1" />
@@ -121,7 +111,6 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <EntitySet Name="password_table" EntityType="Self.password_table" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="renew" EntityType="Self.renew" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="setting_table" EntityType="Self.setting_table" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="revenue_report" EntityType="Self.revenue_report" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [revenue_report].[revenue_start_date] AS [revenue_start_date], 
@@ -137,7 +126,8 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
             <End Role="renew" EntitySet="renew" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Gym_SystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -180,6 +170,14 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <NavigationProperty Name="membership_report_table" Relationship="Self.FK_membership_report_table_new_member_table" FromRole="new_member_table" ToRole="membership_report_table" />
           <NavigationProperty Name="renews" Relationship="Self.FK_Renew_Member" FromRole="new_member_table" ToRole="renew" />
         </EntityType>
+        <EntityType Name="password_table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="current_password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="renew">
           <Key>
             <PropertyRef Name="id" />
@@ -201,24 +199,6 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <Property Name="Gym_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Gym_manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="logo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="password_table">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="current_password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="id" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="revenue_report">
           <Key>
@@ -252,14 +232,13 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Gym_SystemEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Gym_SystemEntities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="membership_report_table" EntityType="Self.membership_report_table" />
           <EntitySet Name="membership_type_table" EntityType="Self.membership_type_table" />
           <EntitySet Name="new_member_table" EntityType="Self.new_member_table" />
+          <EntitySet Name="password_table" EntityType="Self.password_table" />
           <EntitySet Name="renews" EntityType="Self.renew" />
           <EntitySet Name="setting_table" EntityType="Self.setting_table" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="password_table" EntityType="Self.password_table" />
           <EntitySet Name="revenue_report" EntityType="Self.revenue_report" />
           <AssociationSet Name="FK_membership_report_table_new_member_table" Association="Self.FK_membership_report_table_new_member_table">
             <End Role="new_member_table" EntitySet="new_member_table" />
@@ -275,7 +254,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Gym_SystemModelStoreContainer" CdmEntityContainer="Gym_SystemEntities6">
+        <EntityContainerMapping StorageEntityContainer="Gym_SystemModelStoreContainer" CdmEntityContainer="Gym_SystemEntities7">
           <EntitySetMapping Name="membership_report_table">
             <EntityTypeMapping TypeName="Gym_SystemModel.membership_report_table">
               <MappingFragment StoreEntitySet="membership_report_table">
@@ -315,6 +294,15 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="password_table">
+            <EntityTypeMapping TypeName="Gym_SystemModel.password_table">
+              <MappingFragment StoreEntitySet="password_table">
+                <ScalarProperty Name="current_password" ColumnName="current password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="renews">
             <EntityTypeMapping TypeName="Gym_SystemModel.renew">
               <MappingFragment StoreEntitySet="renew">
@@ -335,26 +323,6 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
                 <ScalarProperty Name="Gym_email" ColumnName="Gym email" />
                 <ScalarProperty Name="Gym_manager" ColumnName="Gym manager" />
                 <ScalarProperty Name="logo" ColumnName="logo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="Gym_SystemModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="password_table">
-            <EntityTypeMapping TypeName="Gym_SystemModel.password_table">
-              <MappingFragment StoreEntitySet="password_table">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="current_password" ColumnName="current password" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

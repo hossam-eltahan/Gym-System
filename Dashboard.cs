@@ -10,11 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace WindowsFormsApp1
 {
     public partial class Dashboard : Form
     {
+
+
         public Dashboard()
         {
             InitializeComponent();
@@ -25,7 +28,7 @@ namespace WindowsFormsApp1
             this.DoubleBuffered = true;
         }
 
-        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
+        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -383,7 +386,7 @@ namespace WindowsFormsApp1
         }
         private void Dashboard_Load_2(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 var entity = context.setting_table.FirstOrDefault();
 
@@ -416,5 +419,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
+
     }
 }

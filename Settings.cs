@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     {
         private string log = "yes";
         private string selectedPhotoPath = "default.jpg";
-        private Gym_SystemEntities6 db = new Gym_SystemEntities6();
+        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
 
         public Settings()
         {
@@ -199,7 +199,7 @@ namespace WindowsFormsApp1
         }
         private void Settings_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 var entity = context.setting_table.FirstOrDefault();
 

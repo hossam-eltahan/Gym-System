@@ -159,7 +159,7 @@ namespace WindowsFormsApp1
         }
 
 
-        Gym_SystemEntities6 db = new Gym_SystemEntities6();
+        Gym_SystemEntities7 db = new Gym_SystemEntities7();
         private void LoadData()
         {
             try
@@ -254,7 +254,7 @@ namespace WindowsFormsApp1
         }
         private void Form6_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities6())
+            using (var context = new Gym_SystemEntities7())
             {
                 var entity = context.setting_table.FirstOrDefault();
 

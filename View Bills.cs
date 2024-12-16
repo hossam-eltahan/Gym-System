@@ -168,5 +168,41 @@ namespace WindowsFormsApp1
             form.Show();
             this.Close();
         }
+
+        private void fullNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (fullNameTextBox.Text == "Enter member name")
+            {
+                fullNameTextBox.Text = "";
+                fullNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void fullNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (fullNameTextBox.Text == "")
+            {
+                fullNameTextBox.Text = "Enter member name";
+                fullNameTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void contactNumberTextBox_Enter(object sender, EventArgs e)
+        {
+            if (contactNumberTextBox.Text == "Enter contact number")
+            {
+                contactNumberTextBox.Text = "";
+                contactNumberTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void contactNumberTextBox_Leave(object sender, EventArgs e)
+        {
+            if (contactNumberTextBox.Text == "")
+            {
+                contactNumberTextBox.Text = "Enter contact number";
+                contactNumberTextBox.ForeColor = Color.Silver;
+            }
+        }
     }
 }
