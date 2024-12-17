@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
             this.DoubleBuffered = true;
         }
 
-        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
+        private Gym_SystemEntities8 db = new Gym_SystemEntities8();
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -278,20 +278,6 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel11_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button13_Click(object sender, EventArgs e)
         {
@@ -314,14 +300,7 @@ namespace WindowsFormsApp1
         //int countmember=Select Count (* from 
 
 
-       
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
+ 
 
 
         private void DisplayTotalMembers()
@@ -386,7 +365,7 @@ namespace WindowsFormsApp1
         }
         private void Dashboard_Load_2(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities7())
+            using (var context = new Gym_SystemEntities8())
             {
                 var entity = context.setting_table.FirstOrDefault();
 
@@ -404,22 +383,5 @@ namespace WindowsFormsApp1
             }
                 DisplayTotalMembers();
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

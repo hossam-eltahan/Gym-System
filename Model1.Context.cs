@@ -13,10 +13,10 @@ namespace WindowsFormsApp1
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Gym_SystemEntities7 : DbContext
+    public partial class Gym_SystemEntities8 : DbContext
     {
-        public Gym_SystemEntities7()
-            : base("name=Gym_SystemEntities7")
+        public Gym_SystemEntities8()
+            : base("name=Gym_SystemEntities8")
         {
         }
     
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         public virtual DbSet<membership_type_table> membership_type_table { get; set; }
         public virtual DbSet<new_member_table> new_member_table { get; set; }
         public virtual DbSet<password_table> password_table { get; set; }
-        public virtual DbSet<renew> renews { get; set; }
+        public virtual DbSet<renew> renew { get; set; }
         public virtual DbSet<setting_table> setting_table { get; set; }
         public virtual DbSet<revenue_report> revenue_report { get; set; }
     }

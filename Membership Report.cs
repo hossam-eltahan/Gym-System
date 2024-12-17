@@ -127,11 +127,6 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -141,5 +136,6 @@ namespace WindowsFormsApp1
             base.OnHandleCreated(e);
             this.DoubleBuffered = true;
         }
+
     }
 }

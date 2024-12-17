@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
 {
     public partial class Add : Form
     {
-        private Gym_SystemEntities7 db  =new Gym_SystemEntities7();
+        private Gym_SystemEntities8 db  =new Gym_SystemEntities8();
 
         public Add()
         {
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
         }
         private async void Add_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities7())
+            using (var context = new Gym_SystemEntities8())
             {
                 var entity = context.setting_table.FirstOrDefault();
 

@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
     {
         private string log = "yes";
         private string selectedPhotoPath = "default.jpg";
-        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
+        private Gym_SystemEntities8 db = new Gym_SystemEntities8();
 
         public Settings()
         {
@@ -199,7 +199,7 @@ namespace WindowsFormsApp1
         }
         private void Settings_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities7())
+            using (var context = new Gym_SystemEntities8())
             {
                 var entity = context.setting_table.FirstOrDefault();
 
@@ -323,6 +323,168 @@ namespace WindowsFormsApp1
             Form addfrm = new Form6();
             addfrm.Show();
             this.Close();
+        }
+
+        private void systemNameTextBox_Enter(object sender, EventArgs e)
+        {
+            if (systemNameTextBox.Text == "Enter System Name")
+            {
+                systemNameTextBox.Text = "";
+                systemNameTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void systemNameTextBox_Leave(object sender, EventArgs e)
+        {
+            if (systemNameTextBox.Text == "")
+            {
+                systemNameTextBox.Text = "Enter System Name";
+                systemNameTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void currencyTextBox_Enter(object sender, EventArgs e)
+        {
+            if (currencyTextBox.Text == "Enter your currency")
+            {
+                currencyTextBox.Text = "";
+                currencyTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void currencyTextBox_Leave(object sender, EventArgs e)
+        {
+            if (currencyTextBox.Text == "")
+            {
+                currencyTextBox.Text = "Enter your currency";
+                currencyTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void gymAddressTextBox_Enter(object sender, EventArgs e)
+        {
+            if (gymAddressTextBox.Text == "Enter GYM address")
+            {
+                gymAddressTextBox.Text = "";
+                gymAddressTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void gymAddressTextBox_Leave(object sender, EventArgs e)
+        {
+            if (gymAddressTextBox.Text == "")
+            {
+                gymAddressTextBox.Text = "Enter GYM address";
+                gymAddressTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void gymContactTextBox_Enter(object sender, EventArgs e)
+        {
+            if (gymContactTextBox.Text == "Enter GYM contact")
+            {
+                gymContactTextBox.Text = "";
+                gymContactTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void gymContactTextBox_Leave(object sender, EventArgs e)
+        {
+            if (gymContactTextBox.Text == "")
+            {
+                gymContactTextBox.Text = "Enter GYM contact";
+                gymContactTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void gymEmailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (gymEmailTextBox.Text == "Enter GYM Email")
+            {
+                gymEmailTextBox.Text = "";
+                gymEmailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void gymEmailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (gymEmailTextBox.Text == "")
+            {
+                gymEmailTextBox.Text = "Enter GYM Email";
+                gymEmailTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void gymManagerTextBox_Enter(object sender, EventArgs e)
+        {
+            if (gymManagerTextBox.Text == "Enter GYM manager name")
+            {
+                gymManagerTextBox.Text = "";
+                gymManagerTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void gymManagerTextBox_Leave(object sender, EventArgs e)
+        {
+            if (gymManagerTextBox.Text == "")
+            {
+                gymManagerTextBox.Text = "Enter GYM manager name";
+                gymManagerTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void currentPassTextBox_Enter(object sender, EventArgs e)
+        {
+            if (currentPassTextBox.Text == "Enter current password")
+            {
+                currentPassTextBox.Text = "";
+                currentPassTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void currentPassTextBox_Leave(object sender, EventArgs e)
+        {
+            if (currentPassTextBox.Text == "")
+            {
+                currentPassTextBox.Text = "Enter current password";
+                currentPassTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void newPassTextBox_Enter(object sender, EventArgs e)
+        {
+            if (newPassTextBox.Text == "Enter new password")
+            {
+                newPassTextBox.Text = "";
+                newPassTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void newPassTextBox_Leave(object sender, EventArgs e)
+        {
+            if (newPassTextBox.Text == "")
+            {
+                newPassTextBox.Text = "Enter new password";
+                newPassTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void confirmPassTextBox_Enter(object sender, EventArgs e)
+        {
+            if (confirmPassTextBox.Text == "Confirm new password")
+            {
+                confirmPassTextBox.Text = "";
+                confirmPassTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void confirmPassTextBox_Leave(object sender, EventArgs e)
+        {
+            if (confirmPassTextBox.Text == "")
+            {
+                confirmPassTextBox.Text = "Confirm new password";
+                confirmPassTextBox.ForeColor = Color.Silver;
+            }
         }
     }
 }

@@ -168,7 +168,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           <Property Name="startdate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="enddate" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="membership_report_table" Relationship="Self.FK_membership_report_table_new_member_table" FromRole="new_member_table" ToRole="membership_report_table" />
-          <NavigationProperty Name="renews" Relationship="Self.FK_Renew_Member" FromRole="new_member_table" ToRole="renew" />
+          <NavigationProperty Name="renew" Relationship="Self.FK_Renew_Member" FromRole="new_member_table" ToRole="renew" />
         </EntityType>
         <EntityType Name="password_table">
           <Key>
@@ -232,12 +232,12 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Gym_SystemEntities7" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Gym_SystemEntities8" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="membership_report_table" EntityType="Self.membership_report_table" />
           <EntitySet Name="membership_type_table" EntityType="Self.membership_type_table" />
           <EntitySet Name="new_member_table" EntityType="Self.new_member_table" />
           <EntitySet Name="password_table" EntityType="Self.password_table" />
-          <EntitySet Name="renews" EntityType="Self.renew" />
+          <EntitySet Name="renew" EntityType="Self.renew" />
           <EntitySet Name="setting_table" EntityType="Self.setting_table" />
           <EntitySet Name="revenue_report" EntityType="Self.revenue_report" />
           <AssociationSet Name="FK_membership_report_table_new_member_table" Association="Self.FK_membership_report_table_new_member_table">
@@ -246,7 +246,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
           </AssociationSet>
           <AssociationSet Name="FK_Renew_Member" Association="Self.FK_Renew_Member">
             <End Role="new_member_table" EntitySet="new_member_table" />
-            <End Role="renew" EntitySet="renews" />
+            <End Role="renew" EntitySet="renew" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -254,7 +254,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Gym_SystemModelStoreContainer" CdmEntityContainer="Gym_SystemEntities7">
+        <EntityContainerMapping StorageEntityContainer="Gym_SystemModelStoreContainer" CdmEntityContainer="Gym_SystemEntities8">
           <EntitySetMapping Name="membership_report_table">
             <EntityTypeMapping TypeName="Gym_SystemModel.membership_report_table">
               <MappingFragment StoreEntitySet="membership_report_table">
@@ -303,7 +303,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="renews">
+          <EntitySetMapping Name="renew">
             <EntityTypeMapping TypeName="Gym_SystemModel.renew">
               <MappingFragment StoreEntitySet="renew">
                 <ScalarProperty Name="id" ColumnName="id" />
@@ -348,7 +348,7 @@ warning 6002: The table/view 'Gym_System.dbo.revenue_report' does not have a pri
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

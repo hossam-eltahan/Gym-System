@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         private string editingMembershipType = null; // Track the membership type being edited
 
 
-        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
+        private Gym_SystemEntities8 db = new Gym_SystemEntities8();
 
         protected override void OnHandleCreated(EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         private string log = "yes";
         private void Form5_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities7())
+            using (var context = new Gym_SystemEntities8())
             {
 
                     var entity = context.setting_table.FirstOrDefault();
@@ -275,5 +275,6 @@ namespace WindowsFormsApp1
                 textBox1.ForeColor = Color.White;
             }
         }
+
     }
 }

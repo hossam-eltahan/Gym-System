@@ -189,19 +189,91 @@ namespace WindowsFormsApp1
 
         private void contactNumberTextBox_Enter(object sender, EventArgs e)
         {
-            if (contactNumberTextBox.Text == "Enter contact number")
+            if (contactNumberBTextBox.Text == "Enter contact number")
             {
-                contactNumberTextBox.Text = "";
-                contactNumberTextBox.ForeColor = Color.Black;
+                contactNumberBTextBox.Text = "";
+                contactNumberBTextBox.ForeColor = Color.Black;
             }
         }
 
         private void contactNumberTextBox_Leave(object sender, EventArgs e)
         {
-            if (contactNumberTextBox.Text == "")
+            if (contactNumberBTextBox.Text == "")
             {
-                contactNumberTextBox.Text = "Enter contact number";
-                contactNumberTextBox.ForeColor = Color.Silver;
+                contactNumberBTextBox.Text = "Enter contact number";
+                contactNumberBTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void billAmountTextBox_Enter(object sender, EventArgs e)
+        {
+            if (billAmountTextBox.Text == "Enter Bill Amount")
+            {
+                billAmountTextBox.Text = "";
+                billAmountTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void billAmountTextBox_Leave(object sender, EventArgs e)
+        {
+            if (billAmountTextBox.Text == "")
+            {
+                billAmountTextBox.Text = "Enter Bill Amount";
+                billAmountTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void membershipTypeComboBox_Enter(object sender, EventArgs e)
+        {
+            if (membershipTypeComboBox.Text == " -Select-")
+            {
+                membershipTypeComboBox.Text = "";
+                membershipTypeComboBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void membershipTypeComboBox_Leave(object sender, EventArgs e)
+        {
+            if (membershipTypeComboBox.Text == "")
+            {
+                membershipTypeComboBox.Text = " -Select-";
+                membershipTypeComboBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void emailTextBox_Enter(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "Enter e-mail")
+            {
+                emailTextBox.Text = "";
+                emailTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void emailTextBox_Leave(object sender, EventArgs e)
+        {
+            if (emailTextBox.Text == "")
+            {
+                emailTextBox.Text = "Enter e-mail";
+                emailTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void postcodeTextBox_Enter(object sender, EventArgs e)
+        {
+            if (postcodeTextBox.Text == "Enter post code")
+            {
+                postcodeTextBox.Text = "";
+                postcodeTextBox.ForeColor = Color.Black;
+            }
+        }
+
+        private void postcodeTextBox_Leave(object sender, EventArgs e)
+        {
+            if (postcodeTextBox.Text == "")
+            {
+                postcodeTextBox.Text = "Enter post code";
+                postcodeTextBox.ForeColor = Color.Silver;
             }
         }
     }

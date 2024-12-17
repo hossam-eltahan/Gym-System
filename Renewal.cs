@@ -307,7 +307,7 @@ namespace WindowsFormsApp1
                     member.enddate = member.enddate.AddMonths(months);
                     member.number_of_month += months;
                     // Add a record to the renew table
-                    db.renews.Add(new renew
+                    db.renew.Add(new renew
                     {
                         member_id = memberId,
                         total_amount = totalAmount,
@@ -353,7 +353,7 @@ namespace WindowsFormsApp1
             // Return a default photo if the member does not have a photo or the file is not found
             return Properties.Resources.user;
         }
-        private Gym_SystemEntities7 db = new Gym_SystemEntities7();
+        private Gym_SystemEntities8 db = new Gym_SystemEntities8();
 
         // تحميل البيانات وعرض البطاقات
         private void LoadData()
@@ -555,7 +555,7 @@ namespace WindowsFormsApp1
         }
         private void Renewal_Load(object sender, EventArgs e)
         {
-            using (var context = new Gym_SystemEntities7())
+            using (var context = new Gym_SystemEntities8())
             {
                 var entity = context.setting_table.FirstOrDefault();
 

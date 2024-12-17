@@ -68,6 +68,7 @@
     <Compile Include="Add memebership.Designer.cs">
       <DependentUpon>Add memebership.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileName.cs" />
     <Compile Include="membership_report_table.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -310,20 +311,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\muscle.png" />
-    <None Include="Resources\muscle %281%29.png" />
     <None Include="Resources\new-folder.png" />
-    <None Include="Resources\gearwheel.png" />
     <None Include="Resources\image-gallery.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\cancel1.png" />
     <None Include="Resources\calendar.png" />
     <None Include="Resources\bill1.png" />
     <None Include="Resources\add-group.png" />
-    <None Include="Resources\increase.png" />
-    <None Include="Resources\time-left.png" />
     <None Include="Resources\light.png" />
-    <None Include="Resources\member-card1.png" />
-    <None Include="Resources\group-chat.png" />
     <None Include="Resources\padlock.png" />
     <None Include="Resources\email.png" />
   </ItemGroup>
@@ -332,6 +327,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\dashboard2.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\dashboard1.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">
@@ -344,14 +347,34 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\bin.png" />
-    <None Include="Resources\delete.png" />
-    <None Include="Resources\dashboard2.png" />
-    <None Include="Resources\eye.png" />
-    <None Include="Resources\file.png" />
-    <None Include="Resources\dashboard1.png" />
-    <None Include="Resources\male-silhouette-variant-showing-muscles %281%29.png" />
-    <None Include="Resources\male-silhouette-variant-showing-muscles.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\revenue1.png" />
+    <None Include="Resources\id.png" />
+    <None Include="Resources\add-user1.png" />
+    <None Include="Resources\member-card %282%29.png" />
+    <None Include="Resources\gearwheel1.png" />
+    <None Include="Resources\membership-card.png" />
+    <None Include="Resources\add-group %282%29.png" />
+    <None Include="Resources\group-users.png" />
+    <None Include="Resources\dashboard3.png" />
+    <None Include="Resources\locked-computer.png" />
+    <None Include="Resources\setting-lines.png" />
+    <None Include="Resources\muscle1.png" />
+    <None Include="Resources\businessman1.png" />
+    <None Include="Resources\dumbbell %282%29.png" />
+    <None Include="Resources\dumbbell %281%29.png" />
+    <None Include="Resources\dumbbell.png" />
+    <None Include="Resources\increase %281%29.png" />
+    <None Include="Resources\group-chat %282%29.png" />
+    <None Include="Resources\member-card %281%29.png" />
+    <None Include="Resources\bill %281%29.png" />
+    <None Include="Resources\add-group %281%29.png" />
+    <None Include="Resources\expired %281%29.png" />
+    <None Include="Resources\history %281%29.png" />
+    <None Include="Resources\group-chat %281%29.png" />
+    <None Include="Resources\add-group1.png" />
+    <None Include="Resources\bill2.png" />
+    <None Include="Resources\expired.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

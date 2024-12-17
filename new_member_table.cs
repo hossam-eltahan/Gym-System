@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public new_member_table()
         {
-            this.renews = new HashSet<renew>();
+            this.renew = new HashSet<renew>();
         }
     
         public int id { get; set; }
@@ -38,6 +38,6 @@ namespace WindowsFormsApp1
     
         public virtual membership_report_table membership_report_table { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<renew> renews { get; set; }
+        public virtual ICollection<renew> renew { get; set; }
     }
 }
