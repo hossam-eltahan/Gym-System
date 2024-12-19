@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -73,15 +74,20 @@ namespace WindowsFormsApp1
         {
             if (password_textbox.Text == "Password")
             {
+                password_textbox.PasswordChar = '*';
                 password_textbox.Text = "";
+              
                 password_textbox.ForeColor = Color.White;
+                // تفعيل النجوم
             }
+
         }
 
         private void password_textbox_Leave_1(object sender, EventArgs e)
         {
             if (password_textbox.Text == "")
             {
+                password_textbox.PasswordChar = '\0';
                 password_textbox.Text = "Password";
                 password_textbox.ForeColor = Color.Silver;
             }

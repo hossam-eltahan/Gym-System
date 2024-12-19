@@ -300,10 +300,7 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
-
             log = "yes";
-            Form addfrm = new Login();
-            addfrm.Show();
             this.Close();
         }
 
@@ -484,6 +481,29 @@ namespace WindowsFormsApp1
             {
                 confirmPassTextBox.Text = "Confirm new password";
                 confirmPassTextBox.ForeColor = Color.Silver;
+            }
+        }
+
+        private void uploadbtn_Click_1(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    selectedPhotoPath = openFileDialog.FileName; // Store the selected file path
+                    MessageBox.Show("Photo selected: " + selectedPhotoPath);
+                    label15.Text = "Chosen";
+
+                    // Load the image without locking the file
+                    using (var stream = new MemoryStream(File.ReadAllBytes(selectedPhotoPath)))
+                    {
+                        pictureBox18.Image = Image.FromStream(stream);
+                    }
+
+                    pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
+                    button12.Visible = true;
+                }
             }
         }
     }

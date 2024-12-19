@@ -222,7 +222,7 @@ namespace WindowsFormsApp1
                 Width = 80,
                 Height = searchBox.Height,
                 Font = new System.Drawing.Font("Arial", 10),
-                Anchor = AnchorStyles.Top
+              
             };
 
             //لما اضغط ع زر البحث الفانكشن بتاعت البحث تشتغل
@@ -371,25 +371,41 @@ namespace WindowsFormsApp1
         }
 
         // Method to load the member photo or use a default if not available
-        private Image LoadMemberPhoto(int memberId)
+        private  Image LoadMemberPhoto(int memberId)
         {
-            // Retrieve the member record from the database using the correct table (e.g., new_member_table)
-            var member = db.new_member_table.FirstOrDefault(m => m.id == memberId);
-
-            if (member != null)
+            try
             {
-                string photoPath = member.membership_photo;
+                // استخدم LINQ Query لاسترجاع المسار فقط
+                string photoPath = db.new_member_table
+                                     .Where(m => m.id == memberId)
+                                     .Select(m => m.membership_photo)
+                                     .FirstOrDefault();
 
-                // Check if the photo file exists in the specified folder
-                string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
-
-                if (File.Exists(filePath))
+                // التأكد من أن المسار ليس فارغًا
+                if (!string.IsNullOrEmpty(photoPath))
                 {
-                    return Image.FromFile(filePath); // Return the image from the file
+                    // إنشاء المسار الكامل للملف
+                    string filePath = Path.Combine(Application.StartupPath, "Photos", photoPath);
+
+                    // التحقق من وجود الملف
+                    if (File.Exists(filePath))
+                    {
+                        // استخدام FileStream لضمان إدارة الموارد
+                        using (FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                        {
+                            return Image.FromStream(fs);
+                        }
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                // تسجيل الخطأ لأغراض التصحيح
+                Console.WriteLine($"Error loading member photo: {ex.Message}");
+            }
 
-            // Return a default photo if the member does not have a photo or the file is not found
+
+            // إرجاع صورة افتراضية إذا لم يتم العثور على الصورة أو حدث خطأ
             return Properties.Resources.user;
         }
 
@@ -588,11 +604,16 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
 
         //private void viewmember_Load(object sender, EventArgs e) { }
-    }
+    }
 
 }

@@ -195,7 +195,7 @@ namespace WindowsFormsApp1
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Enter Membership Type")
+            if (textBox1.Text == " Add amembership Type")
             {
                 textBox1.Text = "";
                 textBox1.ForeColor = Color.Black;
@@ -206,7 +206,7 @@ namespace WindowsFormsApp1
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "Enter Membership Type";
+                textBox1.Text = " Add amembership Type";
                 textBox1.ForeColor = Color.Silver;
             }
         }
@@ -269,11 +269,11 @@ namespace WindowsFormsApp1
 
         private void textBox1_MouseEnter(object sender, EventArgs e)
         {
-            if (textBox1.Text == " Add amembership Type")
-            {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.White;
-            }
+            //if (textBox1.Text == " Add amembership Type")
+            //{
+            //    textBox1.Text = "";
+            //    textBox1.ForeColor = Color.White;
+            //}
         }
 
     }
